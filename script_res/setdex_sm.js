@@ -2897,14 +2897,14 @@ var SETDEX_SM={
     "Common Showdown": {
       "level": 50,
       "evs": {
-        "hp": 252,
+        "hp": 4,
         "at": 0,
-        "df": 4,
-        "sa": 0,
+        "df": 0,
+        "sa": 252,
         "sd": 0,
         "sp": 252
       },
-      "nature": "Impish",
+      "nature": "Timid",
       "ability": "Intimidate",
       "item": "",
       "moves": [
