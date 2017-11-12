@@ -4,9 +4,9 @@
 
 <link rel="image_src" href="http://trainertower.com/damagecalc/image_res/rhydon.png" />
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
-<meta property="og:title" content="Trainer Tower Damage Calculator" />
+<!-- <meta property="og:title" content="Trainer Tower Damage Calculator" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="http://trainertower.com/damagecalc/image_res/rhydon.png" />
+<meta property="og:image" content="http://trainertower.com/damagecalc/image_res/rhydon.png" /> -->
 
 <!-- <script>
 	(function (i, s, o, g, r, a, m) {
@@ -23,7 +23,7 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Pokémon Damage Calculator</title>
+	<title>精灵宝可梦伤害计算器</title>
 	<link href='script_res/open_sans.css' rel='stylesheet' type='text/css'>
 	<link type="text/css" rel="stylesheet" href="script_res/select2.css" />
 	<link type="text/css" rel="stylesheet" href="script_res/ap_calc.css" />
@@ -32,7 +32,7 @@
 </head>
 
 <body>
-	<div class="header">
+	<!-- <div class="header">
 		<div class="wrapper">
 			<span class="header-logo">
 				<a href="http://trainertower.com">
@@ -53,10 +53,10 @@
 			<div style="clear:both"></div>
 
 		</div>
-	</div>
+	</div> -->
 	<div class="wrapper">
 		<div>
-			<span class="title-text">Pokémon Damage Calculator - VGC 2017 Edition</span>
+			<span class="title-text">精灵宝可梦伤害计算器-VGC2017版</span>
 			<span class="generations" title="选择游戏世代.">
 				<input class="gen btn-input" type="radio" name="gen" value="1" id="gen1" />
 				<label class="btn btn-small btn-left" for="gen1">红绿蓝黄</label>
@@ -75,9 +75,6 @@
 			</span>
 		</div>
 		<hr />
-		<p>搜索宝可梦阿罗拉形态:
-			<b>嘎啦嘎啦-阿罗拉</b>
-		</p>
 
 		<!-- <div align="center"> -->
 		<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
@@ -87,11 +84,20 @@
 		<!-- (adsbygoogle = window.adsbygoogle || []).push({}); -->
 		<!-- </script> -->
 		<!-- </div> -->
+		<h3>原作者信息：</h3>
 		<p>Ultra Sun & Ultra Moon VGC calculator by Jake White (
 			<a href="https://twitter.com/squirrelboyVGC">@squirrelboyVGC</a>). Submit bug/feature reports/requests through
 			<a href="https://github.com/jake-white/VGC-Damage-Calculator/issues">Github</a> or
 			<a href="http://www.trainertower.com/forums/threads/damage-calculator-bug-reports.62/">this thread</a>, not through Twitter please :)</p>
 		<p>USUM details are implemented according to my best knowledge! No promises ;)</p>
+		<h3>中文翻译信息：</h3>
+		<p>问题反馈:
+			<a href="https://github.com/bikvy/VGC-Damage-Calculator/issues">Github</a>
+		</p>
+		<p>搜索宝可梦形态:
+			<b>洛托姆-冲洗</b>、
+			<b>嘎啦嘎啦-阿罗拉</b>
+		</p>
 
 		<!-- OLD NUGGETBRIDGE ADS -->
 		<!-- TRAINER TOWER ADS GO HERE :) -->
@@ -533,7 +539,7 @@
 						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critL1" />
-					<label class="btn crit-btn" for="critL1" title="强制此招式命中要害?">致命</label>
+					<label class="btn crit-btn" for="critL1" title="强制此招式击中要害?">要害</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zL1" />
 					<label class="btn x-btn gen-specific g7" for="zL1" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
@@ -552,7 +558,7 @@
 						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critL2" />
-					<label class="btn crit-btn" for="critL2" title="强制此招式命中要害?">致命</label>
+					<label class="btn crit-btn" for="critL2" title="强制此招式击中要害?">要害</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zL2" />
 					<label class="btn x-btn gen-specific g7" for="zL2" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
@@ -571,7 +577,7 @@
 						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critL3" />
-					<label class="btn crit-btn" for="critL3" title="强制此招式命中要害?">致命</label>
+					<label class="btn crit-btn" for="critL3" title="强制此招式击中要害?">要害</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zL3" />
 					<label class="btn x-btn gen-specific g7" for="zL3" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
@@ -590,7 +596,7 @@
 						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critL4" />
-					<label class="btn crit-btn" for="critL4" title="强制此招式命中要害?">致命</label>
+					<label class="btn crit-btn" for="critL4" title="强制此招式击中要害?">要害</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zL4" />
 					<label class="btn x-btn gen-specific g7" for="zL4" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
@@ -1190,7 +1196,7 @@
 						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critR1" />
-					<label class="btn crit-btn" for="critR1" title="强制此招式命中要害?">致命</label>
+					<label class="btn crit-btn" for="critR1" title="强制此招式击中要害?">要害</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zR1" />
 					<label class="btn x-btn gen-specific g7" for="zR1" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
@@ -1209,7 +1215,7 @@
 						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critR2" />
-					<label class="btn crit-btn" for="critR2" title="强制此招式命中要害?">致命</label>
+					<label class="btn crit-btn" for="critR2" title="强制此招式击中要害?">要害</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zR2" />
 					<label class="btn x-btn gen-specific g7" for="zR2" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
@@ -1228,7 +1234,7 @@
 						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critR3" />
-					<label class="btn crit-btn" for="critR3" title="强制此招式命中要害?">致命</label>
+					<label class="btn crit-btn" for="critR3" title="强制此招式击中要害?">要害</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zR3" />
 					<label class="btn x-btn gen-specific g7" for="zR3" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
@@ -1247,7 +1253,7 @@
 						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critR4" />
-					<label class="btn crit-btn" for="critR4" title="强制此招式命中要害?">致命</label>
+					<label class="btn crit-btn" for="critR4" title="强制此招式击中要害?">要害</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zR4" />
 					<label class="btn x-btn gen-specific g7" for="zR4" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
