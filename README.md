@@ -9,3 +9,7 @@ MIT License.
 Written by Honko. VGC 2015 Update by Tapin and Firestorm. VGC 2016 and onwards done by squirrelboyVGC.
 
 The calculator is accessible online via http://trainertower.com/damagecalc
+
+
+-------------------
+由MEI进行中文翻译
