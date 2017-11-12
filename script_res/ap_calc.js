@@ -391,7 +391,7 @@ $(".set-selector").change(function () {
 function showFormes(formeObj, setName, pokemonName, pokemon) {
 	var defaultForme = 0;
 
-	if (setName !== 'Blank Set') {
+	if (setName !== '空白配置') {
 		var set = setdex[pokemonName][setName];
 
 		// Repurpose the previous filtering code to provide the "different default" logic
@@ -434,7 +434,7 @@ $(".forme").change(function () {
 
 	if (abilities.indexOf(altForme.ab) > -1) {
 		container.find(".ability").val(altForme.ab);
-	} else if (setName !== "Blank Set" && abilities.indexOf(setdex[pokemonName][setName].ability) > -1) {
+	} else if (setName !== "空白配置" && abilities.indexOf(setdex[pokemonName][setName].ability) > -1) {
 		container.find(".ability").val(setdex[pokemonName][setName].ability);
 	} else {
 		container.find(".ability").val("");
@@ -916,9 +916,9 @@ function getSelectOptions(arr, sort, defaultIdx, transFunc) {
 	}
 	for (var i = 0; i < arr.length; i++) {
 		if (i === defaultIdx) {
-			r += '<option value="' + arr[i] + '" selected="selected">' + arr[i] + '</option>';
+			r += '<option value="' + arr[i] + '" selected="selected">' + transFunc(arr[i]) + '</option>';
 		} else {
-			r += '<option value="' + arr[i] + '">' + arr[i] + '</option>';
+			r += '<option value="' + arr[i] + '">' + transFunc(arr[i]) + '</option>';
 		}
 	}
 	return r;
@@ -938,8 +938,10 @@ $(document).ready(function () {
 			var pageSize = 30;
 			var results = [];
 			for (var i = 0; i < setOptions.length; i++) {
-				var pokeName = setOptions[i].pokemon.toUpperCase();
-				if (!query.term || pokeName.indexOf(query.term.toUpperCase()) === 0) {
+				var pokeName = setOptions[i].text.toUpperCase()
+				pokeName_origin = setOptions[i].pokemon.toUpperCase();
+				if (!query.term || pokeName.indexOf(query.term.toUpperCase()) === 0 || pokeName_origin.indexOf(query.term.toUpperCase()) >= 0
+					|| match_langs_pokemon(pokemonname_noforme(setOptions[i].pokemon), query.term.toUpperCase())) {
 					results.push(setOptions[i]);
 				}
 			}
@@ -955,9 +957,11 @@ $(document).ready(function () {
 	});
 	$(".move-selector").select2({
 		dropdownAutoWidth: true,
-		matcher: function (term, text) {
+		matcher: function (term, text, option) {
 			// 2nd condition is for Hidden Power
-			return text.toUpperCase().indexOf(term.toUpperCase()) === 0 || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0;
+			return text.toUpperCase().indexOf(term.toUpperCase()) === 0 || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0
+				|| option.val().toUpperCase().indexOf(term.toUpperCase()) === 0 || option.val().toUpperCase().indexOf(" " + term.toUpperCase()) >= 0
+				|| match_langs_move(option.val(), term.toUpperCase());
 		}
 	});
 	$(".set-selector").val(getSetOptions()[gen > 3 ? 1 : gen === 1 ? 5 : 3].id);

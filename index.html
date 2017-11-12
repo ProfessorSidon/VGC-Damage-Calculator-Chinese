@@ -57,31 +57,35 @@
 	<div class="wrapper">
 		<div>
 			<span class="title-text">Pokémon Damage Calculator - VGC 2017 Edition</span>
-			<span class="generations" title="Select the generation.">
+			<span class="generations" title="选择游戏世代.">
 				<input class="gen btn-input" type="radio" name="gen" value="1" id="gen1" />
-				<label class="btn btn-small btn-left" for="gen1">RBY</label>
+				<label class="btn btn-small btn-left" for="gen1">红绿蓝黄</label>
 				<input class="gen btn-input" type="radio" name="gen" value="2" id="gen2" />
-				<label class="btn btn-small btn-mid" for="gen2">GSC</label>
+				<label class="btn btn-small btn-mid" for="gen2">金银水晶</label>
 				<input class="gen btn-input" type="radio" name="gen" value="3" id="gen3" />
-				<label class="btn btn-small btn-mid" for="gen3">ADV</label>
+				<label class="btn btn-small btn-mid" for="gen3">宝石</label>
 				<input class="gen btn-input" type="radio" name="gen" value="4" id="gen4" />
-				<label class="btn btn-small btn-mid" for="gen4">DPP</label>
+				<label class="btn btn-small btn-mid" for="gen4">珍钻白金</label>
 				<input class="gen btn-input" type="radio" name="gen" value="5" id="gen5" />
-				<label class="btn btn-small btn-mid" for="gen5">B/W</label>
+				<label class="btn btn-small btn-mid" for="gen5">黑/白</label>
 				<input class="gen btn-input" type="radio" name="gen" value="6" id="gen6" />
-				<label class="btn btn-small btn-mid" for="gen6">ORAS</label>
+				<label class="btn btn-wide btn-mid" for="gen6">XY/宝石复刻</label>
 				<input class="gen btn-input" type="radio" name="gen" value="7" id="gen7" checked="checked" />
-				<label class="btn btn-small btn-right" for="gen7">USUM</label>
+				<label class="btn btn-small btn-right" for="gen7">日/月</label>
 			</span>
 		</div>
 		<hr />
+		<p>搜索宝可梦阿罗拉形态:
+			<b>嘎啦嘎啦-阿罗拉</b>
+		</p>
+
 		<!-- <div align="center"> -->
-			<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-			<!-- Damage Calc Ad -->
-			<!-- <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1513870120798988" data-ad-slot="8348790551"></ins> -->
-			<!-- <script> -->
-				<!-- (adsbygoogle = window.adsbygoogle || []).push({}); -->
-			<!-- </script> -->
+		<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+		<!-- Damage Calc Ad -->
+		<!-- <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1513870120798988" data-ad-slot="8348790551"></ins> -->
+		<!-- <script> -->
+		<!-- (adsbygoogle = window.adsbygoogle || []).push({}); -->
+		<!-- </script> -->
 		<!-- </div> -->
 		<p>Ultra Sun & Ultra Moon VGC calculator by Jake White (
 			<a href="https://twitter.com/squirrelboyVGC">@squirrelboyVGC</a>). Submit bug/feature reports/requests through
@@ -100,10 +104,10 @@
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script></div> -->
-		<div class="move-result-group" title="Select a move to show detailed results.">
+		<div class="move-result-group" title="选择招式以查看详细结果.">
 			<div class="move-result-subgroup">
 				<div class="result-move-header">
-					<span id="resultHeaderL">Pokemon 1's Moves (select one to show detailed results)</span>
+					<span id="resultHeaderL">宝可梦#1的招式(选择一个查看详细结果)</span>
 				</div>
 				<div>
 					<input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveL1" checked="checked" />
@@ -128,7 +132,7 @@
 			</div>
 			<div class="move-result-subgroup">
 				<div class="result-move-header">
-					<span id="resultHeaderR">Pokemon 2's Moves (select one to show detailed results)</span>
+					<span id="resultHeaderR">宝可梦#2的招式(选择一个查看详细结果)</span>
 				</div>
 				<div>
 					<input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveR1" />
@@ -154,36 +158,35 @@
 		</div>
 		<div class="main-result-group">
 			<div class="big-text">
-				<span id="mainResult">Loading...</span>
+				<span id="mainResult">加载中...</span>
 			</div>
 			<div class="small-text">
-				<span id="damageValues">(If you see this message for more than a few seconds, try enabling JavaScript. If you have that enabled, try deleting
-					your cookies. Otherwise, I won't be able to help you unless you send a screenshot of your browser console.)</span>
+				<span id="damageValues">(如果此条信息长时间显示，请尝试启用JavaScript，或者删除cookies)</span>
 			</div>
 		</div>
 
 		<div class="panel poke-info" id="p1">
 			<div class="panel-heading">
-				<h4 class="panel-title">Pokémon 1</h4>
+				<h4 class="panel-title">宝可梦#1</h4>
 			</div>
 			<div class="panel-body">
 				<input type="text" class="set-selector calc-trigger" />
 				<div class="info-group">
 					<div>
-						<label>Type</label>
+						<label>属性</label>
 						<select class="type1 terrain-trigger calc-trigger"></select>
 						<select class="type2 terrain-trigger calc-trigger"></select>
 					</div>
 					<div class="hide">
-						<label>Forme</label>
+						<label>形态</label>
 						<select class="forme calc-trigger"></select>
 					</div>
 					<div>
-						<label>Level</label>
+						<label>等级</label>
 						<input class="level calc-trigger" value="100" />
 					</div>
 					<div class="hide">
-						<label>Weight (kg)</label>
+						<label>重量 (kg)</label>
 						<input class="weight calc-trigger" value="10.0" />
 					</div>
 				</div>
@@ -191,10 +194,10 @@
 					<table>
 						<tr>
 							<th></th>
-							<th>Base</th>
-							<th class="gen-specific g3 g4 g5 g6 g7 g7">IVs</th>
-							<th class="gen-specific g3 g4 g5 g6 g7 g7">EVs</th>
-							<th class="gen-specific g1 g2 hide">DVs</th>
+							<th>种族值</th>
+							<th class="gen-specific g3 g4 g5 g6 g7 g7">个体值</th>
+							<th class="gen-specific g3 g4 g5 g6 g7 g7">努力值</th>
+							<th class="gen-specific g1 g2 hide">动态值</th>
 							<th></th>
 							<th></th>
 						</tr>
@@ -221,7 +224,7 @@
 						</tr>
 						<tr class="at">
 							<td>
-								<label>Attack</label>
+								<label>攻击</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -258,7 +261,7 @@
 						</tr>
 						<tr class="df">
 							<td>
-								<label>Defense</label>
+								<label>防御</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -295,7 +298,7 @@
 						</tr>
 						<tr class="sa gen-specific g2 g3 g4 g5 g6 g7">
 							<td>
-								<label>Sp. Atk</label>
+								<label>特攻</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -332,7 +335,7 @@
 						</tr>
 						<tr class="sd gen-specific g2 g3 g4 g5 g6 g7">
 							<td>
-								<label>Sp. Def</label>
+								<label>特防</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -369,7 +372,7 @@
 						</tr>
 						<tr class="sl gen-specific g1 hide">
 							<td>
-								<label>Special</label>
+								<label>特殊</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -400,7 +403,7 @@
 						</tr>
 						<tr class="sp">
 							<td>
-								<label>Speed</label>
+								<label>速度</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -448,53 +451,53 @@
 				</div>
 				<div class="info-group info-selectors">
 					<div class="gen-specific g3 g4 g5 g6 g7">
-						<label>Nature</label>
+						<label>性格</label>
 						<select class="nature calc-trigger">
-							<option value="Adamant">Adamant (+Atk, -SpA)</option>
-							<option value="Bashful">Bashful</option>
-							<option value="Bold">Bold (+Def, -Atk)</option>
-							<option value="Brave">Brave (+Atk, -Spe)</option>
-							<option value="Calm">Calm (+SpD, -Atk)</option>
-							<option value="Careful">Careful (+SpD, -SpA)</option>
-							<option value="Docile">Docile</option>
-							<option value="Gentle">Gentle (+SpD, -Def)</option>
-							<option value="Hardy" selected="selected">Hardy</option>
-							<option value="Hasty">Hasty (+Spe, -Def)</option>
-							<option value="Impish">Impish (+Def, -SpA)</option>
-							<option value="Jolly">Jolly (+Spe, -SpA)</option>
-							<option value="Lax">Lax (+Def, -SpD)</option>
-							<option value="Lonely">Lonely (+Atk, -Def)</option>
-							<option value="Mild">Mild (+SpA, -Def)</option>
-							<option value="Modest">Modest (+SpA, -Atk)</option>
-							<option value="Naive">Naive (+Spe, -SpD)</option>
-							<option value="Naughty">Naughty (+Atk, -SpD)</option>
-							<option value="Quiet">Quiet (+SpA, -Spe)</option>
-							<option value="Quirky">Quirky</option>
-							<option value="Rash">Rash (+SpA, -SpD)</option>
-							<option value="Relaxed">Relaxed (+Def, -Spe)</option>
-							<option value="Sassy">Sassy (+SpD, -Spe)</option>
-							<option value="Serious">Serious</option>
-							<option value="Timid">Timid (+Spe, -Atk)</option>
+							<option value="Hardy" selected="selected">勤奋</option>
+							<option value="Lonely">怕寂寞 (+攻击, -防御)</option>
+							<option value="Adamant">固执&emsp; (+攻击, -特攻)</option>
+							<option value="Naughty">顽皮&emsp; (+攻击, -特防)</option>
+							<option value="Brave">勇敢&emsp; (+攻击, -速度)</option>
+							<option value="Docile">坦率</option>
+							<option value="Bold">大胆&emsp; (+防御, -攻击)</option>
+							<option value="Impish">淘气&emsp; (+防御, -特攻)</option>
+							<option value="Lax">乐天&emsp; (+防御, -特防)</option>
+							<option value="Relaxed">悠闲&emsp; (+防御, -速度)</option>
+							<option value="Bashful">害羞</option>
+							<option value="Modest">内敛&emsp; (+特攻, -攻击)</option>
+							<option value="Mild">慢吞吞 (+特攻, -防御)</option>
+							<option value="Rash">马虎&emsp; (+特攻, -特防)</option>
+							<option value="Quiet">冷静&emsp; (+特攻, -速度)</option>
+							<option value="Quirky">浮躁</option>
+							<option value="Calm">温和&emsp; (+特防, -攻击)</option>
+							<option value="Gentle">温顺&emsp; (+特防, -防御)</option>
+							<option value="Careful">慎重&emsp; (+特防, -特攻)</option>
+							<option value="Sassy">自大&emsp; (+特防, -速度)</option>
+							<option value="Serious">认真</option>
+							<option value="Timid">胆小&emsp; (+速度, -攻击)</option>
+							<option value="Hasty">急躁&emsp; (+速度, -防御)</option>
+							<option value="Jolly">爽朗&emsp; (+速度, -特攻)</option>
+							<option value="Naive">天真&emsp; (+速度, -特防)</option>
 						</select>
 					</div>
 					<div class="gen-specific g3 g4 g5 g6 g7">
-						<label>Ability</label>
+						<label>特性</label>
 						<select class="ability terrain-trigger calc-trigger"></select>
 					</div>
 					<div class="gen-specific g2 g3 g4 g5 g6 g7">
-						<label>Item</label>
+						<label>物品</label>
 						<select class="item terrain-trigger calc-trigger"></select>
 					</div>
 					<div>
-						<label>Status</label>
+						<label>状态</label>
 						<select class="status calc-trigger">
-							<option value="Healthy">Healthy</option>
-							<option value="Poisoned">Poisoned</option>
-							<option value="Badly Poisoned">Badly Poisoned</option>
-							<option value="Burned">Burned</option>
-							<option value="Paralyzed">Paralyzed</option>
-							<option value="Asleep">Asleep</option>
-							<option value="Frozen">Frozen</option>
+							<option value="Healthy">健康</option>
+							<option value="Poisoned">中毒</option>
+							<option value="Badly Poisoned">中剧毒</option>
+							<option value="Burned">烧伤</option>
+							<option value="Paralyzed">麻痹</option>
+							<option value="Asleep">睡眠</option>
+							<option value="Frozen">冰冻</option>
 						</select>
 						<select class="toxic-counter calc-trigger hide">
 							<option value="1">1/16</option>
@@ -516,7 +519,7 @@
 					</div>
 				</div>
 				<div class="info-group">
-					<label>Current HP</label>
+					<label>当前 HP</label>
 					<input class="current-hp calc-trigger" value="341" />/
 					<span class="max-hp">341</span> (
 					<input class="percent-hp calc-trigger" value="100" />%)
@@ -526,18 +529,18 @@
 					<input class="move-bp calc-trigger" value="50" />
 					<select class="move-type calc-trigger"></select>
 					<select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-						<option value="Physical">Physical</option>
-						<option value="Special">Special</option>
+						<option value="Physical">物理</option>
+						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critL1" />
-					<label class="btn crit-btn" for="critL1" title="Force this attack to be a critical hit?">Crit</label>
+					<label class="btn crit-btn" for="critL1" title="强制此招式命中要害?">致命</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zL1" />
-					<label class="btn x-btn" for="zL1" title="Use the corresponding Z-Move?">Z-Move</label>
+					<label class="btn x-btn gen-specific g7" for="zL1" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
-						<option value="2">2 hits</option>
-						<option value="3">3 hits</option>
-						<option value="4">4 hits</option>
-						<option value="5">5 hits</option>
+						<option value="2">2次命中</option>
+						<option value="3">3次命中</option>
+						<option value="4">4次命中</option>
+						<option value="5">5次命中</option>
 					</select>
 				</div>
 				<div class="move2">
@@ -545,18 +548,18 @@
 					<input class="move-bp calc-trigger" value="0" />
 					<select class="move-type calc-trigger"></select>
 					<select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-						<option value="Physical">Physical</option>
-						<option value="Special">Special</option>
+						<option value="Physical">物理</option>
+						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critL2" />
-					<label class="btn crit-btn" for="critL2" title="Force this attack to be a critical hit?">Crit</label>
+					<label class="btn crit-btn" for="critL2" title="强制此招式命中要害?">致命</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zL2" />
-					<label class="btn x-btn" for="zL2" title="Use the corresponding Z-Move?">Z-Move</label>
+					<label class="btn x-btn gen-specific g7" for="zL2" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
-						<option value="2">2 hits</option>
-						<option value="3">3 hits</option>
-						<option value="4">4 hits</option>
-						<option value="5">5 hits</option>
+						<option value="2">2次命中</option>
+						<option value="3">3次命中</option>
+						<option value="4">4次命中</option>
+						<option value="5">5次命中</option>
 					</select>
 				</div>
 				<div class="move3">
@@ -564,18 +567,18 @@
 					<input class="move-bp calc-trigger" value="0" />
 					<select class="move-type calc-trigger"></select>
 					<select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-						<option value="Physical">Physical</option>
-						<option value="Special">Special</option>
+						<option value="Physical">物理</option>
+						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critL3" />
-					<label class="btn crit-btn" for="critL3" title="Force this attack to be a critical hit?">Crit</label>
+					<label class="btn crit-btn" for="critL3" title="强制此招式命中要害?">致命</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zL3" />
-					<label class="btn x-btn" for="zL3" title="Use the corresponding Z-Move?">Z-Move</label>
+					<label class="btn x-btn gen-specific g7" for="zL3" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
-						<option value="2">2 hits</option>
-						<option value="3">3 hits</option>
-						<option value="4">4 hits</option>
-						<option value="5">5 hits</option>
+						<option value="2">2次命中</option>
+						<option value="3">3次命中</option>
+						<option value="4">4次命中</option>
+						<option value="5">5次命中</option>
 					</select>
 				</div>
 				<div class="move4">
@@ -583,18 +586,18 @@
 					<input class="move-bp calc-trigger" value="0" />
 					<select class="move-type calc-trigger"></select>
 					<select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-						<option value="Physical">Physical</option>
-						<option value="Special">Special</option>
+						<option value="Physical">物理</option>
+						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critL4" />
-					<label class="btn crit-btn" for="critL4" title="Force this attack to be a critical hit?">Crit</label>
+					<label class="btn crit-btn" for="critL4" title="强制此招式命中要害?">致命</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zL4" />
-					<label class="btn x-btn" for="zL4" title="Use the corresponding Z-Move?">Z-Move</label>
+					<label class="btn x-btn gen-specific g7" for="zL4" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
-						<option value="2">2 hits</option>
-						<option value="3">3 hits</option>
-						<option value="4">4 hits</option>
-						<option value="5">5 hits</option>
+						<option value="2">2次命中</option>
+						<option value="3">3次命中</option>
+						<option value="4">4次命中</option>
+						<option value="5">5次命中</option>
 					</select>
 				</div>
 
@@ -603,8 +606,8 @@
 
 		<div class="panel field-info">
 			<div class="panel-heading">
-				<h4 class="panel-title">Field
-					<div id="autolevel">Auto-Level to:
+				<h4 class="panel-title">场地
+					<div id="autolevel">自动等级:
 						<div class="onoffswitch" style="margin-left: 1em">
 							<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="douswitch" checked>
 							<label class="onoffswitch-label" for="douswitch">
@@ -621,92 +624,92 @@
 						<img align="middle" src="image_res/mimikyu.png" alt="Mimikyu da yo" height="42" width="42">
 					</a>
 				</div>
-				<div class="gen-specific g3 g4 g5 g6 g7" style="width: 10.6em; margin: 0 auto 5px;" title="Select the battle format.">
+				<div class="gen-specific g3 g4 g5 g6 g7" style="width: 10.6em; margin: 0 auto 5px;" title="选择战斗模式.">
 					<input class="btn-input calc-trigger" type="radio" name="format" value="Singles" id="singles" checked="checked" />
-					<label class="btn btn-left" for="singles">Singles</label>
+					<label class="btn btn-left" for="singles">单打</label>
 					<input class="btn-input calc-trigger" type="radio" name="format" value="Doubles" id="doubles" />
-					<label class="btn btn-right" for="doubles">Doubles</label>
+					<label class="btn btn-right" for="doubles">双打</label>
 				</div>
-				<div class="gen-specific g6 g7" style="width: 22.0em; margin: 5px auto;" title="Select the current terrain.">
+				<div class="gen-specific g6 g7" style="width: 21em; margin: 5px auto;" title="选择场地状态.">
 					<input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="" id="noterrain" checked="checked"
 					/>
-					<label class="btn btn-small btn-left" for="noterrain">None</label>
+					<label class="btn btn-xsmall btn-left" for="noterrain">无</label>
 					<input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="Electric" id="electric" />
-					<label class="btn btn-small btn-mid" for="electric">Electric</label>
+					<label class="btn btn-small btn-mid" for="electric">电气场地</label>
 					<input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="Grassy" id="grassy" />
-					<label class="btn btn-small btn-mid" for="grassy">Grassy</label>
+					<label class="btn btn-small btn-mid" for="grassy">青草场地</label>
 					<input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="Misty" id="misty" />
-					<label class="btn btn-small btn-mid" for="misty">Misty</label>
+					<label class="btn btn-small btn-mid" for="misty">薄雾场地</label>
 					<input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="Psychic" id="psychic" />
-					<label class="btn btn-small btn-right" for="psychic">Psychic</label>
+					<label class="btn btn-small btn-right" for="psychic">超能场地</label>
 				</div>
 				<hr class="gen-specific g6 g7 g7" />
-				<div class="gen-specific g3 g4 g5 g6 g7 g7" style="width: 22.2em; margin: 5px auto;" title="Select the current weather condition.">
+				<div class="gen-specific g3 g4 g5 g6 g7 g7" style="width: 21em; margin: 5px auto;" title="选择当前的天气状况.">
 					<input class="btn-input calc-trigger" type="radio" name="weather" value="" id="clear" checked="checked" />
-					<label class="btn btn-small btn-left" for="clear">None</label>
+					<label class="btn btn-xsmall btn-left" for="clear">无</label>
 					<input class="btn-input calc-trigger" type="radio" name="weather" value="Sun" id="sun" />
-					<label class="btn btn-small btn-mid" for="sun">Sun</label>
+					<label class="btn btn-small btn-mid" for="sun">阳光</label>
 					<input class="btn-input calc-trigger" type="radio" name="weather" value="Rain" id="rain" />
-					<label class="btn btn-small btn-mid" for="rain">Rain</label>
+					<label class="btn btn-small btn-mid" for="rain">下雨</label>
 					<input class="btn-input calc-trigger" type="radio" name="weather" value="Sand" id="sand" />
-					<label class="btn btn-small btn-mid" for="sand">Sand</label>
+					<label class="btn btn-small btn-mid" for="sand">沙暴</label>
 					<input class="btn-input calc-trigger" type="radio" name="weather" value="Hail" id="hail" />
-					<label class="btn btn-small btn-right" for="hail">Hail</label>
+					<label class="btn btn-small btn-right" for="hail">冰雹</label>
 				</div>
-				<div class="gen-specific g6 g7 g7" style="width: 21.1em; margin: 5px auto;" title="Select the current weather condition.">
+				<div class="gen-specific g6 g7 g7" style="width: 21em; margin: 5px auto;" title="选择当前的天气状况.">
 					<input class="btn-input calc-trigger" type="radio" name="weather" value="Harsh Sun" id="harsh-sun" />
-					<label class="btn btn-wide btn-left" for="harsh-sun">Harsh Sun</label>
+					<label class="btn btn-wide btn-left" for="harsh-sun">日光非常猛烈</label>
 					<input class="btn-input calc-trigger" type="radio" name="weather" value="Heavy Rain" id="heavy-rain" />
-					<label class="btn btn-wide btn-mid" for="heavy-rain">Heavy Rain</label>
+					<label class="btn btn-wide btn-mid" for="heavy-rain">下大雨</label>
 					<input class="btn-input calc-trigger" type="radio" name="weather" value="Strong Winds" id="strong-winds" />
-					<label class="btn btn-xwide btn-right" for="strong-winds">Strong Winds</label>
+					<label class="btn btn-xwide btn-right" for="strong-winds">空气湍流</label>
 				</div>
-				<div class="gen-specific g2 hide" style="width: 17.8em; margin: 0 auto 5px;" title="Select the current weather condition.">
+				<div class="gen-specific g2 hide" style="width: 17.8em; margin: 0 auto 5px;" title="选择当前的天气状况.">
 					<input class="btn-input calc-trigger" type="radio" name="gscWeather" value="" id="gscClear" checked="checked" />
-					<label class="btn btn-small btn-left" for="gscClear">None</label>
+					<label class="btn btn-xsmall btn-left" for="gscClear">无</label>
 					<input class="btn-input calc-trigger" type="radio" name="gscWeather" value="Sun" id="gscSun" />
-					<label class="btn btn-small btn-mid" for="gscSun">Sun</label>
+					<label class="btn btn-small btn-mid" for="gscSun">阳光</label>
 					<input class="btn-input calc-trigger" type="radio" name="gscWeather" value="Rain" id="gscRain" />
-					<label class="btn btn-small btn-mid" for="gscRain">Rain</label>
+					<label class="btn btn-small btn-mid" for="gscRain">下雨</label>
 					<input class="btn-input calc-trigger" type="radio" name="gscWeather" value="Sand" id="gscSand" />
-					<label class="btn btn-small btn-right" for="gscSand">Sand</label>
+					<label class="btn btn-small btn-right" for="gscSand">沙暴</label>
 				</div>
-				<div class="gen-specific g6 g7 g7" style="width: 21.1em; margin: 5px auto;" title="Select the current radiating aura.">
+				<div class="gen-specific g6 g7 g7" style="width: 20.2em; margin: 5px auto;" title="Select the current radiating aura.">
 					<input class="btn-input calc-trigger" type="checkbox" name="aura" value="Aura Break" id="aura-break" />
-					<label class="btn btn-wide btn-left" for="aura-break">Aura Break</label>
+					<label class="btn btn-wide btn-left" for="aura-break">气场破坏</label>
 					<input class="btn-input calc-trigger" type="checkbox" name="aura" value="Fairy Aura" id="fairy-aura" />
-					<label class="btn btn-wide btn-mid" for="fairy-aura">Fairy Aura</label>
+					<label class="btn btn-wide btn-mid" for="fairy-aura">妖精气场</label>
 					<input class="btn-input calc-trigger" type="checkbox" name="aura" value="Dark Aura" id="dark-aura" />
-					<label class="btn btn-wide btn-right" for="dark-aura">Dark Aura</label>
+					<label class="btn btn-wide btn-right" for="dark-aura">暗黑气场</label>
 				</div>
-				<div class="gen-specific g4 g5 g6 g7 g7" style="width: 5.3em; margin: 5px auto;" title="Is gravity in effect?">
+				<div class="gen-specific g4 g5 g6 g7 g7" style="width: 5.3em; margin: 5px auto;" title="重力是否正在生效?">
 					<input class="btn-input calc-trigger" type="checkbox" id="gravity" />
-					<label class="btn" for="gravity">Gravity</label>
+					<label class="btn" for="gravity">重力</label>
 				</div>
 				<hr class="gen-specific g2 g3 g4 g5 g6 g7 g7" />
 
 				<div class="btn-group gen-specific g7">
 					<div class="left" title="Is this Pokemon protecting?">
 						<input class="btn-input calc-trigger" type="checkbox" id="protectL" />
-						<label class="btn btn-xwide" for="protectL">Protect</label>
+						<label class="btn btn-xwide" for="protectL">守住</label>
 					</div>
 					<div class="right" title="Is this Pokemon protecting?">
 						<input class="btn-input calc-trigger" type="checkbox" id="protectR" />
-						<label class="btn btn-xwide" for="protectR">Protect</label>
+						<label class="btn btn-xwide" for="protectR">守住</label>
 					</div>
 				</div>
 				<div class="btn-group gen-specific g4 g5 g6 g7 g7">
-					<div class="left" title="Is Stealth Rock affecting this side of the field?">
+					<div class="left" title="是否有隐形岩位于这一侧场地?">
 						<input class="btn-input calc-trigger" type="checkbox" id="srL" />
-						<label class="btn btn-xwide" for="srL">Stealth Rock</label>
+						<label class="btn btn-xwide" for="srL">隐形岩</label>
 					</div>
-					<div class="right" title="Is Stealth Rock affecting this side of the field?">
+					<div class="right" title="是否有隐形岩位于这一侧场地?">
 						<input class="btn-input calc-trigger" type="checkbox" id="srR" />
-						<label class="btn btn-xwide" for="srR">Stealth Rock</label>
+						<label class="btn btn-xwide" for="srR">隐形岩</label>
 					</div>
 				</div>
 				<div class="btn-group gen-specific g3 g4 g5 g6 g7 g7">
-					<div class="left" title="Are there Spikes on this side of the field?">
+					<div class="left" title="是否有撒菱位于这一侧场地?">
 						<input class="btn-input calc-trigger" type="radio" name="spikesL" value="0" id="spikesL0" checked="checked" />
 						<label class="btn btn-xsmall btn-left" for="spikesL0">0</label>
 						<input class="btn-input calc-trigger" type="radio" name="spikesL" value="1" id="spikesL1" />
@@ -714,9 +717,9 @@
 						<input class="btn-input calc-trigger" type="radio" name="spikesL" value="2" id="spikesL2" />
 						<label class="btn btn-xsmall btn-mid" for="spikesL2">2</label>
 						<input class="btn-input calc-trigger" type="radio" name="spikesL" value="3" id="spikesL3" />
-						<label class="btn btn-wide btn-right" for="spikesL3">3 Spikes</label>
+						<label class="btn btn-wide btn-right" for="spikesL3">3 撒菱</label>
 					</div>
-					<div class="right" title="Are there Spikes on this side of the field?">
+					<div class="right" title="是否有撒菱位于这一侧场地?">
 						<input class="btn-input calc-trigger" type="radio" name="spikesR" value="0" id="spikesR0" checked="checked" />
 						<label class="btn btn-xsmall btn-left" for="spikesR0">0</label>
 						<input class="btn-input calc-trigger" type="radio" name="spikesR" value="1" id="spikesR1" />
@@ -724,125 +727,123 @@
 						<input class="btn-input calc-trigger" type="radio" name="spikesR" value="2" id="spikesR2" />
 						<label class="btn btn-xsmall btn-mid" for="spikesR2">2</label>
 						<input class="btn-input calc-trigger" type="radio" name="spikesR" value="3" id="spikesR3" />
-						<label class="btn btn-wide btn-right" for="spikesR3">3 Spikes</label>
+						<label class="btn btn-wide btn-right" for="spikesR3">3 撒菱</label>
 					</div>
 				</div>
 				<div class="btn-group gen-specific g2">
-					<div class="left" title="Are there Spikes on this side of the field?">
+					<div class="left" title="是否有撒菱位于这一侧场地?">
 						<input class="btn-input calc-trigger" type="checkbox" id="gscSpikesL" />
-						<label class="btn" for="gscSpikesL">Spikes</label>
+						<label class="btn" for="gscSpikesL">撒菱</label>
 					</div>
-					<div class="right" title="Are there Spikes on this side of the field?">
+					<div class="right" title="是否有撒菱位于这一侧场地?">
 						<input class="btn-input calc-trigger" type="checkbox" id="gscSpikesR" />
-						<label class="btn" for="gscSpikesR">Spikes</label>
+						<label class="btn" for="gscSpikesR">撒菱</label>
 					</div>
 				</div>
 				<div class="btn-group">
-					<div class="left" title="Is this Pokemon protected by Reflect and/or Light Screen?">
+					<div class="left" title="此宝可梦是否被反射壁/光墙保护?">
 						<input class="btn-input calc-trigger" type="checkbox" id="reflectL" />
-						<label class="btn btn-left" for="reflectL">Reflect</label>
+						<label class="btn btn-left" for="reflectL">反射壁</label>
 						<input class="btn-input calc-trigger" type="checkbox" id="lightScreenL" />
-						<label class="btn btn-xwide btn-right" for="lightScreenL">Light Screen</label>
+						<label class="btn btn-xwide btn-right" for="lightScreenL">光墙</label>
 					</div>
-					<div class="right" title="Is this Pokemon protected by Reflect and/or Light Screen?">
+					<div class="right" title="此宝可梦是否被反射壁/光墙保护?">
 						<input class="btn-input calc-trigger" type="checkbox" id="reflectR" />
-						<label class="btn btn-left" for="reflectR">Reflect</label>
+						<label class="btn btn-left" for="reflectR">反射壁</label>
 						<input class="btn-input calc-trigger" type="checkbox" id="lightScreenR" />
-						<label class="btn btn-xwide btn-right" for="lightScreenR">Light Screen</label>
+						<label class="btn btn-xwide btn-right" for="lightScreenR">光墙</label>
 					</div>
 				</div>
 				<div class="btn-group gen-specific g2 g3 g4 g5 g6 g7 g7">
-					<div class="left" title="Has this Pokemon been revealed with Foresight or Odor Sleuth?">
+					<div class="left" title="此宝可梦是否受到识破/气味侦测作用?">
 						<input class="btn-input calc-trigger" type="checkbox" id="foresightL" />
-						<label class="btn btn-wide" for="foresightL">Foresight</label>
+						<label class="btn btn-wide" for="foresightL">识破</label>
 					</div>
-					<div class="right" title="Has this Pokemon been revealed with Foresight or Odor Sleuth?">
+					<div class="right" title="此宝可梦是否受到识破/气味侦测作用?">
 						<input class="btn-input calc-trigger" type="checkbox" id="foresightR" />
-						<label class="btn btn-wide" for="foresightR">Foresight</label>
+						<label class="btn btn-wide" for="foresightR">识破</label>
 					</div>
 				</div>
 				<div class="btn-group gen-specific g3 g4 g5 g6 g7 g7">
-					<div class="left" title="Has this Pokemon's power been boosted by an ally's Helping Hand?">
+					<div class="left" title="此宝可梦是否受到友方的帮助加成?">
 						<input class="btn-input calc-trigger" type="checkbox" id="helpingHandL" />
-						<label class="btn btn-xxwide" for="helpingHandL">Helping Hand</label>
+						<label class="btn btn-xxwide" for="helpingHandL">帮助</label>
 					</div>
-					<div class="right" title="Has this Pokemon's power been boosted by an ally's Helping Hand?">
+					<div class="right" title="此宝可梦是否受到友方的帮助加成?">
 						<input class="btn-input calc-trigger" type="checkbox" id="helpingHandR" />
-						<label class="btn btn-xxwide" for="helpingHandR">Helping Hand</label>
+						<label class="btn btn-xxwide" for="helpingHandR">帮助</label>
 					</div>
 				</div>
 				<div class="btn-group gen-specific g7">
-					<div class="left" title="Has this Pokemon's power been boosted by an ally's Battery?">
+					<div class="left" title="此宝可梦是否受到友方的蓄电池加成?">
 						<input class="btn-input calc-trigger" type="checkbox" id="batteryL" />
-						<label class="btn btn-xxwide" for="batteryL">Battery</label>
+						<label class="btn btn-xxwide" for="batteryL">蓄电池</label>
 					</div>
-					<div class="right" title="Has this Pokemon's power been boosted by an ally's Battery?">
+					<div class="right" title="此宝可梦是否受到友方的蓄电池加成?">
 						<input class="btn-input calc-trigger" type="checkbox" id="batteryR" />
-						<label class="btn btn-xxwide" for="batteryR">Battery</label>
+						<label class="btn btn-xxwide" for="batteryR">蓄电池</label>
 					</div>
 				</div>
 				<div class="btn-group gen-specific g5 g6 g7 g7">
-					<div class="left" title="Is this Pokemon protected by an ally's Friend Guard?">
+					<div class="left" title="此宝可梦是否受到友方的友情防守保护?">
 						<input class="btn-input calc-trigger" type="checkbox" id="friendGuardL" />
-						<label class="btn btn-xxwide" for="friendGuardL">Friend Guard</label>
+						<label class="btn btn-xxwide" for="friendGuardL">友情防守</label>
 					</div>
-					<div class="right" title="Is this Pokemon protected by an ally's Friend Guard?">
+					<div class="right" title="此宝可梦是否受到友方的友情防守保护?">
 						<input class="btn-input calc-trigger" type="checkbox" id="friendGuardR" />
-						<label class="btn btn-xxwide" for="friendGuardR">Friend Guard</label>
+						<label class="btn btn-xxwide" for="friendGuardR">友情防守</label>
 					</div>
 				</div>
 
 
 				<div class="btn-group gen-specific g7">
-					<div class="left" title="Has this Pokemon used Extreme Evoboost?">
+					<div class="left" title="此宝可梦是否使用了九彩升华齐聚顶?">
 						<input class="btn-input calc-trigger" type="checkbox" id="evoL" />
 						<label class="btn btn-xwide" for="evoL">
 							<img src="image_res/133.png">
-							<br>Extreme Evoboost</label>
+							<br>九彩升华齐聚顶</label>
 					</div>
-					<div class="right" title="Has this Pokemon used Extreme Evoboost?">
+					<div class="right" title="此宝可梦是否使用了九彩升华齐聚顶?">
 						<input class="btn-input calc-trigger" type="checkbox" id="evoR" />
 						<label class="btn btn-xwide" for="evoR">
 							<img src="image_res/133.png">
-							<br>Extreme Evoboost</label>
+							<br>九彩升华齐聚顶</label>
 					</div>
 				</div>
 				<!--squirrelboy1225's HTML additions are right here-->
-				<p>Please enter your custom set here.</p>
-				Spread Name:
-				<input type="text" id="spreadName" style="width: 60%" value="My Custom Set">
+				<p>请输入你的自定义配置</p>
+				命名:
+				<input type="text" id="spreadName" style="width: 60%" value="我的自定义配置">
 				<br>
 				<textarea rows="9" cols="40" id="customMon"></textarea>
 				<br>
-				<script type="text/javascript" src="script_res/setdex_custom.js"></script>
-				<button type="button" onclick="savecustom()">Save</button>
-				<button type="button" onclick="deletecustom()">Delete Custom Sets</button>
-				<p>You may need to refresh the page after deleting your custom sets. If you encounter a bug, please try deleting your cookies
-					or reporting it!</p>
+				<button type="button" onclick="savecustom()">保存</button>
+				<button type="button" onclick="deletecustom()">删除自定义配置</button>
+				<p>你可能需要在删除你的配置后刷新页面。 如果遇到BUG，请尝试清除Cookies或者汇报错误！</p>
 			</div>
 		</div>
 		<div class="panel poke-info" id="p2">
 			<div class="panel-heading">
-				<h4 class="panel-title">Pokémon 2</h4>
+				<h4 class="panel-title">宝可梦#2</h4>
 			</div>
 			<div class="panel-body">
 				<input type="text" class="set-selector calc-trigger" />
 				<div class="info-group">
 					<div>
-						<label>Type</label>
+						<label>属性</label>
 						<select class="type1 terrain-trigger calc-trigger"></select>
 						<select class="type2 terrain-trigger calc-trigger"></select>
 					</div>
 					<div class="hide">
-						<label>Forme</label>
+						<label>形态</label>
 						<select class="forme calc-trigger"></select>
 					</div>
 					<div>
-						<label>Level</label>
+						<label>等级</label>
 						<input class="level calc-trigger" value="100" />
 					</div>
 					<div class="hide">
-						<label>Weight (kg)</label>
+						<label>重量 (kg)</label>
 						<input class="weight calc-trigger" value="10.0" />
 					</div>
 				</div>
@@ -850,10 +851,10 @@
 					<table>
 						<tr>
 							<th></th>
-							<th>Base</th>
-							<th class="gen-specific g3 g4 g5 g6 g7">IVs</th>
-							<th class="gen-specific g3 g4 g5 g6 g7">EVs</th>
-							<th class="gen-specific g1 g2 hide">DVs</th>
+							<th>种族值</th>
+							<th class="gen-specific g3 g4 g5 g6 g7">个体值</th>
+							<th class="gen-specific g3 g4 g5 g6 g7">努力值</th>
+							<th class="gen-specific g1 g2 hide">动态值</th>
 							<th></th>
 							<th></th>
 						</tr>
@@ -880,7 +881,7 @@
 						</tr>
 						<tr class="at">
 							<td>
-								<label>Attack</label>
+								<label>攻击</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -917,7 +918,7 @@
 						</tr>
 						<tr class="df">
 							<td>
-								<label>Defense</label>
+								<label>防御</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -954,7 +955,7 @@
 						</tr>
 						<tr class="sa gen-specific g2 g3 g4 g5 g6 g7">
 							<td>
-								<label>Sp. Atk</label>
+								<label>特攻</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -991,7 +992,7 @@
 						</tr>
 						<tr class="sd gen-specific g2 g3 g4 g5 g6 g7">
 							<td>
-								<label>Sp. Def</label>
+								<label>特防</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -1028,7 +1029,7 @@
 						</tr>
 						<tr class="sl gen-specific g1 hide">
 							<td>
-								<label>Special</label>
+								<label>特殊</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -1059,7 +1060,7 @@
 						</tr>
 						<tr class="sp">
 							<td>
-								<label>Speed</label>
+								<label>速度</label>
 							</td>
 							<td>
 								<input class="base calc-trigger" value="100" />
@@ -1107,53 +1108,53 @@
 				</div>
 				<div class="info-group info-selectors">
 					<div class="gen-specific g3 g4 g5 g6 g7">
-						<label>Nature</label>
+						<label>性格</label>
 						<select class="nature calc-trigger">
-							<option value="Adamant">Adamant (+Atk, -SpA)</option>
-							<option value="Bashful">Bashful</option>
-							<option value="Bold">Bold (+Def, -Atk)</option>
-							<option value="Brave">Brave (+Atk, -Spe)</option>
-							<option value="Calm">Calm (+SpD, -Atk)</option>
-							<option value="Careful">Careful (+SpD, -SpA)</option>
-							<option value="Docile">Docile</option>
-							<option value="Gentle">Gentle (+SpD, -Def)</option>
-							<option value="Hardy" selected="selected">Hardy</option>
-							<option value="Hasty">Hasty (+Spe, -Def)</option>
-							<option value="Impish">Impish (+Def, -SpA)</option>
-							<option value="Jolly">Jolly (+Spe, -SpA)</option>
-							<option value="Lax">Lax (+Def, -SpD)</option>
-							<option value="Lonely">Lonely (+Atk, -Def)</option>
-							<option value="Mild">Mild (+SpA, -Def)</option>
-							<option value="Modest">Modest (+SpA, -Atk)</option>
-							<option value="Naive">Naive (+Spe, -SpD)</option>
-							<option value="Naughty">Naughty (+Atk, -SpD)</option>
-							<option value="Quiet">Quiet (+SpA, -Spe)</option>
-							<option value="Quirky">Quirky</option>
-							<option value="Rash">Rash (+SpA, -SpD)</option>
-							<option value="Relaxed">Relaxed (+Def, -Spe)</option>
-							<option value="Sassy">Sassy (+SpD, -Spe)</option>
-							<option value="Serious">Serious</option>
-							<option value="Timid">Timid (+Spe, -Atk)</option>
+							<option value="Hardy" selected="selected">勤奋</option>
+							<option value="Lonely">怕寂寞 (+攻击, -防御)</option>
+							<option value="Adamant">固执&emsp; (+攻击, -特攻)</option>
+							<option value="Naughty">顽皮&emsp; (+攻击, -特防)</option>
+							<option value="Brave">勇敢&emsp; (+攻击, -速度)</option>
+							<option value="Docile">坦率</option>
+							<option value="Bold">大胆&emsp; (+防御, -攻击)</option>
+							<option value="Impish">淘气&emsp; (+防御, -特攻)</option>
+							<option value="Lax">乐天&emsp; (+防御, -特防)</option>
+							<option value="Relaxed">悠闲&emsp; (+防御, -速度)</option>
+							<option value="Bashful">害羞</option>
+							<option value="Modest">内敛&emsp; (+特攻, -攻击)</option>
+							<option value="Mild">慢吞吞 (+特攻, -防御)</option>
+							<option value="Rash">马虎&emsp; (+特攻, -特防)</option>
+							<option value="Quiet">冷静&emsp; (+特攻, -速度)</option>
+							<option value="Quirky">浮躁</option>
+							<option value="Calm">温和&emsp; (+特防, -攻击)</option>
+							<option value="Gentle">温顺&emsp; (+特防, -防御)</option>
+							<option value="Careful">慎重&emsp; (+特防, -特攻)</option>
+							<option value="Sassy">自大&emsp; (+特防, -速度)</option>
+							<option value="Serious">认真</option>
+							<option value="Timid">胆小&emsp; (+速度, -攻击)</option>
+							<option value="Hasty">急躁&emsp; (+速度, -防御)</option>
+							<option value="Jolly">爽朗&emsp; (+速度, -特攻)</option>
+							<option value="Naive">天真&emsp; (+速度, -特防)</option>
 						</select>
 					</div>
 					<div class="gen-specific g3 g4 g5 g6 g7">
-						<label>Ability</label>
+						<label>特性</label>
 						<select class="ability terrain-trigger calc-trigger"></select>
 					</div>
 					<div class="gen-specific g2 g3 g4 g5 g6 g7">
-						<label>Item</label>
+						<label>物品</label>
 						<select class="item terrain-trigger calc-trigger"></select>
 					</div>
 					<div>
-						<label>Status</label>
+						<label>状态</label>
 						<select class="status calc-trigger">
-							<option value="Healthy">Healthy</option>
-							<option value="Poisoned">Poisoned</option>
-							<option value="Badly Poisoned">Badly Poisoned</option>
-							<option value="Burned">Burned</option>
-							<option value="Paralyzed">Paralyzed</option>
-							<option value="Asleep">Asleep</option>
-							<option value="Frozen">Frozen</option>
+							<option value="Healthy">健康</option>
+							<option value="Poisoned">中毒</option>
+							<option value="Badly Poisoned">中剧毒</option>
+							<option value="Burned">烧伤</option>
+							<option value="Paralyzed">麻痹</option>
+							<option value="Asleep">睡眠</option>
+							<option value="Frozen">冰冻</option>
 						</select>
 						<select class="toxic-counter calc-trigger hide">
 							<option value="1">1/16</option>
@@ -1175,7 +1176,7 @@
 					</div>
 				</div>
 				<div class="info-group">
-					<label>Current HP</label>
+					<label>当前 HP</label>
 					<input class="current-hp calc-trigger" value="341" />/
 					<span class="max-hp">341</span> (
 					<input class="percent-hp calc-trigger" value="100" />%)
@@ -1185,18 +1186,18 @@
 					<input class="move-bp calc-trigger" value="50" />
 					<select class="move-type calc-trigger"></select>
 					<select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-						<option value="Physical">Physical</option>
-						<option value="Special">Special</option>
+						<option value="Physical">物理</option>
+						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critR1" />
-					<label class="btn crit-btn" for="critR1" title="Force this attack to be a critical hit?">Crit</label>
+					<label class="btn crit-btn" for="critR1" title="强制此招式命中要害?">致命</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zR1" />
-					<label class="btn x-btn" for="zR1" title="Use the corresponding Z-Move?">Z-Move</label>
+					<label class="btn x-btn gen-specific g7" for="zR1" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
-						<option value="2">2 hits</option>
-						<option value="3">3 hits</option>
-						<option value="4">4 hits</option>
-						<option value="5">5 hits</option>
+						<option value="2">2次命中</option>
+						<option value="3">3次命中</option>
+						<option value="4">4次命中</option>
+						<option value="5">5次命中</option>
 					</select>
 				</div>
 				<div class="move2">
@@ -1204,18 +1205,18 @@
 					<input class="move-bp calc-trigger" value="0" />
 					<select class="move-type calc-trigger"></select>
 					<select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-						<option value="Physical">Physical</option>
-						<option value="Special">Special</option>
+						<option value="Physical">物理</option>
+						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critR2" />
-					<label class="btn crit-btn" for="critR2" title="Force this attack to be a critical hit?">Crit</label>
+					<label class="btn crit-btn" for="critR2" title="强制此招式命中要害?">致命</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zR2" />
-					<label class="btn x-btn" for="zR2" title="Use the corresponding Z-Move?">Z-Move</label>
+					<label class="btn x-btn gen-specific g7" for="zR2" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
-						<option value="2">2 hits</option>
-						<option value="3">3 hits</option>
-						<option value="4">4 hits</option>
-						<option value="5">5 hits</option>
+						<option value="2">2次命中</option>
+						<option value="3">3次命中</option>
+						<option value="4">4次命中</option>
+						<option value="5">5次命中</option>
 					</select>
 				</div>
 				<div class="move3">
@@ -1223,18 +1224,18 @@
 					<input class="move-bp calc-trigger" value="0" />
 					<select class="move-type calc-trigger"></select>
 					<select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-						<option value="Physical">Physical</option>
-						<option value="Special">Special</option>
+						<option value="Physical">物理</option>
+						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critR3" />
-					<label class="btn crit-btn" for="critR3" title="Force this attack to be a critical hit?">Crit</label>
+					<label class="btn crit-btn" for="critR3" title="强制此招式命中要害?">致命</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zR3" />
-					<label class="btn x-btn" for="zR3" title="Use the corresponding Z-Move?">Z-Move</label>
+					<label class="btn x-btn gen-specific g7" for="zR3" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
-						<option value="2">2 hits</option>
-						<option value="3">3 hits</option>
-						<option value="4">4 hits</option>
-						<option value="5">5 hits</option>
+						<option value="2">2次命中</option>
+						<option value="3">3次命中</option>
+						<option value="4">4次命中</option>
+						<option value="5">5次命中</option>
 					</select>
 				</div>
 				<div class="move4">
@@ -1242,18 +1243,18 @@
 					<input class="move-bp calc-trigger" value="0" />
 					<select class="move-type calc-trigger"></select>
 					<select class="move-cat calc-trigger gen-specific g4 g5 g6 g7">
-						<option value="Physical">Physical</option>
-						<option value="Special">Special</option>
+						<option value="Physical">物理</option>
+						<option value="Special">特殊</option>
 					</select>
 					<input class="move-crit calc-trigger btn-input" type="checkbox" id="critR4" />
-					<label class="btn crit-btn" for="critR4" title="Force this attack to be a critical hit?">Crit</label>
+					<label class="btn crit-btn" for="critR4" title="强制此招式命中要害?">致命</label>
 					<input class="move-z calc-trigger btn-input" type="checkbox" id="zR4" />
-					<label class="btn x-btn" for="zR4" title="Use the corresponding Z-Move?">Z-Move</label>
+					<label class="btn x-btn gen-specific g7" for="zR4" title="使用对应的Z招式?">Z招式</label>
 					<select class="move-hits calc-trigger hide">
-						<option value="2">2 hits</option>
-						<option value="3">3 hits</option>
-						<option value="4">4 hits</option>
-						<option value="5">5 hits</option>
+						<option value="2">2次命中</option>
+						<option value="3">3次命中</option>
+						<option value="4">4次命中</option>
+						<option value="5">5次命中</option>
 					</select>
 				</div>
 			</div>
@@ -1273,6 +1274,7 @@
 <script type="text/javascript" src="script_res/translate/translate_langs.js"></script>
 <script type="text/javascript" src="script_res/select2.min.js"></script>
 <script type="text/javascript" src="script_res/pokedex.js"></script>
+<script type="text/javascript" src="script_res/setdex_custom.js"></script>
 <script type="text/javascript" src="script_res/setdex_showdown.js"></script>
 <script type="text/javascript" src="script_res/setdex_globalLink.js"></script>
 <script type="text/javascript" src="script_res/setdex_nuggetBridge.js"></script>
