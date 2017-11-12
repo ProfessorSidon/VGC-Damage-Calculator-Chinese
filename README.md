@@ -10,6 +10,6 @@ Written by Honko. VGC 2015 Update by Tapin and Firestorm. VGC 2016 and onwards d
 
 The calculator is accessible online via http://trainertower.com/damagecalc
 
-
+MEI
 -------------------
 由MEI进行中文翻译
