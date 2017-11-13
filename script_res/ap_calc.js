@@ -416,11 +416,14 @@ function setSelectValueIfValid(select, value, fallback) {
 }
 
 $(".forme").change(function () {
-	var altForme = pokedex[$(this).val()],
+	var key = $(this).val(),
+		altForme = pokedex[key],
 		container = $(this).closest(".info-group").siblings(),
 		fullSetName = container.find(".select2-chosen").first().text(),
 		pokemonName = fullSetName.substring(0, fullSetName.indexOf(" (")),
 		setName = fullSetName.substring(fullSetName.indexOf("(") + 1, fullSetName.lastIndexOf(")"));
+	
+	if(fullSetName=="") return;
 
 	$(this).parent().siblings().find(".type1").val(altForme.t1);
 	$(this).parent().siblings().find(".type2").val(typeof altForme.t2 != "undefined" ? altForme.t2 : "");
@@ -434,8 +437,8 @@ $(".forme").change(function () {
 
 	if (abilities.indexOf(altForme.ab) > -1) {
 		container.find(".ability").val(altForme.ab);
-	} else if (setName !== "空白配置" && abilities.indexOf(setdex[pokemonName][setName].ability) > -1) {
-		container.find(".ability").val(setdex[pokemonName][setName].ability);
+	} else if (setName !== "空白配置" && abilities.indexOf(setdex[key][setName].ability) > -1) {
+		container.find(".ability").val(setdex[key][setName].ability);
 	} else {
 		container.find(".ability").val("");
 	}
@@ -449,7 +452,7 @@ $(".forme").change(function () {
 		container.find(".item").prop("disabled", false);
 	}
 
-	if (pokemonName === "Darmanitan") {
+	if (key === "Darmanitan") {
 		container.find(".percent-hp").val($(this).val() === "Darmanitan-Z" ? "50" : "100").keyup();
 	}
 });
