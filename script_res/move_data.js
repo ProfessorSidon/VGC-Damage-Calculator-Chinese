@@ -3003,7 +3003,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	'Land\'s Wrath': {
 		zp: 185
 	},
-	'Light Of Ruin': {
+	'Light of Ruin': {
 		zp: 200
 	},
 	'Origin Pulse': {
