@@ -2040,6 +2040,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		category: 'Special',
 		type: 'Dragon',
 		bp: 110,
+		isSound: true,
 		isSpread: true,
 		zp: 185
 	},
@@ -2960,6 +2961,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		zp: 180
 	},
 	'Flying Press': {
+		bp: 100,
 		zp: 170
 	},
 	'Phantom Force': {
@@ -3001,7 +3003,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	'Land\'s Wrath': {
 		zp: 185
 	},
-	'Light of Ruin': {
+	'Light Of Ruin': {
 		zp: 200
 	},
 	'Origin Pulse': {
@@ -3061,6 +3063,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		bp: 185,
 		type: 'Dragon',
 		category: 'Special',
+		isSound: true,
 		isSpread: true
 	},
 });
