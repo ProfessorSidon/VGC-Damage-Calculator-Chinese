@@ -27,6 +27,12 @@ $(".level").keyup(function () {
 	calcHP(poke);
 	calcStats(poke);
 });
+
+$(".max").bind("keyup change", function() {
+    var poke = $(this).closest(".poke-info");
+    calcHP(poke);
+    calcStats(poke);
+});
 $(".nature").bind("keyup change", function () {
 	calcStats($(this).closest(".poke-info"));
 });
@@ -647,6 +653,7 @@ function Pokemon(pokeInfo) {
 	this.maxHP = ~~pokeInfo.find(".hp .total").text();
 	this.curHP = ~~pokeInfo.find(".current-hp").val();
 	this.HPEVs = ~~pokeInfo.find(".hp .evs").val();
+    this.isDynamax = pokeInfo.find(".max").prop("checked");
 	this.rawStats = {};
 	this.boosts = {};
 	this.stats = {};
@@ -680,6 +687,7 @@ function getMoveDetails(moveInfo) {
 		category: moveInfo.find(".move-cat").val(),
 		isCrit: moveInfo.find(".move-crit").prop("checked"),
 		isZ: moveInfo.find(".move-z").prop("checked"),
+        isMax: moveInfo.find(".move-max").prop("checked"),
 		hits: (defaultDetails.isMultiHit && !moveInfo.find(".move-z").prop("checked")) ? ~~moveInfo.find(".move-hits").val() : (defaultDetails.isTwoHit && !moveInfo.find(".move-z").prop("checked")) ? 2 : 1
 	});
 }
@@ -824,6 +832,19 @@ $(".gen").change(function () {
             calculateAllMoves = CALCULATE_ALL_MOVES_SM;
 			calcHP = CALC_HP_ADV;
 			calcStat = CALC_STAT_ADV;
+            break;
+        case 8:
+            pokedex = POKEDEX_SS;
+            setdex = SETDEX_SS;
+            typeChart = TYPE_CHART_XY;
+            moves = MOVES_SS;
+            items = ITEMS_SS;
+            abilities = ABILITIES_SS;
+            STATS = STATS_GSC;
+            calculateAllMoves = CALCULATE_ALL_MOVES_SM;
+            calcHP = CALC_HP_ADV;
+            calcStat = CALC_STAT_ADV;
+            break;
 	}
 	clearField();
 	$(".gen-specific.g" + gen).show();
@@ -936,8 +957,8 @@ function getSelectOptions(arr, sort, defaultIdx, transFunc) {
 }
 
 $(document).ready(function () {
-	$("#gen7").prop("checked", true);
-	$("#gen7").change();
+    $("#gen8").prop("checked", true);
+    $("#gen8").change();
 	$(".terrain-trigger").bind("change keyup", getTerrainEffects);
 	$(".calc-trigger").bind("change keyup", calculate);
 	$(".set-selector").select2({
