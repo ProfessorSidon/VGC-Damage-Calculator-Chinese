@@ -9333,7 +9333,7 @@ var SETDEX_TT2018 = {
 				"Shadow Claw",
 				"Shadow Sneak",
 				"Play Rough",
-				"Wood Hammer"
+                "Let\'s Snuggle Forever"
 			]
 		}
 	},
@@ -10245,7 +10245,10 @@ var SETDEX_TT2018 = {
 				"sd": 4,
 				"sp": 0
 			},
-			"nature": "Adamant",
+          "ivs": {
+            "sp": 0
+          },
+          "nature": "Brave",
 			"ability": "",
 			"item": "",
 			"moves": [

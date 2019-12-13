@@ -307,6 +307,7 @@ $(".move-selector").change(function () {
 	} else {
 		moveGroupObj.children(".move-hits").hide();
 	}
+    moveGroupObj.children(".move-z").prop("checked", false);
 });
 
 // auto-update set details on select
@@ -419,7 +420,7 @@ function showFormes(formeObj, setName, pokemonName, pokemon) {
 }
 
 function setSelectValueIfValid(select, value, fallback) {
-	select.val(select.children("option[value='" + value + "']").length !== 0 ? value : fallback);
+    select.val(select.children('option[value="' + value + '"]').length !== 0 ? value : fallback);
 }
 
 $(".forme").change(function () {
