@@ -3044,7 +3044,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
         zp: 175,
         isSpread: true
     },
-    'Light of Ruin':{
+  'Light of Ruin':{
 		zp: 200
 	},
 	'Origin Pulse': {
@@ -3056,7 +3056,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	'Dragon Ascent': {
 		zp: 190
 	},
-    'Electroweb':{
+  'Electroweb':{
         zp: 100
     },
 	'Mind Blown': {
