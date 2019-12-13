@@ -9541,7 +9541,7 @@ var SETDEX_TT2019 = {
                 "Shadow Claw",
                 "Shadow Sneak",
                 "Play Rough",
-                "Let\'s Snuggle Forever"
+                "Wood Hammer"
             ]
         }
     },

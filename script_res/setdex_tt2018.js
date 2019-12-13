@@ -9333,7 +9333,7 @@ var SETDEX_TT2018 = {
 				"Shadow Claw",
 				"Shadow Sneak",
 				"Play Rough",
-                "Let\'s Snuggle Forever"
+        "Wood Hammer"
 			]
 		}
 	},
