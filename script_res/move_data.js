@@ -1613,6 +1613,13 @@ var MOVES_BW = $.extend(true, {}, MOVES_DPP, {
 		makesContact: true,
 		alwaysCrit: true
 	},
+    'Struggle Bug': {
+        bp: 30,
+        type: "Bug",
+        category: "Special",
+        isSpread: "True",
+        hasSecondaryEffect: "True"
+    },
 	'Synchronoise': {
 		bp: 70,
 		type: 'Psychic',
@@ -1847,6 +1854,7 @@ var MOVES_XY = $.extend(true, {}, MOVES_BW, {
 		isMLG: 'true'
 	},
 	'Storm Throw': { bp: 60 },
+    'Struggle Bug': { bp: 50 },
 	'Surf': { bp: 90 },
 	'Synchronoise': { bp: 120 },
 	'Thief': { bp: 60 },
@@ -3013,6 +3021,9 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	'Power-Up Punch': {
 		zp: 100
 	},
+    'Struggle Bug':{
+        zp: 100
+    },
 	'Oblivion Wing': {
 		zp: 160
 	},
