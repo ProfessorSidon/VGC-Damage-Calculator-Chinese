@@ -12,10 +12,10 @@ function CALCULATE_ALL_MOVES_SM(p1, p2, field) {
 	checkSeeds(p2, field);
 	p1.stats[DF] = getModifiedStat(p1.rawStats[DF], p1.boosts[DF]);
 	p1.stats[SD] = getModifiedStat(p1.rawStats[SD], p1.boosts[SD]);
-	p1.stats[SP] = getFinalSpeed(p1, field.getWeather(), field.getTerrain());
+    p1.stats[SP] = getFinalSpeedSM(p1, field.getWeather(), field.getTerrain());
 	p2.stats[DF] = getModifiedStat(p2.rawStats[DF], p2.boosts[DF]);
 	p2.stats[SD] = getModifiedStat(p2.rawStats[SD], p2.boosts[SD]);
-	p2.stats[SP] = getFinalSpeed(p2, field.getWeather(), field.getTerrain());
+    p2.stats[SP] = getFinalSpeedSM(p2, field.getWeather(), field.getTerrain());
 	checkIntimidate(p1, p2);
 	checkIntimidate(p2, p1);
 	checkDownload(p1, p2);
@@ -83,7 +83,7 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
 		defAbility = "";
 		description.attackerAbility = attacker.ability;
 	}
-	else if (move.name === "Moongeist Beam" || move.name === "Sunsteel Strike")
+        else if(["Moongeist Beam", "Sunsteel Strike", "Photon Geyser", "Searing Sunraze Smash", "Menacing Moonraze Maelstrom", "Light That Burns the Sky"].indexOf(move.name) !== -1)
 		defAbility = ""; //works as a mold breaker
     }
 
@@ -349,12 +349,12 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
 	} else if (((attacker.item === "Adamant Orb" && attacker.name === "Dialga") ||
 		(attacker.item === "Lustrous Orb" && attacker.name === "Palkia") ||
             (attacker.item === "Griseous Orb" && attacker.name === "Giratina-O")) ||
-            (attacker.item === "Soul Dew" && (attacker.name === "Latios" || attacker.name === "Latias") && gen === 7) &&
+            (attacker.item === "Soul Dew" && (attacker.name === "Latios" || attacker.name === "Latias")) &&
 		(move.type === attacker.type1 || move.type === attacker.type2)) {
 		bpMods.push(0x1333);
 		description.attackerItem = attacker.item;
 	} else if (attacker.item === move.type + " Gem") {
-		bpMods.push(gen >= 6 ? 0x14CD : 0x1800);
+        bpMods.push(0x14CD);
 		description.attackerItem = attacker.item;
 	}
 
@@ -363,7 +363,7 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
 		description.moveBP = move.bp / 2;
 		description.weather = field.weather;
     } //technicially Me First would sandwich between these
-    else if (move.name === "Knock Off" && gen >= 6  && !(defender.item === "" ||
+    else if (move.name === "Knock Off" && !(defender.item === "" ||
 		(defender.name === "Giratina-O" && defender.item === "Griseous Orb") ||
 		(defender.name.indexOf("Arceus") !== -1 && defender.item.indexOf("Plate") !== -1))) {
 		bpMods.push(0x1800);
@@ -409,8 +409,7 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
     //Technically Mud Sport/Water Sport here next
 
 	basePower = Math.max(1, pokeRound(basePower * chainMods(bpMods) / 0x1000));
-	if (gen == 6) basePower = attacker.isChild ? basePower / 2 : basePower;
-	else if (gen == 7) basePower = attacker.isChild ? basePower / 4 : basePower;
+    basePower = attacker.isChild ? basePower / 4 : basePower;
 
 	////////////////////////////////
 	////////// (SP)ATTACK //////////
@@ -489,8 +488,7 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
 		(attacker.item === "Light Ball" && attacker.name === "Pikachu")) {
 		atMods.push(0x2000);
 		description.attackerItem = attacker.item;
-    } else if ((attacker.item === "Soul Dew" && (attacker.name === "Latios" || attacker.name === "Latias") && move.category === "Special") && gen < 7 ||
-		(attacker.item === "Choice Band" && move.category === "Physical") ||
+    } else if ((attacker.item === "Choice Band" && move.category === "Physical") ||
 		(attacker.item === "Choice Specs" && move.category === "Special")) {
 		atMods.push(0x1800);
 		description.attackerItem = attacker.item;
@@ -538,8 +536,7 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
         description.defenderAbility = defAbility;
 	}
 
-    if ((defender.item === "Soul Dew" && (defender.name === "Latios" || defender.name === "Latias") && !hitsPhysical) && gen < 7||
-        (defender.item === "Assault Vest" && !hitsPhysical) ||
+    if ((defender.item === "Assault Vest" && !hitsPhysical) ||
         defender.item === "Eviolite") {
 		dfMods.push(0x1800);
 		description.defenderItem = defender.item;
@@ -571,7 +568,7 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
 		description.weather = field.weather;
 	}
 	if (isCritical) {
-		baseDamage = Math.floor(baseDamage * (gen >= 6 ? 1.5 : 2));
+        baseDamage = Math.floor(baseDamage * 1.5);
 		description.isCritical = isCritical;
 	}
 	// the random factor is applied between the crit mod and the stab mod, so don't apply anything below this until we're inside the loop
@@ -591,10 +588,10 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
 	description.isBurned = applyBurn;
 	var finalMods = [];
 	if (field.isReflect && move.category === "Physical" && !isCritical) {
-        finalMods.push(field.format !== "Singles" ? gen >= 6 ? 0xAAC : 0xA8F : 0x800);
+        finalMods.push(field.format !== "Singles" ? 0xAAC : 0x800);
 		description.isReflect = true;
 	} else if (field.isLightScreen && move.category === "Special" && !isCritical) {
-        finalMods.push(field.format !== "Singles" ? gen >= 6 ? 0xAAC : 0xA8F : 0x800);
+        finalMods.push(field.format !== "Singles" ? 0xAAC : 0x800);
 		description.isLightScreen = true;
 	}
     if (attacker.ability === "Neuroforce" && typeEffectiveness > 1) {
@@ -653,7 +650,7 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
 			child.boosts[AT]++;
 			child.stats[AT] = getModifiedStat(child.rawStats[AT], child.boosts[AT]);
 		}
-		childDamage = getDamageResult(child, defender, move, field).damage;
+        childDamage = GET_DAMAGE_SM(child, defender, move, field).damage;
 		description.attackerAbility = attacker.ability;
 	}
 
@@ -816,7 +813,7 @@ function getModifiedStat(stat, mod) {
 			: stat;
 }
 
-function getFinalSpeed(pokemon, weather, terrain) {
+function getFinalSpeedSM(pokemon, weather, terrain) {
 	var speed = getModifiedStat(pokemon.rawStats[SP], pokemon.boosts[SP]);
     var otherSpeedMods = 1;
 	if (pokemon.item === "Choice Scarf") {
