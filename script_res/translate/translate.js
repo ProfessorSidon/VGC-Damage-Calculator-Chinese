@@ -179,6 +179,12 @@ function translate_pokemon(name) {
 		let name0 = name.substring(0, idx);
 		return translate_pokemon(name0) + '-阿罗拉'
 	}
+	
+	idx = name.indexOf('-Galar');
+	if (idx != -1) {
+		let name0 = name.substring(0, idx);
+		return translate_pokemon(name0) + '-伽勒尔'
+	}
 
 	formes = [{
 		name: 'Arceus',
@@ -317,6 +323,11 @@ function translate_pokemon(name) {
 			'Lunala': '拂晓之翼',
 			'Ultra': '究极',
 		}
+	}, {
+		name: 'Eiscue',
+		types: {
+			'Noice': '解冻形态',
+		},
 	}];
 	idx = name.indexOf('-');
 	if (idx != -1) {
