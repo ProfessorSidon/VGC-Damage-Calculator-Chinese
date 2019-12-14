@@ -3019,7 +3019,21 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	'Land\'s Wrath': {
 		zp: 185
 	},
-	'Light of Ruin': {
+    'Thousand Arrows':{
+        category: 'Physical',
+        type: 'Ground',
+        bp: 90,
+        zp: 180,
+        isSpread: true
+    },
+    'Thousand Waves':{
+        category: 'Physical',
+        type: 'Ground',
+        bp: 90,
+        zp: 175,
+        isSpread: true
+    },
+    'Light of Ruin':{
 		zp: 200
 	},
 	'Origin Pulse': {

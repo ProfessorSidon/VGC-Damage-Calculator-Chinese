@@ -130,8 +130,8 @@ function getDamageResult(attacker, defender, move, field) {
 		}
 	}
 
-	var typeEffect1 = getMoveEffectiveness(move, defender.type1, attacker.ability === "Scrappy" || field.isForesight, field.isGravity);
-	var typeEffect2 = defender.type2 ? getMoveEffectiveness(move, defender.type2, attacker.ability === "Scrappy" || field.isForesight, field.isGravity) : 1;
+    var typeEffect1 = getMoveEffectiveness(move, defender.type1, defender.type2, attacker.ability === "Scrappy" || field.isForesight, field.isGravity);
+    var typeEffect2 = defender.type2 ? getMoveEffectiveness(move, defender.type2, defender.type1, attacker.ability === "Scrappy" || field.isForesight, field.isGravity) : 1;
 	var typeEffectiveness = typeEffect1 * typeEffect2;
 
 	if (typeEffectiveness === 0) {
@@ -148,7 +148,7 @@ function getDamageResult(attacker, defender, move, field) {
 		description.defenderAbility = defAbility;
 		return { "damage": [0], "description": buildDescription(description) };
 	}
-	if (move.type === "Ground" && !field.isGravity && defender.item === "Air Balloon") {
+    if (move.type === "Ground" && !field.isGravity && defender.item === "Air Balloon" && attacker.move != "Thousand Arrows") {
 		description.defenderItem = defender.item;
 		return { "damage": [0], "description": buildDescription(description) };
 	}
@@ -356,6 +356,9 @@ function getDamageResult(attacker, defender, move, field) {
 		description.attackerAbility = attacker.ability;
 	} else if (attacker.ability === "Tough Claws" && move.makesContact) { //boosts by 1.3x for contact moves, apparently
 		bpMods.push(0x14CD);
+		description.attackerAbility = attacker.ability;
+    } else if (attacker.ability === "Neuroforce" && typeEffectiveness > 1) {
+		bpMods.push(0x1400);
 		description.attackerAbility = attacker.ability;
 	} else if (defender.ability === "Fluffy" && move.makesContact) {
 		bpMods.push(0x800);
@@ -762,11 +765,15 @@ function chainMods(mods) {
 	return M;
 }
 
-function getMoveEffectiveness(move, type, isGhostRevealed, isGravity) {
+function getMoveEffectiveness(move, type, otherType, isGhostRevealed, isGravity) {
 	if (isGhostRevealed && type === "Ghost" && (move.type === "Normal" || move.type === "Fighting")) {
 		return 1;
 	} else if (isGravity && type === "Flying" && move.type === "Ground") {
 		return 1;
+    } else if(!isGravity && type== "Flying" && move.type === "Ground" && move.name == "Thousand Arrows") {
+        return 1;
+    } else if(!isGravity && otherType == "Flying" && move.type === "Ground" && move.name == "Thousand Arrows") {
+        return 1;
 	} else if (move.name === "Freeze-Dry" && type === "Water") {
 		return 2;
 	} else if (move.name === "Flying Press") {
