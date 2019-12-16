@@ -328,6 +328,12 @@ function translate_pokemon(name) {
 		types: {
 			'Noice': '解冻形态',
 		},
+	}, {
+		name: 'Indeedee',
+		types: {
+			'F': '雌',
+			'M': '雄',
+		}
 	}];
 	idx = name.indexOf('-');
 	if (idx != -1) {
