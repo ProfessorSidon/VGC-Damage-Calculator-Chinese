@@ -920,8 +920,8 @@ function getSetOptions() {
 				var setName = setNames[j];
 				setOptions.push({
 					pokemon: pokeName,
-					set: setName,
-					text: translate_pokemon(pokeName) + " (" + setName + ")",
+					set: translate_set(setName),
+					text: translate_pokemon(pokeName) + " (" + translate_set(setName) + ")",
 					id: pokeName + " (" + setName + ")"
 				});
 			}

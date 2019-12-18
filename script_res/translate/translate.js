@@ -377,6 +377,13 @@ function translate_type(name) {
 	return TYPENAMES[name] || name;
 }
 
+function translate_set(setName) {
+    if (setName.toLowerCase().startsWith("default set")) {
+        return "默认配置"
+    }
+    return setName;
+}
+
 		// (function(){
 		// 	$('td').each(function(){$(this).html(translate($(this).html()));})
 		// })();
