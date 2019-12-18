@@ -120,11 +120,12 @@ function getKOChanceText(damage, move, defender, field, isBadDreams) {
 			toxicCounter = defender.toxicCounter;
 		}
 	} else if (defender.status === 'Burned') {
+        var burnDmgDivider = (gen >= 7) ? 16 : 8;
 		if (defender.ability === 'Heatproof') {
-			eot -= Math.floor(defender.maxHP / 16);
+			eot -= Math.floor(defender.maxHP / burnDmgDivider / 2);
 			eotText.push('减少的烧伤伤害');
 		} else if (defender.ability !== 'Magic Guard') {
-			eot -= Math.floor(defender.maxHP / 8);
+			eot -= Math.floor(defender.maxHP / burnDmgDivider);
 			eotText.push('烧伤伤害');
 		}
 	} else if (defender.status === 'Asleep' && isBadDreams && defender.ability !== 'Magic Guard') {
