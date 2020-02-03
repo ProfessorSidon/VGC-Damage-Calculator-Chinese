@@ -12,6 +12,6 @@ Written by Honko. VGC 2015 Update by Tapin and Firestorm. VGC 2016 and onwards d
 
 The calculator is accessible online via https://damagecalc.trainertower.com/. This page may take up to 24 hours to push any commits from this repo due to TT's workflow.
 
-MEI
+中文翻译
 -------------------
-由MEI进行中文翻译
+由MEI进行中文翻译，hdongZ，professorSidon进行Gen8翻译。
