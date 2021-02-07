@@ -1299,6 +1299,11 @@ var MOVES_DPP = $.extend(true, {}, MOVES_ADV, {
         category: 'Physical',
         isBullet: true,
     },
+    'Roar of Time': {
+        bp: 150,
+        type: 'Dragon',
+        category: 'Special',
+    },
 });
 
 delete MOVES_DPP['Razor Leaf'];
@@ -1484,6 +1489,12 @@ var MOVES_BW = $.extend(true, {}, MOVES_DPP, {
     'Hurricane': {
         bp: 120,
         type: 'Flying',
+        category: 'Special',
+        hasSecondaryEffect: true
+    },
+    'Ice Burn': {
+        bp: 140,
+        type: 'Ice',
         category: 'Special',
         hasSecondaryEffect: true
     },
@@ -1847,7 +1858,7 @@ var MOVES_XY = $.extend(true, {}, MOVES_BW, {
     },
     'Muddy Water': { bp: 90 },
     'Nature Power': {
-        bp: 80,
+        bp: 1,
         type: 'Normal',
         category: 'Special',
         hasSecondaryEffect: true,
@@ -3232,6 +3243,12 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
         zp: 175,
     },
     'Rock Wrecker': {
+        zp: 200,
+    },
+    'Roar of Time': {
+        zp: 200,
+    },
+    'Ice Burn': {
         zp: 200,
     },
 });

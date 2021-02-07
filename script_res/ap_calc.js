@@ -153,7 +153,8 @@ $(".percent-hp").keyup(function() {
 });
 
 var lastAura = [false, false, false]
-$(".ability").bind("keyup change", function() {
+$(".ability").bind("keyup change", function () {
+    autoSetNeutralGas();
     $(this).closest(".poke-info").find(".move-hits").val($(this).val() === 'Skill Link' ? 5 : 3);
     autoSetAura()
     autoSetTerrain()
@@ -173,18 +174,19 @@ function autoSetAura()
 {
     var ability1 = $("#p1 .ability").val()
     var ability2 = $("#p2 .ability").val()
-    if(ability1 == "Fairy Aura" || ability2 == "Fairy Aura" )
-        $("input:checkbox[id='fairy-aura']").prop("checked", true)
-    else
-        $("input:checkbox[id='fairy-aura']").prop("checked", lastAura[0])
-    if(ability1 == "Dark Aura" || ability2 == "Dark Aura")
-        $("input:checkbox[id='dark-aura']").prop("checked", true)
-    else
-        $("input:checkbox[id='dark-aura']").prop("checked", lastAura[1])
-    if(ability1 == "Aura Break" || ability2 == "Aura Break" )
-        $("input:checkbox[id='aura-break']").prop("checked", true)
-    else
-        $("input:checkbox[id='aura-break']").prop("checked", lastAura[2])
+
+        if (ability1 == "Fairy Aura" || ability2 == "Fairy Aura")
+            $("input:checkbox[id='fairy-aura']").prop("checked", true)
+        else
+            $("input:checkbox[id='fairy-aura']").prop("checked", lastAura[0])
+        if (ability1 == "Dark Aura" || ability2 == "Dark Aura")
+            $("input:checkbox[id='dark-aura']").prop("checked", true)
+        else
+            $("input:checkbox[id='dark-aura']").prop("checked", lastAura[1])
+        if (ability1 == "Aura Break" || ability2 == "Aura Break")
+            $("input:checkbox[id='aura-break']").prop("checked", true)
+        else
+            $("input:checkbox[id='aura-break']").prop("checked", lastAura[2])
 }
 function autoSetTerrain()
 {
@@ -269,12 +271,32 @@ function autosetWeather(ability, i) {
     $("input:radio[name='weather'][value='" + newWeather + "']").prop("checked", true);
 }
 
+function autoSetNeutralGas() {
+    var ability1 = $("#p1 .ability").val()
+    var ability2 = $("#p2 .ability").val()
+    if ((ability1 == "Neutralizing Gas" || ability2 == "Neutralizing Gas")) {
+        $("input:checkbox[id='neutralizingGas']").prop("checked", true);
+    }
+}
+
 $("#p1 .item").bind("keyup change", function() {
     autosetStatus("#p1", $(this).val());
+    autoSetType("#p1", $(this).val());
 });
 $("#p2 .item").bind("keyup change", function() {
     autosetStatus("#p2", $(this).val());
+    autoSetType("#p2", $(this).val());
 });
+
+function autoSetType(p, item) {
+    var ab = $(p + " .ability").val();
+    if (ab == "RKS System" && item.indexOf("Memory") != -1) {
+        $(p + " .type1").val(getMemoryType(item));
+    }
+    else if (ab == "Multitype" && item.indexOf("Plate") != -1) {
+        $(p + " .type1").val(getItemBoostType(item));
+    }
+}
 
 var lastManualStatus = {"#p1":"Healthy", "#p2":"Healthy"};
 var lastAutoStatus = {"#p1":"Healthy", "#p2":"Healthy"};
@@ -328,6 +350,7 @@ $(".move-selector").change(function() {
     if (moveName=="Dragon Darts") moveGroupObj.children(".move-hits2").show();
     else moveGroupObj.children(".move-hits2").hide();
     moveGroupObj.children(".move-z").prop("checked", false);
+    moveGroupObj.children(".move-max").prop("checked", false);
 });
 
 // auto-update set details on select
@@ -374,7 +397,7 @@ $(".set-selector").change(function() {
                 pokeObj.find("." + STATS[i] + " .dvs").val((set.dvs && typeof set.dvs[STATS[i]] !== "undefined") ? set.dvs[STATS[i]] : 15);
             }
             setSelectValueIfValid(pokeObj.find(".nature"), set.nature, "Hardy");
-            setSelectValueIfValid(abilityObj, pokemon.ab ? pokemon.ab : set.ability, "");
+            setSelectValueIfValid(abilityObj, set.ability, pokemon.ab ? pokemon.ab : set.ability, "");
             setSelectValueIfValid(itemObj, set.item, "");
             for (i = 0; i < 4; i++) {
                 moveObj = pokeObj.find(".move" + (i+1) + " select.move-selector");
@@ -408,6 +431,7 @@ $(".set-selector").change(function() {
         } else {
             formeObj.hide();
         }
+        pokeObj.find(".max").prop("checked", false);
         calcHP(pokeObj);
         calcStats(pokeObj);
         calcEvTotal(pokeObj);
@@ -601,7 +625,8 @@ $(".result-move").change(function() {
             if (result.parentDamage) {
                 $("#damageValues").text("(First hit: " + result.parentDamage.join(", ") +
                     "; Second hit: " + result.childDamage.join(", ") + ")");
-            } else {
+            }
+            else {
                 $("#damageValues").text("(" + result.damage.join(", ") + ")");
             }
             checkCrit(result.crit)
@@ -731,15 +756,22 @@ function Field() {
     var isLightScreen = [$("#lightScreenL").prop("checked"), $("#lightScreenR").prop("checked")];
     var isForesight = [$("#foresightL").prop("checked"), $("#foresightR").prop("checked")];
     var isHelpingHand = [$("#helpingHandR").prop("checked"), $("#helpingHandL").prop("checked")]; // affects attacks against opposite side
-    var isFriendGuard = [$("#friendGuardL").prop("checked"), $("#friendGuardR").prop("checked")];
-    var isBattery = [$("#batteryR").prop("checked"), $("#batteryL").prop("checked")];
-    var isPowerSpot = [$("#powerSpotR").prop("checked"), $("#powerSpotL").prop("checked")]; // affects attacks against opposite side
-    var isSteelySpirit = [$("#steelySpiritR").prop("checked"), $("#steelySpiritL").prop("checked")]; // affects attacks against opposite side
-    var isNeutralizingGas = $("#neutralizingGas").prop("checked");
     var isGMaxField = [$("#gMaxFieldL").prop("checked"), $("#gMaxFieldR").prop("checked")];
-    var isFlowerGiftSpD = [$("#flowerGiftL").prop("checked"), $("#flowerGiftR").prop("checked")];
-    var isFlowerGiftAtk = [$("#flowerGiftR").prop("checked"), $("#flowerGiftL").prop("checked")];
+    var isNeutralizingGas = $("#neutralizingGas").prop("checked");
+    var isFriendGuard = (!isNeutralizingGas) ? [$("#friendGuardL").prop("checked"), $("#friendGuardR").prop("checked")] : false;
+    var isBattery = (!isNeutralizingGas) ? [$("#batteryR").prop("checked"), $("#batteryL").prop("checked")] : false;
+    var isPowerSpot = (!isNeutralizingGas) ? [$("#powerSpotR").prop("checked"), $("#powerSpotL").prop("checked")] : false; // affects attacks against opposite side
+    var isSteelySpirit = (!isNeutralizingGas) ? [$("#steelySpiritR").prop("checked"), $("#steelySpiritL").prop("checked")] : false; // affects attacks against opposite side
+    var isFlowerGiftSpD = (!isNeutralizingGas) ? [$("#flowerGiftL").prop("checked"), $("#flowerGiftR").prop("checked")] : false;
+    var isFlowerGiftAtk = (!isNeutralizingGas) ? [$("#flowerGiftR").prop("checked"), $("#flowerGiftL").prop("checked")] : false;
+    var isTailwind = [$("#tailwindL").prop("checked"), $("#tailwindR").prop("checked")];
 
+    this.getNeutralGas = function () {
+        return isNeutralizingGas;
+    }
+    this.getTailwind = function (i) {
+        return isTailwind[i];
+    }
     this.getWeather = function() {
         return weather;
     };
@@ -749,12 +781,12 @@ function Field() {
     this.clearWeather = function() {
         weather = "";
     };
-    this.getSide = function(i) {
-        return new Side(format, terrain, weather, isGravity, isSR[i], spikes[i], isReflect[i], isLightScreen[i], isForesight[i], isHelpingHand[i], isFriendGuard[i], isBattery[i], isProtect[i], isPowerSpot[i], isSteelySpirit[i], isNeutralizingGas, isGMaxField[i], isFlowerGiftSpD[i], isFlowerGiftAtk[i]);
+    this.getSide = function (i) {
+        return new Side(format, terrain, weather, isGravity, isSR[i], spikes[i], isReflect[i], isLightScreen[i], isForesight[i], isHelpingHand[i], isFriendGuard[i], isBattery[i], isProtect[i], isPowerSpot[i], isSteelySpirit[i], isNeutralizingGas, isGMaxField[i], isFlowerGiftSpD[i], isFlowerGiftAtk[i], isTailwind[i]);
     };
 }
 
-function Side(format, terrain, weather, isGravity, isSR, spikes, isReflect, isLightScreen, isForesight, isHelpingHand, isFriendGuard, isBattery, isProtect, isPowerSpot, isSteelySpirit, isNeutralizingGas, isGmaxField, isFlowerGiftSpD, isFlowerGiftAtk) {
+function Side(format, terrain, weather, isGravity, isSR, spikes, isReflect, isLightScreen, isForesight, isHelpingHand, isFriendGuard, isBattery, isProtect, isPowerSpot, isSteelySpirit, isNeutralizingGas, isGmaxField, isFlowerGiftSpD, isFlowerGiftAtk, isTailwind) {
     this.format = format;
     this.terrain = terrain;
     this.weather = weather;
@@ -774,6 +806,7 @@ function Side(format, terrain, weather, isGravity, isSR, spikes, isReflect, isLi
     this.isGMaxField = isGmaxField;
     this.isFlowerGiftSpD = isFlowerGiftSpD;
     this.isFlowerGiftAtk = isFlowerGiftAtk;
+    this.isTailwind = isTailwind;
 }
 
 var gen, pokedex, setdex, typeChart, moves, abilities, items, STATS, calculateAllMoves, calcHP, calcStat;
@@ -923,6 +956,8 @@ function clearField() {
     $("#gMaxHazardR").prop("checked", false);
     $("#flowerGiftL").prop("checked", false);
     $("#flowerGiftR").prop("checked", false);
+    $("#tailwindL").prop("checked", false);
+    $("#tailwindR").prop("checked", false);
 }
 
 function getSetOptions() {
