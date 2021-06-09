@@ -208,10 +208,6 @@ var ITEMS_SS = ITEMS_SM.concat([
 
 ]);
 
-var ITEMS_SS = ITEMS_SM.concat([
-
-]);
-
 function getItemBoostType(item) {
     switch (item) {
         case 'Draco Plate':

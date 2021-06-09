@@ -274,67 +274,81 @@ var TYPE_CHART_RBY = {
 var TYPE_CHART_GSC = $.extend(true, {}, TYPE_CHART_RBY, {
     Normal: {
         Dark: 1,
-        Steel: 0.5
+        Steel: 0.5,
+        Typeless: 1
     },
     Grass: {
         Dark: 1,
-        Steel: 0.5
+        Steel: 0.5,
     },
     Fire: {
         Dark: 1,
-        Steel: 2
+        Steel: 2,
+        Typeless: 1
     },
     Water: {
         Dark: 1,
-        Steel: 1
+        Steel: 1,
+        Typeless: 1
     },
     Electric: {
         Dark: 1,
-        Steel: 1
+        Steel: 1,
+        Typeless: 1
     },
     Ice: {
         Fire: 0.5,
         Dark: 1,
-        Steel: 0.5
+        Steel: 0.5,
+        Typeless: 1
     },
     Flying: {
         Dark: 1,
-        Steel: 0.5
+        Steel: 0.5,
+        Typeless: 1
     },
     Bug: {
         Poison: 0.5,
         Dark: 2,
-        Steel: 0.5
+        Steel: 0.5,
+        Typeless: 1
     },
     Poison: {
         Bug: 1,
         Dark: 1,
-        Steel: 0
+        Steel: 0,
+        Typeless: 1
     },
     Ground: {
         Dark: 1,
-        Steel: 2
+        Steel: 2,
+        Typeless: 1
     },
     Rock: {
         Dark: 1,
-        Steel: 0.5
+        Steel: 0.5,
+        Typeless: 1
     },
     Fighting: {
         Dark: 2,
-        Steel: 2
+        Steel: 2,
+        Typeless: 1
     },
     Psychic: {
         Dark: 0,
-        Steel: 0.5
+        Steel: 0.5,
+        Typeless: 1
     },
     Ghost: {
         Psychic: 2,
         Dark: 0.5,
-        Steel: 0.5
+        Steel: 0.5,
+        Typeless: 1
     },
     Dragon: {
         Dark: 1,
-        Steel: 0.5
+        Steel: 0.5,
+        Typeless: 1
     },
     Dark: {
         category: 'Special',
@@ -354,7 +368,8 @@ var TYPE_CHART_GSC = $.extend(true, {}, TYPE_CHART_RBY, {
         Ghost: 2,
         Dragon: 1,
         Dark: 0.5,
-        Steel: 0.5
+        Steel: 0.5,
+        Typeless: 1
     },
     Steel: {
         category: 'Physical',
@@ -374,7 +389,8 @@ var TYPE_CHART_GSC = $.extend(true, {}, TYPE_CHART_RBY, {
         Ghost: 1,
         Dragon: 1,
         Dark: 1,
-        Steel: 0.5
+        Steel: 0.5,
+        Typeless: 1
     },
 
     Typeless: {
@@ -395,7 +411,8 @@ var TYPE_CHART_GSC = $.extend(true, {}, TYPE_CHART_RBY, {
         Ghost: 1,
         Dragon: 1,
         Dark: 1,
-        Steel: 1
+        Steel: 1,
+        Typeless: 1
     }
 });
 
@@ -471,6 +488,7 @@ var TYPE_CHART_XY = $.extend(true, {}, TYPE_CHART_GSC, {
         Dragon: 2,
         Dark: 2,
         Steel: 0.5,
+        Typeless: 1,
         Fairy: 1
     },
     Typeless: {

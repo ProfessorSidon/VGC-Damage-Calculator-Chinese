@@ -60,7 +60,7 @@ th {
     position: relative;
     cursor: pointer;
     color : #d4d4d4;
-	background : #323232;
+    background : #323232;
     margin: -1px -3px 0;
     display: inline-block;
     width: 5em;
@@ -173,16 +173,16 @@ th {
 .poke-info input:not([type]), .poke-info input[type="text"], .poke-info span :not(.select2-chosen) {
     display: inline-block;
     width: 2.5em;
-	background: #323232;
-	color: #d4d4d4 ;
-	border: #525252 solid 1px;
+    background: #323232;
+    color: #d4d4d4 ;
+    border: #525252 solid 1px;
 }
 .poke-info input[type="number"] {
     display: inline-block;
     width: 3em;
-	background: #323232;
-	color: #d4d4d4 ;
-	border: #525252 solid 1px;
+    background: #323232;
+    color: #d4d4d4 ;
+    border: #525252 solid 1px;
 }
 
 .info-group {

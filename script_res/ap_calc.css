@@ -285,12 +285,12 @@ select.toxic-counter {
 .onoffswitch-inner:before {
     content: "50";
     padding-left: 10px;
-    background-color: #1e3864; color: #fff;
+    background-color: #192121; color: #fff;
 }
 .onoffswitch-inner:after {
     content: "100";
     padding-right: 10px;
-    background-color: #F3F3F3; color: #333333;
+    background-color: #F3F3F3; color: #31313a;
     text-align: right;
 }
 .onoffswitch-switch {
