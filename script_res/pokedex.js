@@ -11971,6 +11971,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "sd": 95,
       "sp": 95
     },
+    "ab": "RKS System",
     "w": 100.5,
   },
   "Minior": {
@@ -12605,7 +12606,7 @@ var POKEDEX_SS = $.extend(true, {}, POKEDEX_SM, {
       "sp": 60
     },
     "w": 16,
-    
+    "ab": "Neutralizing Gas",
   },
   "Mr. Mime-Galar": {
     "t1": "Ice",
@@ -13794,8 +13795,8 @@ var POKEDEX_SS = $.extend(true, {}, POKEDEX_SM, {
     "w": 110,
     "ab": "Intrepid Sword",
     "formes": [
-      "Zacian",
-      "Zacian-Crowned"
+      "Zacian-Crowned",
+      "Zacian"
     ]
   },
   "Zacian-Crowned": {
@@ -13826,8 +13827,8 @@ var POKEDEX_SS = $.extend(true, {}, POKEDEX_SM, {
     "w": 210,
     "ab": "Dauntless Shield",
     "formes": [
-      "Zamazenta",
-      "Zamazenta-Crowned"
+      "Zamazenta-Crowned",
+      "Zamazenta"
     ]
   },
   "Zamazenta-Crowned": {
@@ -14163,6 +14164,8 @@ var POKEDEX_SS = $.extend(true, {}, POKEDEX_SM, {
   "Metagross": { "formes": null },
   "Latias": { "formes": null },
   "Latios": { "formes": null },
+  "Kyogre": { "formes": null },
+  "Groudon": { "formes": null },
   "Rayquaza": { "formes": null },
   "Lopunny": { "formes": null },
   "Garchomp": { "formes": null },
@@ -14171,7 +14174,12 @@ var POKEDEX_SS = $.extend(true, {}, POKEDEX_SM, {
   "Gallade": { "formes": null },
   "Audino": { "formes": null },
   "Diancie": { "formes": null },
+  "Necrozma-Dawn-Wings": { "formes": null },
+  "Necrozma-Dusk-Mane": { "formes": null },
+  "Primal Kyogre": { "isAlternateForme": true },
+  "Primal Groudon": { "isAlternateForme": true },
 
+  "Weezing": {"ab": "Neutralizing Gas"},
   "Sneasel": { "ab": "Inner Focus" },
   "Snorunt": { "ab": "Inner Focus" },
   "Glalie": { "ab": "Inner Focus" },
