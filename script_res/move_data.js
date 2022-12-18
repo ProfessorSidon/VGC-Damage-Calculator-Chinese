@@ -1902,27 +1902,6 @@ var MOVES_XY = $.extend(true, {}, MOVES_BW, {
 		isSpread: 'false',
 		isMLG: 'true'
 	},
-	'Fissure': {
-		bp: 0,
-		type: 'Earth',
-		category: 'Physical',
-		isSpread: 'false',
-		isMLG: 'true'
-	},
-	'Guillotine': {
-		bp: 0,
-		type: 'Normal',
-		category: 'Physical',
-		isSpread: 'false',
-		isMLG: 'true'
-	},
-	'Horn Drill': {
-		bp: 0,
-		type: 'Normal',
-		category: 'Physical',
-		isSpread: 'false',
-		isMLG: 'true'
-	},
 	'Storm Throw': { bp: 60 },
     'Struggle Bug': { bp: 50 },
 	'Surf': { bp: 90 },
@@ -1995,8 +1974,7 @@ var ZMOVES_LOOKUP = {
 	'Dark': 'Black Hole Eclipse', 'Psychic': 'Shattered Psyche', 'Fighting': 'All-Out Pummeling',
 	'Steel': 'Corkscrew Crash', 'Ice': 'Subzero Slammer', 'Ground': 'Tectonic Rage',
 	'Rock': 'Continental Crush', 'Bug': 'Savage Spin-Out', 'Fairy': 'Twinkle Tackle',
-	'Flying': 'Supersonic Skystrike', 'Dragon': 'Devastating Drake', 'Poison': 'Acid Downpour'
-};
+    'Flying':'Supersonic Skystrike','Dragon':'Devastating Drake','Poison':'Acid Downpour'};
 
 var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	'Bolt Strike': { zp: 195 },
@@ -3151,7 +3129,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
         zp: 175,
         isSpread: true
     },
-  'Light of Ruin':{
+    'Light Of Ruin':{
 		zp: 200
 	},
 	'Origin Pulse': {
