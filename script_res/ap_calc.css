@@ -46,7 +46,7 @@ th {
     width: 30em;
 }
 .field-info {
-    width: 28em;
+    width: 30em;
 }
 .generations {
     padding-left: 1em;
@@ -192,7 +192,7 @@ th {
 select.toxic-counter {
     width: 4.5em;
 }
-.move-selector, .move-bp, .move-type, .move-cat, .move-hits {
+.move-selector, .move-bp, .move-type, .move-cat, .move-hits, .move-double, .move-hits2 {
     font-size: 0.9em;
 }
 .move-selector {

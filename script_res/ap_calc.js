@@ -7,6 +7,14 @@ var bounds = {
 	"dvs": [0, 15],
 	"move-bp": [0, 999]
 };
+isCrit = false;
+center_images = ["image_res/toge_normal.png", "image_res/toge_crit.png"]
+function checkCrit(crit) {
+    if(crit != isCrit) {
+        isCrit = crit;
+        $("#toge").attr("src", center_images[+isCrit])
+    }
+}
 for (var bounded in bounds) {
 	if (bounds.hasOwnProperty(bounded)) {
 		attachValidation(bounded, bounds[bounded][0], bounds[bounded][1]);
@@ -313,6 +321,10 @@ $(".move-selector").change(function () {
 	} else {
 		moveGroupObj.children(".move-hits").hide();
 	}
+    if (move.canDouble) moveGroupObj.children(".move-double").show();
+    else moveGroupObj.children(".move-double").hide();
+    if (moveName=="Dragon Darts") moveGroupObj.children(".move-hits2").show();
+    else moveGroupObj.children(".move-hits2").hide();
     moveGroupObj.children(".move-z").prop("checked", false);
 });
 
@@ -540,6 +552,7 @@ function calculate() {
 		result.damageText = minDamage + "-" + maxDamage + " (" + minPercent + " - " + maxPercent + "%)";
 		result.koChanceText = p1.moves[i].bp === 0 ? '<a href="https://bangumi.bilibili.com/anime/5761/play#97555">皮卡丘！加油！(避雷针？不存在的)</a>'
 			: getKOChanceText(result.damage, p1.moves[i], p2, field.getSide(1), p1.ability === 'Bad Dreams');
+        result.crit = p1.moves[i].isCrit
 		if (p1.moves[i].isMLG) {
 			result.koChanceText = "<a href = 'https://www.youtube.com/watch?v=iD92h-M474g'>it's a one-hit KO!</a>"; //dank memes
 		}
@@ -558,6 +571,7 @@ function calculate() {
 		result.damageText = minDamage + "-" + maxDamage + " (" + minPercent + " - " + maxPercent + "%)";
           result.koChanceText = p2.moves[i].bp === 0 ? '<a href="https://www.youtube.com/watch?v=7u6kMjWt1Rk&feature=youtu.be">you wanna dance with me?!</a>'
 			: getKOChanceText(result.damage, p2.moves[i], p1, field.getSide(0), p2.ability === 'Bad Dreams');
+        result.crit = p2.moves[i].isCrit
 		if (p2.moves[i].isMLG) {
 			result.koChanceText = "<a href = 'https://www.youtube.com/watch?v=iD92h-M474g'>it's a one-hit KO!</a>";
 		}
@@ -573,6 +587,7 @@ function calculate() {
 	} else {
 		stickyMoves.setSelectedMove(bestResult.prop("id"));
 	}
+    temp_crit = bestResult.crit;
 	bestResult.prop("checked", true);
 	bestResult.change();
 	$("#resultHeaderL").text(translate_pokemon(p1.name) + "的招式 (选择以查看详细结果)");
@@ -590,6 +605,7 @@ $(".result-move").change(function () {
 			} else {
 				$("#damageValues").text("(" + result.damage.join(", ") + ")");
 			}
+            checkCrit(result.crit)
 		}
 	}
 });
@@ -688,7 +704,12 @@ function getMoveDetails(moveInfo) {
 		isCrit: moveInfo.find(".move-crit").prop("checked"),
 		isZ: moveInfo.find(".move-z").prop("checked"),
         isMax: moveInfo.find(".move-max").prop("checked"),
-		hits: (defaultDetails.isMultiHit && !moveInfo.find(".move-z").prop("checked")) ? ~~moveInfo.find(".move-hits").val() : (defaultDetails.isTwoHit && !moveInfo.find(".move-z").prop("checked")) ? 2 : 1
+        hits: (defaultDetails.isMultiHit && !moveInfo.find(".move-z").prop("checked") && !moveInfo.find(".move-max").prop("checked")) ? ~~moveInfo.find(".move-hits").val()
+            : (moveName == "Dragon Darts" && !moveInfo.find(".move-z").prop("checked") && !moveInfo.find(".move-max").prop("checked")) ? ~~moveInfo.find(".move-hits2").val()
+            : (defaultDetails.isTwoHit && !moveInfo.find(".move-z").prop("checked") && !moveInfo.find(".move-max").prop("checked")) ? 2
+            : (defaultDetails.isThreeHit && !moveInfo.find(".move-z").prop("checked") && !moveInfo.find(".move-max").prop("checked")) ? 3
+            : 1,
+        isDouble: (defaultDetails.canDouble && !moveInfo.find(".move-z").prop("checked") && !moveInfo.find(".move-max").prop("checked")) ? ~~moveInfo.find(".move-double").val() : 0
 	});
 }
 
@@ -713,6 +734,12 @@ function Field() {
 	var isHelpingHand = [$("#helpingHandR").prop("checked"), $("#helpingHandL").prop("checked")]; // affects attacks against opposite side
 	var isFriendGuard = [$("#friendGuardL").prop("checked"), $("#friendGuardR").prop("checked")];
 	var isBattery = [$("#batteryR").prop("checked"), $("#batteryL").prop("checked")];
+    var isPowerSpot = [$("#powerSpotR").prop("checked"), $("#powerSpotL").prop("checked")]; // affects attacks against opposite side
+    var isSteelySpirit = [$("#steelySpiritR").prop("checked"), $("#steelySpiritL").prop("checked")]; // affects attacks against opposite side
+    var isNeutralizingGas = $("#neutralizingGas").prop("checked");
+    var isGMaxField = [$("#gMaxFieldL").prop("checked"), $("#gMaxFieldR").prop("checked")];
+    var isFlowerGiftSpD = [$("#flowerGiftL").prop("checked"), $("#flowerGiftR").prop("checked")];
+    var isFlowerGiftAtk = [$("#flowerGiftR").prop("checked"), $("#flowerGiftL").prop("checked")];
 
 	this.getWeather = function () {
 		return weather;
@@ -724,11 +751,11 @@ function Field() {
 		weather = "";
 	};
 	this.getSide = function (i) {
-		return new Side(format, terrain, weather, isGravity, isSR[i], spikes[i], isReflect[i], isLightScreen[i], isForesight[i], isHelpingHand[i], isFriendGuard[i], isBattery[i], isProtect[i]);
+        return new Side(format, terrain, weather, isGravity, isSR[i], spikes[i], isReflect[i], isLightScreen[i], isForesight[i], isHelpingHand[i], isFriendGuard[i], isBattery[i], isProtect[i], isPowerSpot[i], isSteelySpirit[i], isNeutralizingGas, isGMaxField[i], isFlowerGiftSpD[i], isFlowerGiftAtk[i]);
 	};
 }
 
-function Side(format, terrain, weather, isGravity, isSR, spikes, isReflect, isLightScreen, isForesight, isHelpingHand, isFriendGuard, isBattery, isProtect) {
+function Side(format, terrain, weather, isGravity, isSR, spikes, isReflect, isLightScreen, isForesight, isHelpingHand, isFriendGuard, isBattery, isProtect, isPowerSpot, isSteelySpirit, isNeutralizingGas, isGmaxField, isFlowerGiftSpD, isFlowerGiftAtk) {
 	this.format = format;
 	this.terrain = terrain;
 	this.weather = weather;
@@ -742,6 +769,12 @@ function Side(format, terrain, weather, isGravity, isSR, spikes, isReflect, isLi
 	this.isFriendGuard = isFriendGuard;
 	this.isBattery = isBattery;
 	this.isProtect = isProtect;
+    this.isPowerSpot = isPowerSpot;
+    this.isSteelySpirit = isSteelySpirit;
+    this.isNeutralizingGas = isNeutralizingGas;
+    this.isGMaxField = isGmaxField;
+    this.isFlowerGiftSpD = isFlowerGiftSpD;
+    this.isFlowerGiftAtk = isFlowerGiftAtk;
 }
 
 var gen, pokedex, setdex, typeChart, moves, abilities, items, STATS, calculateAllMoves, calcHP, calcStat;
@@ -884,6 +917,13 @@ function clearField() {
 	$("#helpingHandR").prop("checked", false);
 	$("#friendGuardL").prop("checked", false);
 	$("#friendGuardR").prop("checked", false);
+    $("#neutralizingGas").prop("checked", false);
+    $("#steelySpiritL").prop("checked", false);
+    $("#steelySpiritR").prop("checked", false);
+    $("#gMaxHazardL").prop("checked", false);
+    $("#gMaxHazardR").prop("checked", false);
+    $("#flowerGiftL").prop("checked", false);
+    $("#flowerGiftR").prop("checked", false);
 }
 
 function getSetOptions() {
