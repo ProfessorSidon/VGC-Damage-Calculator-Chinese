@@ -1,7 +1,12 @@
 var SETDEX_SS = {};
+var SETDEX_CUSTOM_SS = {};
 
 var components = [
-    SETDEX_VGC2021
+    SETDEX_VGC2022_S13,
+    SETDEX_VGC2022,
+    SETDEX_VGC2021,
+    SETDEX_VGC2021_S10,
+    SETDEX_VGC_BFD,
 ];
 
 for (var i=0; i<components.length; i++) {
@@ -15,12 +20,14 @@ for (var i=0; i<components.length; i++) {
     }
 }
 
-var reloadXYScript = function()
+var reloadSSScript = function()
 {
-  console.log(SETDEX_CUSTOM);
+  console.log(SETDEX_CUSTOM_SS);
     components = [
+    SETDEX_VGC2022,
     SETDEX_VGC2021,
-    SETDEX_CUSTOM,
+    SETDEX_VGC2021_S10,
+    SETDEX_CUSTOM_SS,
 ];
 
 for (var i=0; i<components.length; i++) {

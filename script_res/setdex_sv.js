@@ -1,8 +1,8 @@
-var SETDEX_SM = {};
-var SETDEX_CUSTOM_SM = {};
+var SETDEX_SV = {};
+var SETDEX_CUSTOM_SV = {};
 
 var components = [
-    SETDEX_TT2019
+    SETDEX_VGC2023,
 ];
 
 for (var i=0; i<components.length; i++) {
@@ -10,18 +10,18 @@ for (var i=0; i<components.length; i++) {
     if (sourceDex) {
         for (var p in sourceDex) {
             if (sourceDex.hasOwnProperty(p)) {
-                SETDEX_SM[p] = $.extend(SETDEX_SM[p], sourceDex[p])
+                SETDEX_SV[p] = $.extend(SETDEX_SV[p], sourceDex[p])
             }
         }
     }
 }
 
-var reloadSMScript = function()
+var reloadSVScript = function()
 {
-  console.log(SETDEX_CUSTOM_SM);
+  console.log(SETDEX_CUSTOM_SV);
     components = [
-    SETDEX_TT2019,
-    SETDEX_CUSTOM_SM,
+    SETDEX_VGC2023,
+    SETDEX_CUSTOM_SV,
 ];
 
 for (var i=0; i<components.length; i++) {
@@ -29,7 +29,7 @@ for (var i=0; i<components.length; i++) {
     if (sourceDex) {
         for (var p in sourceDex) {
             if (sourceDex.hasOwnProperty(p)) {
-                SETDEX_SM[p] = $.extend(SETDEX_SM[p], sourceDex[p])
+                SETDEX_SV[p] = $.extend(SETDEX_SV[p], sourceDex[p])
             }
         }
     }

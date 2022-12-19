@@ -1,8 +1,8 @@
 /*here are the changes for dark mode */
 
 #switchTheme{
-    margin-left : 90px;
-    width: 100px;
+	margin-left : 90px;
+	width: 100px;
 }
 
 body.dark, html.dark {
@@ -14,6 +14,17 @@ body.dark, html.dark {
     background-color: #192121;
     border-bottom: 5px solid #103a52;
 }
+
+/*.dark .panel[id="p1"] {
+    background-color: #5A1412;*/
+    /*background-color: #911e18;*/
+    /*border-bottom: 5px solid #103a52;
+}
+.dark .panel[id="p2"] {
+    background-color: #200c30;*/
+    /*background-color: #471868;*/
+    /*border-bottom: 5px solid #103a52;
+}*/
 
 .dark .header {    
     color: #ffffff !important;
@@ -31,7 +42,7 @@ body.dark, html.dark {
     color: #d4d4d4;
     border: #525252 solid 1px;
 }
-.dark .poke-info input:not([type]), .poke-info input[type="text"], .poke-info span :not(.select2-chosen) {
+.dark .poke-info input:not([type]), .dark .poke-info input[type="text"], .poke-info span :not(.select2-chosen) {
     background: #31313a;
     color: #d4d4d4;
     border: #525252 solid 1px;
@@ -48,40 +59,24 @@ body.dark, html.dark {
 }
 
 .dark .select2-search input {    
-<<<<<<< HEAD
-    background: #323232
-}
-
-.dark select {
-    background: #323232 !important;
-=======
     background: #31313a
 }
 
 .dark select {
     background: #31313a !important;
->>>>>>> 1044bd6 (Adding files 1)
     color: #d4d4d4 !important;
     border: #525252 solid 1px !important;
 }
 
 .dark .select2-container .select2-choice {
     color: #f1f1f1!important;
-<<<<<<< HEAD
-    background: #292929 !important;
-=======
     background: #31313a !important;
->>>>>>> 1044bd6 (Adding files 1)
 }
 
 .dark textarea, .dark #spreadName {    
     color: #d4d4d4;
     border-color: rgb(169, 169, 169);
-<<<<<<< HEAD
-    background-color: #323232;
-=======
     background-color: #31313a;
->>>>>>> 1044bd6 (Adding files 1)
 }
 
 
@@ -90,11 +85,7 @@ body.dark, html.dark {
 }
 
 .dark .onoffswitch-inner:before {    
-<<<<<<< HEAD
-    background-color: #323232;
-=======
     background-color: #31313a;
->>>>>>> 1044bd6 (Adding files 1)
 }
 
 .dark .poke-info .underLimit {
@@ -130,16 +121,17 @@ body, html {
     color: #1e3864;
 }
 
+.poke-info input:not([type]), .poke-info input[type="text"], .poke-info span :not(.select2-chosen) {
+    background: #ffffff;
+    color: #000000;
+    border: #525252 solid 1px;
+}
+
 .header{
     margin:0 0 20px 0;
     color: #ffffff;
-<<<<<<< HEAD
-    background:#1e3864;
-    border-bottom: 5px solid #e64946;
-=======
     background:#293131;
     border-bottom: 5px solid #3ab5f7;
->>>>>>> 1044bd6 (Adding files 1)
     box-shadow:inset 1px 1px 0 rgba(255,255,255,.6),0px 2px 2px rgba(0,0,0,.15);
     min-height:50px;
 }
@@ -227,15 +219,9 @@ body, html {
   padding: 15px;
 }
 .panel-heading {
-<<<<<<< HEAD
-  background-color: #1e3864;
-  padding: 10px 15px;
-  border-bottom: 5px solid #e64946;
-=======
   background-color: #293131;
   padding: 10px 15px;
   border-bottom: 5px solid #de2808;
->>>>>>> 1044bd6 (Adding files 1)
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
 }

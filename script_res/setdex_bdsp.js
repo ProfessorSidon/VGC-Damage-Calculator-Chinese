@@ -1,11 +1,8 @@
-var SETDEX_BW = {};
-var SETDEX_CUSTOM_BW = {};
+var SETDEX_BDSP = {};
+var SETDEX_CUSTOM_BDSP = {};
 
 var components = [
-    //SETDEX_VGC2011,
-    //SETDEX_VGC2012,
-    //SETDEX_VGC2013,
-    //SETDEX_CUSTOM_BW
+    SETDEX_VGC_BFD,
 ];
 
 for (var i = 0; i < components.length; i++) {
@@ -13,19 +10,17 @@ for (var i = 0; i < components.length; i++) {
     if (sourceDex) {
         for (var p in sourceDex) {
             if (sourceDex.hasOwnProperty(p)) {
-                SETDEX_BW[p] = $.extend(SETDEX_BW[p], sourceDex[p])
+                SETDEX_BDSP[p] = $.extend(SETDEX_BDSP[p], sourceDex[p])
             }
         }
     }
 }
 
-var reloadBWScript = function () {
-    console.log(SETDEX_CUSTOM_BW);
+var reloadBDSPScript = function () {
+    console.log(SETDEX_CUSTOM_BDSP);
     components = [
-        //SETDEX_VGC2011,
-        //SETDEX_VGC2012,
-        //SETDEX_VGC2013,
-        SETDEX_CUSTOM_BW
+        SETDEX_VGC_BFD,
+        SETDEX_CUSTOM_BDSP,
     ];
 
     for (var i = 0; i < components.length; i++) {
@@ -33,7 +28,7 @@ var reloadBWScript = function () {
         if (sourceDex) {
             for (var p in sourceDex) {
                 if (sourceDex.hasOwnProperty(p)) {
-                    SETDEX_BW[p] = $.extend(SETDEX_BW[p], sourceDex[p])
+                    SETDEX_BDSP[p] = $.extend(SETDEX_BDSP[p], sourceDex[p])
                 }
             }
         }

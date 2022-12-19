@@ -1,3 +1,31 @@
+    //"": {
+    //    "": {
+    //        "level": 50,
+    //        "evs": {
+    //            "hp": 0,
+    //            "at": 0,
+    //            "df": 0,
+    //            "sa": 0,
+    //            "sd": 0,
+    //            "sp": 0
+    //        },
+    //        "ivs": {
+    //            "at": 0,
+    //            "sp": 0
+    //        },
+    //        "nature": "",
+    //        "ability": "",
+    //        "item": "",
+    //        "moves": [
+    //            "",
+    //            "",
+    //            "",
+    //            ""
+    //        ]
+    //    },
+
+    //},
+
 var SETDEX_VGC2021 = {
     "Poliwrath": {
         "Default Set": {
@@ -448,6 +476,29 @@ var SETDEX_VGC2021 = {
                 "Flamethrower",
                 "Psyshock"
             ]
+        },
+        "2022 Body Press Set": {
+            "level": 50,
+            "evs": {
+                "hp": 244,
+                "at": 0,
+                "df": 12,
+                "sa": 0,
+                "sd": 252,
+                "sp": 0
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Calm",
+            "ability": "Oblivious",
+            "item": "Wacan Berry",
+            "moves": [
+                "Iron Defense",
+                "Body Press",
+                "Protect",
+                "Trick Room"
+            ]
         }
     },
     "Omastar": {
@@ -710,7 +761,7 @@ var SETDEX_VGC2021 = {
             "level": 50,
             "evs": {
                 "hp": 4,
-                "at": 252,
+                "at": 252,
                 "df": 0,
                 "sa": 0,
                 "sd": 0,
@@ -3413,7 +3464,7 @@ var SETDEX_VGC2021 = {
                 "Pollen Puff",
                 "Clear Smog"
             ]
-        },        
+        },
     },
     "Rotom-Wash": {
         "Standard Rotom-Wash": {
@@ -4985,7 +5036,7 @@ var SETDEX_VGC2021 = {
                 "Ice Beam",
                 "Thunder"
             ]
-        },        
+        },
     },
 
     "Groudon": {
@@ -5460,7 +5511,7 @@ var SETDEX_VGC2021 = {
                 "Fake Out",
                 "Snarl"
             ]
-        },        
+        },
         "Wolfe's PC2 Finals Incineroar": {
             "level": 50,
             "evs": {
@@ -5529,7 +5580,7 @@ var SETDEX_VGC2021 = {
             ]
         },
     },
-    
+
     "Vikavolt": {
         "Default Set": {
             "level": 50,
@@ -5554,7 +5605,7 @@ var SETDEX_VGC2021 = {
             ]
         },
     },
-    
+
     "Ribombee": {
         "Default Set": {
             "level": 50,
@@ -5867,7 +5918,7 @@ var SETDEX_VGC2021 = {
             ]
         }
     },
-    
+
     "Silvally": {
         "Physical Set": {
             "level": 50,
@@ -6104,29 +6155,29 @@ var SETDEX_VGC2021 = {
     },
 
     "Tapu Lele": {
-        "Specs Lele": {
-            "level": 50,
-            "evs": {
-                "hp": 4,
-                "at": 0,
-                "df": 0,
-                "sa": 252,
-                "sd": 0,
-                "sp": 252
+        "Specs Lele": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
             },
             "ivs": {
                 "at": 0
             },
-            "nature": "Timid",
-            "ability": "Psychic Surge",
-            "item": "Choice Specs",
-            "moves": [
-                 "Psychic",
-                 "Moonblast",
-                 "Dazzling Gleam",
-                 "Psyshock"
+            "nature": "Timid",
+            "ability": "Psychic Surge",
+            "item": "Choice Specs",
+            "moves": [
+                "Psychic",
+                "Moonblast",
+                "Dazzling Gleam",
+                "Psyshock"
             ]
-        },
+        },
         "Scarf Lele": {
             "level": 50,
             "evs": {
@@ -6176,29 +6227,29 @@ var SETDEX_VGC2021 = {
     },
 
     "Tapu Fini": {
-      "Default Set": {
-          "level": 50,
-          "evs": {
-              "hp": 244,
-              "at": 0,
-              "df": 0,
-              "sa": 196,
-              "sd": 0,
-              "sp": 68
-          },
-          "ivs": {
-              "at": 0,
-          },
-          "nature": "Modest",
-          "ability": "Misty Surge",
-          "item": "Leftovers",
-          "moves": [
-              "Muddy Water",
-              "Scald",
-              "Moonblast",
-              "Icy Wind"
-          ]
-      },
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 244,
+                "at": 0,
+                "df": 0,
+                "sa": 196,
+                "sd": 0,
+                "sp": 68
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Modest",
+            "ability": "Misty Surge",
+            "item": "Leftovers",
+            "moves": [
+                "Muddy Water",
+                "Scald",
+                "Moonblast",
+                "Icy Wind"
+            ]
+        },
         "Specs Fini": {
             "level": 50,
             "evs": {
@@ -6432,7 +6483,7 @@ var SETDEX_VGC2021 = {
             ]
         },
     },
-    
+
 
     "Marowak-Alola": {
         "Jhufself's Marowak": {
@@ -6530,30 +6581,30 @@ var SETDEX_VGC2021 = {
             ]
         },
     },
-    
-    "Stakataka" : {
-      "Standard Stakataka": {
-          "level": 50,
-          "evs": {
-              "hp": 252,
-              "at": 252,
-              "df": 0,
-              "sa": 0,
-              "sd": 4,
-              "sp": 0
-          },
-          "ivs": {
-            "sp": 0
-          },
-          "nature": "Brave",
-          "ability": "",
-          "item": "",
-          "moves": [
-              "Gyro Ball",
-              "Rock Slide",
-              "Body Press",
-              "High Horsepower"
-          ]
+
+    "Stakataka": {
+        "Standard Stakataka": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 4,
+                "sp": 0
+            },
+            "ivs": {
+                "sp": 0
+            },
+            "nature": "Brave",
+            "ability": "",
+            "item": "",
+            "moves": [
+                "Gyro Ball",
+                "Rock Slide",
+                "Body Press",
+                "High Horsepower"
+            ]
         },
         "Lonely LO Stakataka": {
             "level": 50,
@@ -6580,130 +6631,130 @@ var SETDEX_VGC2021 = {
             ]
         },
     },
-    "Blacephalon" : {
-      "Default Set": {
-          "level": 50,
-          "evs": {
-              "hp": 4,
-              "at": 0,
-              "df": 0,
-              "sa": 252,
-              "sd": 0,
-              "sp": 252
-          },
-          "ivs": {
-              "at": 0,
-          },
-          "nature": "Timid",
-          "ability": "",
-          "item": "Choice Scarf",
-          "moves": [
-              "Mind Blown",
-              "Shadow Ball",
-              "Flamethrower",
-              "Heat Wave"
-          ]
-      },
-    },
-    "Naganadel" : {
-      "Default Set": {
-          "level": 50,
-          "evs": {
-              "hp": 4,
-              "at": 0,
-              "df": 0,
-              "sa": 252,
-              "sd": 0,
-              "sp": 252
-          },
-          "ivs": {
-              "at": 0,
-          },
-          "nature": "Timid",
-          "ability": "",
-          "item": "Life Orb",
-          "moves": [
-              "Draco Meteor",
-              "Air Slash",
-              "Sludge Bomb",
-              "Flamethrower"
-          ]
-      },
-    },
-    "Lunala" : {
-      "Default Set": {
-          "level": 50,
-          "evs": {
-              "hp": 4,
-              "at": 0,
-              "df": 0,
-              "sa": 252,
-              "sd": 0,
-              "sp": 252
-          },
-          "ivs": {
-            "at": 0
-          },
-          "nature": "Timid",
-          "ability": "Shadow Shield",
-          "item": "",
-          "moves": [
-              "Moongeist Beam",
-              "Expanding Force",
-              "Moonblast",
-              "Psyshock"
-          ]
-      },
-      "Trick Room Lunala": {
-        "level": 50,
-        "evs": {
-            "hp": 252,
-            "at": 0,
-            "df": 0,
-            "sa": 252,
-            "sd": 4,
-            "sp": 0
+    "Blacephalon": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Timid",
+            "ability": "",
+            "item": "Choice Scarf",
+            "moves": [
+                "Mind Blown",
+                "Shadow Ball",
+                "Flamethrower",
+                "Heat Wave"
+            ]
         },
-        "ivs": {
-            "at": 0,
-            "sp": 0
+    },
+    "Naganadel": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Timid",
+            "ability": "",
+            "item": "Life Orb",
+            "moves": [
+                "Draco Meteor",
+                "Air Slash",
+                "Sludge Bomb",
+                "Flamethrower"
+            ]
         },
-        "nature": "Quiet",
-        "ability": "Shadow Shield",
-        "item": "",
-        "moves": [
-            "Moongeist Beam",
-            "Expanding Force",
-            "Moonblast",
-            "Psyshock"
-        ]
     },
-      "Power Herb Lunala": {
-          "level": 50,
-          "evs": {
-              "hp": 4,
-              "at": 0,
-              "df": 0,
-              "sa": 252,
-              "sd": 0,
-              "sp": 252
-          },
-          "ivs": {
-            "at": 0
-          },
-          "nature": "Timid",
-          "ability": "Shadow Shield",
-          "item": "",
-          "moves": [
-              "Moongeist Beam",
-              "Expanding Force",
-              "Meteor Beam",
-              "Air Slash"
-          ]
-      },        
+    "Lunala": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0
+            },
+            "nature": "Timid",
+            "ability": "Shadow Shield",
+            "item": "",
+            "moves": [
+                "Moongeist Beam",
+                "Expanding Force",
+                "Moonblast",
+                "Psyshock"
+            ]
+        },
+        "Trick Room Lunala": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 4,
+                "sp": 0
+            },
+            "ivs": {
+                "at": 0,
+                "sp": 0
+            },
+            "nature": "Quiet",
+            "ability": "Shadow Shield",
+            "item": "",
+            "moves": [
+                "Moongeist Beam",
+                "Expanding Force",
+                "Moonblast",
+                "Psyshock"
+            ]
+        },
+        "Power Herb Lunala": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0
+            },
+            "nature": "Timid",
+            "ability": "Shadow Shield",
+            "item": "",
+            "moves": [
+                "Moongeist Beam",
+                "Expanding Force",
+                "Meteor Beam",
+                "Air Slash"
+            ]
+        },
     },
-    "Solgaleo" : {
-      "Default Set": {
+    "Solgaleo": {
+        "Default Set": {
             "level": 50,
             "evs": {
                 "hp": 252,
@@ -6713,17 +6764,17 @@ var SETDEX_VGC2021 = {
                 "sd": 4,
                 "sp": 0
             },
-          "nature": "Adamant",
-          "ability": "Full Metal Body",
-          "item": "",
-          "moves": [
-              "Sunsteel Strike",
-              "Earthquake",
-              "Rock Slide",
-              "Wild Charge"
-          ]
-      },
-      "Life Orb Solgaleo": {
+            "nature": "Adamant",
+            "ability": "Full Metal Body",
+            "item": "",
+            "moves": [
+                "Sunsteel Strike",
+                "Earthquake",
+                "Rock Slide",
+                "Wild Charge"
+            ]
+        },
+        "Life Orb Solgaleo": {
             "level": 50,
             "evs": {
                 "hp": 4,
@@ -6733,88 +6784,88 @@ var SETDEX_VGC2021 = {
                 "sd": 0,
                 "sp": 252
             },
-          "nature": "Jolly",
-          "ability": "Full Metal Body",
-          "item": "Life Orb",
-          "moves": [
-              "Sunsteel Strike",
-              "Close Combat",
-              "Psychic Fangs",
-              "Earthquake"
-          ]
-      },        
+            "nature": "Jolly",
+            "ability": "Full Metal Body",
+            "item": "Life Orb",
+            "moves": [
+                "Sunsteel Strike",
+                "Close Combat",
+                "Psychic Fangs",
+                "Earthquake"
+            ]
+        },
     },
-    "Necrozma-Dawn-Wings" : {
-      "Default Set": {
-          "level": 50,
-          "evs": {
-              "hp": 252,
-              "at": 0,
-              "df": 4,
-              "sa": 252,
-              "sd": 0,
-              "sp": 0
-          },
-          "ivs": {
-              "at": 0,
-              "sp": 0
-          },
-          "nature": "Quiet",
-          "ability": "Prism Armor",
-          "item": "",
-          "moves": [
-              "Photon Geyser",
-              "Earth Power",
-              "Moongeist Beam",
-              "Expanding Force"
-          ]
-      },
+    "Necrozma-Dawn-Wings": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 4,
+                "sa": 252,
+                "sd": 0,
+                "sp": 0
+            },
+            "ivs": {
+                "at": 0,
+                "sp": 0
+            },
+            "nature": "Quiet",
+            "ability": "Prism Armor",
+            "item": "",
+            "moves": [
+                "Photon Geyser",
+                "Earth Power",
+                "Moongeist Beam",
+                "Expanding Force"
+            ]
+        },
     },
-    "Zygarde" : {
-      "RIP Espeed Zygarde": {
-          "level": 50,
-          "evs": {
-              "hp": 252,
-              "at": 252,
-              "df": 0,
-              "sa": 0,
-              "sd": 4,
-              "sp": 0
-          },
-          "nature": "Adamant",
-          "ability": "Power Construct",
-          "item": "",
-          "moves": [
-              "Thousand Arrows",
-              "Stone Edge",
-              "Iron Tail",
-              "Superpower"
-          ]
-      },
+    "Zygarde": {
+        "RIP Espeed Zygarde": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 4,
+                "sp": 0
+            },
+            "nature": "Adamant",
+            "ability": "Power Construct",
+            "item": "",
+            "moves": [
+                "Thousand Arrows",
+                "Stone Edge",
+                "Iron Tail",
+                "Superpower"
+            ]
+        },
     },
-    "Coalossal" : {
-      "Special Coalossal": {
-          "level": 50,
-          "evs": {
-              "hp": 4,
-              "at": 0,
-              "df": 0,
-              "sa": 252,
-              "sd": 0,
-              "sp": 252
-          },
-          "ivs": {
-              "at": 0,
-          },
-          "nature": "Modest",
-          "ability": "",
-          "item": "",
-          "moves": [
-              "Heat Wave",
-              "Meteor Beam",
-              "Solar Beam",
-              "Earth Power"
-          ]
+    "Coalossal": {
+        "Special Coalossal": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Modest",
+            "ability": "",
+            "item": "",
+            "moves": [
+                "Heat Wave",
+                "Meteor Beam",
+                "Solar Beam",
+                "Earth Power"
+            ]
         },
         "Physical Coalossal": {
             "level": 50,
@@ -6837,30 +6888,30 @@ var SETDEX_VGC2021 = {
             ]
         },
     },
-    "Inteleon" : {
-      "Default Set": {
-          "level": 50,
-          "evs": {
-              "hp": 4,
-              "at": 0,
-              "df": 0,
-              "sa": 252,
-              "sd": 0,
-              "sp": 252
-          },
-          "ivs": {
-              "at": 0,
-          },
-          "nature": "Timid",
-          "ability": "Torrent",
-          "item": "Life Orb",
-          "moves": [
-              "Snipe Shot",
-              "Dark Pulse",
-              "Blizzard",
-              "Air Slash"
-          ]
-      },
+    "Inteleon": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Timid",
+            "ability": "Torrent",
+            "item": "Life Orb",
+            "moves": [
+                "Snipe Shot",
+                "Dark Pulse",
+                "Blizzard",
+                "Air Slash"
+            ]
+        },
     },
     "Dragapult": {
         "Life Orb Dragapult": {
@@ -6882,7 +6933,7 @@ var SETDEX_VGC2021 = {
                 "Fly",
                 "Steel Wing"
             ]
-        },        
+        },
         "Wolfe's PC2 Dragapult": {
             "level": 50,
             "evs": {
@@ -10104,4 +10155,641 @@ var SETDEX_VGC2021_S10 = {
             ]
         }
     },
-}
+};
+
+var SETDEX_VGC2022 = {
+    "Kyogre": {
+        "LO Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0
+            },
+            "nature": "Modest",
+            "item": "Life Orb",
+            "moves": [
+                "Water Spout",
+                "Origin Pulse",
+                "Thunder",
+                "Ice Beam"
+            ]
+        },
+    },
+    "Groudon": {
+        "Chongjun SLC Champ AV Don": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 156,
+                "df": 4,
+                "sa": 0,
+                "sd": 60,
+                "sp": 36
+            },
+            "nature": "Adamant",
+            "ability": "Drought",
+            "item": "Assault Vest",
+            "moves": [
+                "Precipice Blades",
+                "Fire Punch",
+                "Stone Edge",
+                "Heavy Slam"
+            ]
+        },
+    },
+    "Reshiram": {
+        "Serapis' Indy Finalist AV Reshiram": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 4,
+                "sa": 252,
+                "sd": 0,
+                "sp": 0
+            },
+            "ivs": {
+                "at": 0,
+                "sp": 5,
+            },
+            "nature": "Modest",
+            "item": "Assault Vest",
+            "moves": [
+                "Blue Flare",
+                "Draco Meteor",
+                "Earth Power",
+                "Solar Beam"
+            ]
+        },
+    },
+    "Calyrex-Ice Rider": {
+        "Babiri Set": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 4,
+                "sp": 0
+            },
+            "ivs": {
+                "sp": 0
+            },
+            "nature": "Brave",
+            "item": "Babiri Berry",
+            "moves": [
+                "Glacial Lance",
+                "High Horsepower",
+                "Seed Bomb",
+                "Trick Room"
+            ]
+        },
+    },
+    "Calyrex-Shadow Rider": {
+        "Support Sash Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0
+            },
+            "nature": "Timid",
+            "item": "Focus Sash",
+            "moves": [
+                "Astral Barrage",
+                "Psyshock",
+                "Snarl",
+                "Will-O-Wisp"
+            ]
+        },
+    },
+    "Charizard": {
+        "ChartiZard": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0
+            },
+            "nature": "Timid",
+            "ability": "Solar Power",
+            "item": "Charti Berry",
+            "moves": [
+                "Heat Wave",
+                "Air Slash",
+                "Ancient Power",
+                "Blast Burn"
+            ]
+        },
+    },
+    "Regieleki": {
+        "Special Sash Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Timid",
+            "ability": "Transistor",
+            "item": "Focus Sash",
+            "moves": [
+                "Thunderbolt",
+                "Electroweb",
+                "Volt Switch",
+                "Thunder"
+            ]
+        },
+        "Physical LO Eleki": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 0,
+                "sp": 252
+            },
+            "nature": "Naughty",
+            "item": "Life Orb",
+            "moves": [
+                "Wild Charge",
+                "Bounce",
+                "Assurance",
+                "Volt Switch"
+            ]
+        },
+        "Tamtam's AV Eleki": {
+            "level": 50,
+            "evs": {
+                "hp": 20,
+                "at": 252,
+                "df": 44,
+                "sa": 0,
+                "sd": 92,
+                "sp": 100
+            },
+            "nature": "Jolly",
+            "item": "Assault Vest",
+            "moves": [
+                "Wild Charge",
+                "Bounce",
+                "Assurance",
+                "Electroweb"
+            ]
+        },
+    },
+    "Gastrodon": {
+        "2022 Bulky Gastrodon": {
+            "level": 50,
+            "evs": {
+                "hp": 180,
+                "at": 0,
+                "df": 188,
+                "sa": 0,
+                "sd": 140,
+                "sp": 0
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Bold",
+            "ability": "Storm Drain",
+            "item": "Leftovers",
+            "moves": [
+                "Earth Power",
+                "Ice Beam",
+                "Yawn",
+                "Protect"
+            ]
+        },
+
+    },
+    "Tapu Fini": {
+        "Serapis' Indy Support Fini": {
+            "level": 50,
+            "evs": {
+                "hp": 244,
+                "at": 0,
+                "df": 228,
+                "sa": 0,
+                "sd": 36,
+                "sp": 0
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Calm",
+            "ability": "Misty Surge",
+            "item": "Leftovers",
+            "moves": [
+                "Nature's Madness",
+                "Moonblast",
+                "Mist",
+                "Heal Pulse"
+            ]
+        },
+
+    },
+    "Shedinja": {
+        "Series 12 Set": {
+            "level": 50,
+            "evs": {
+                "hp": 0,
+                "at": 252,
+                "df": 0,
+                "sa": 4,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "df": 0,
+                "sd": 0
+            },
+            "nature": "Lonely",
+            "ability": "Wonder Guard",
+            "item": "Safety Goggles",
+            "moves": [
+                "Shadow Sneak",
+                "Ally Switch",
+                "Endure",
+                "Poltergeist"
+            ]
+        },
+
+    },
+    "Yveltal": {
+        "Hamstermania's Worlds Top 16 Serious Yveltal": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 4,
+                "df": 76,
+                "sa": 68,
+                "sd": 60,
+                "sp": 44
+            },
+            "nature": "Serious",
+            "ability": "Dark Aura",
+            "item": "Assault Vest",
+            "moves": [
+                "Foul Play",
+                "Sucker Punch",
+                "Oblivion Wing",
+                "Snarl"
+            ]
+        },
+
+    },
+};
+
+var SETDEX_VGC2022_S13 = {
+
+    "Mew": {
+        "Scarf Transform Set": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 0,
+                "sa": 0,
+                "sd": 12,
+                "sp": 244
+            },
+            "nature": "Timid",
+            "ability": "Synchronize",
+            "item": "Choice Scarf",
+            "moves": [
+                "Transform",
+                "Trick",
+                "Expanding Force",
+                "U-turn"
+            ]
+        },
+
+    },
+    "Celebi": {
+        "Uh... Life Orb Set?": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Timid",
+            "ability": "Natural Cure",
+            "item": "Life Orb",
+            "moves": [
+                "Leaf Storm",
+                "Expanding Force",
+                "Earth Power",
+                "Protect"
+            ]
+        },
+
+    },
+    "Jirachi": {
+        "Support Set?": {
+            "level": 50,
+            "evs": {
+                "hp": 244,
+                "at": 0,
+                "df": 28,
+                "sa": 0,
+                "sd": 236,
+                "sp": 0
+            },
+            "nature": "Careful",
+            "ability": "Serene Grace",
+            "item": "Shuca Berry",
+            "moves": [
+                "Iron Head",
+                "Thunder Wave",
+                "Icy Wind",
+                "Helping Hand"
+            ]
+        },
+
+    },
+    "Victini": {
+        "Trick Room Set": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 100,
+                "df": 0,
+                "sa": 0,
+                "sd": 156,
+                "sp": 0
+            },
+            "ivs": {
+                "sp": 0
+            },
+            "nature": "Sassy",
+            "ability": "Victory Star",
+            "item": "Shuca Berry",
+            "moves": [
+                "V-create",
+                "Trick Room",
+                "Will-O-Wisp",
+                "Protect"
+            ]
+        },
+
+    },
+    "Keldeo": {
+        "Life Orb Set": {
+            "level": 50,
+            "evs": {
+                "hp": 0,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 4,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Timid",
+            "ability": "Justified",
+            "item": "Life Orb",
+            "moves": [
+                "Hydro Pump",
+                "Secret Sword",
+                "Air Slash",
+                "Protect"
+            ]
+        },
+
+    },
+    "Genesect": {
+        "Mixed Scarf Set": {
+            "level": 50,
+            "evs": {
+                "hp": 0,
+                "at": 100,
+                "df": 0,
+                "sa": 164,
+                "sd": 0,
+                "sp": 244
+            },
+            "nature": "Mild",
+            "ability": "Download",
+            "item": "Choice Scarf",
+            "moves": [
+                "U-turn",
+                "Iron Head",
+                "Flamethrower",
+                "Ice Beam"
+            ]
+        },
+
+    },
+    "Diancie": {
+        "Trick Room Body Press Set": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 156,
+                "sa": 0,
+                "sd": 100,
+                "sp": 0
+            },
+            "ivs": {
+                "sp": 0
+            },
+            "nature": "Relaxed",
+            "ability": "Clear Body",
+            "item": "Shuca Berry",
+            "moves": [
+                "Diamond Storm",
+                "Body Press",
+                "Moonblast",
+                "Trick Room"
+            ]
+        },
+
+    },
+    "Volcanion": {
+        "Shuca Set": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 4,
+                "sp": 0
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Modest",
+            "ability": "Water Absorb",
+            "item": "Shuca Berry",
+            "moves": [
+                "Steam Eruption",
+                "Heat Wave",
+                "Earth Power",
+                "Protect"
+            ]
+        },
+
+    },
+    "Magearna": {
+        "Shuca Trick Room Set": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 4,
+                "sp": 0
+            },
+            "ivs": {
+                "at": 0,
+                "sp": 0
+            },
+            "nature": "Quiet",
+            "ability": "Soul-Heart",
+            "item": "Shuca Berry",
+            "moves": [
+                "Flash Cannon",
+                "Dazzling Gleam",
+                "Thunderbolt",
+                "Trick Room"
+            ]
+        },
+
+    },
+    "Marshadow": {
+        "Sash Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 0,
+                "sp": 252
+            },
+            "nature": "Jolly",
+            "ability": "Technician",
+            "item": "Focus Sash",
+            "moves": [
+                "Spectral Thief",
+                "Close Combat",
+                "Shadow Sneak",
+                "Protect"
+            ]
+        },
+
+    },
+    "Zeraora": {
+        "Sash Coaching Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 0,
+                "sp": 252
+            },
+            "nature": "Jolly",
+            "ability": "Volt Absorb",
+            "item": "Focus Sash",
+            "moves": [
+                "Fake Out",
+                "Plasma Fists",
+                "Electroweb",
+                "Coaching"
+            ]
+        },
+
+    },
+    "Melmetal": {
+        "Assault Vest Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 252,
+                "sp": 0
+            },
+            "ivs": {
+                "sp": 0
+            },
+            "nature": "Brave",
+            "ability": "",
+            "item": "Assault Vest",
+            "moves": [
+                "Double Iron Bash",
+                "High Horsepower",
+                "Thunder Punch",
+                "Rock Slide"
+            ]
+        },
+
+    },
+    "Zarude": {
+        "Bulky Offensive Set": {
+            "level": 50,
+            "evs": {
+                "hp": 244,
+                "at": 252,
+                "df": 4,
+                "sa": 0,
+                "sd": 4,
+                "sp": 4
+            },
+            "nature": "Adamant",
+            "ability": "",
+            "item": "Sitrus Berry",
+            "moves": [
+                "Power Whip",
+                "Darkest Lariat",
+                "Protect",
+                "Jungle Healing"
+            ]
+        },
+
+    },
+};

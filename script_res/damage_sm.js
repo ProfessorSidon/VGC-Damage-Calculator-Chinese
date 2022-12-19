@@ -15,9 +15,11 @@ function CALCULATE_ALL_MOVES_SM(p1, p2, field) {
     p1.stats[DF] = getModifiedStat(p1.rawStats[DF], p1.boosts[DF]);
     p1.stats[SD] = getModifiedStat(p1.rawStats[SD], p1.boosts[SD]);
     p1.stats[SP] = getFinalSpeedSM(p1, field.getWeather(), field.getTerrain());
+    $(".p1-speed-mods").text(p1.stats[SP]);
     p2.stats[DF] = getModifiedStat(p2.rawStats[DF], p2.boosts[DF]);
     p2.stats[SD] = getModifiedStat(p2.rawStats[SD], p2.boosts[SD]);
     p2.stats[SP] = getFinalSpeedSM(p2, field.getWeather(), field.getTerrain());
+    $(".p2-speed-mods").text(p1.stats[SP]);
     checkIntimidate(p1, p2);
     checkIntimidate(p2, p1);
     checkDownload(p1, p2);
@@ -223,8 +225,8 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
         }
     }
 
-    var typeEffect1 = getMoveEffectiveness(move, defender.type1, defender.type2, attacker.ability === "Scrappy" || field.isForesight, field.isGravity);
-    var typeEffect2 = defender.type2 ? getMoveEffectiveness(move, defender.type2, defender.type1, attacker.ability === "Scrappy" || field.isForesight, field.isGravity) : 1;
+    var typeEffect1 = getMoveEffectiveness(move, defender.type1, defender.type2, attacker.ability === "Scrappy" || field.isForesight, field.isGravity, field.weather === "Strong Winds");
+    var typeEffect2 = defender.type2 ? getMoveEffectiveness(move, defender.type2, defender.type1, attacker.ability === "Scrappy" || field.isForesight, field.isGravity, field.weather === "Strong Winds") : 1;
     var typeEffectiveness = typeEffect1 * typeEffect2;
 
     if (typeEffectiveness === 0) {
@@ -571,7 +573,7 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
     //var smartMove = move.name == "Shell Side Arm";
     var attack;
     var attackSource = move.name === "Foul Play" ? defender : attacker;
-    var usesPhysicalAttackStat = move.category === "Physical" || (necrozmaMove && attacker.stats[AT] >= attacker.stats[SA]) || (smartMove && (attacker.stats[AT] / defender.stats[DF]) >= (attacker.stats[SA] / defender.stats[SD]));
+    var usesPhysicalAttackStat = move.category === "Physical" || (necrozmaMove && attacker.stats[AT] >= attacker.stats[SA]) /*|| (smartMove && (attacker.stats[AT] / defender.stats[DF]) >= (attacker.stats[SA] / defender.stats[SD]))*/;
     //var usesDefenseStat = move.name === "Body Press";
     var attackStat = /*usesDefenseStat ? DF :*/ usesPhysicalAttackStat ? AT : SA;
     description.attackEVs = attacker.evs[attackStat] +
@@ -734,9 +736,13 @@ function GET_DAMAGE_SM(attacker, defender, move, field) {
         baseDamage = pokeRound(baseDamage * 0x1800 / 0x1000);
         description.weather = field.weather;
     //Need to move Strong Winds check out; I strongly suspect it's a hard modifier to type effectiveness
-    } else if ((field.weather === "Sun" && move.type === "Water") || (field.weather === "Rain" && move.type === "Fire") ||
+    //May 2022: This has been fixed but there still needs to be a description for it, so it's handled here
+    } else if ((field.weather === "Strong Winds" && (defender.type1 === "Flying" || defender.type2 === "Flying") &&
+        typeChart[move.type]["Flying"] > 1)) {
+        description.weather = field.weather;
+    } else if ((field.weather === "Sun" && move.type === "Water") || (field.weather === "Rain" && move.type === "Fire") /*||
                (field.weather === "Strong Winds" && (defender.type1 === "Flying" || defender.type2 === "Flying") &&
-               typeChart[move.type]["Flying"] > 1)) {
+               typeChart[move.type]["Flying"] > 1)*/) {
         baseDamage = pokeRound(baseDamage * 0x800 / 0x1000);
         description.weather = field.weather;
     }
@@ -989,7 +995,7 @@ function chainMods(mods) {
     return M;
 }
 
-function getMoveEffectiveness(move, type, otherType, isGhostRevealed, isGravity) {
+function getMoveEffectiveness(move, type, otherType, isGhostRevealed, isGravity, isStrongWinds) {
     if (isGhostRevealed && type === "Ghost" && (move.type === "Normal" || move.type === "Fighting")) {
         return 1;
     } else if (isGravity && type === "Flying" && move.type === "Ground") {
@@ -1002,6 +1008,8 @@ function getMoveEffectiveness(move, type, otherType, isGhostRevealed, isGravity)
         return 2;
     } else if (move.name === "Flying Press") {
         return typeChart["Fighting"][type] * typeChart["Flying"][type];
+    } else if (isStrongWinds && type == "Flying" && typeChart[move.type][type] > 1) {
+        return 1;
     } else {
         return typeChart[move.type][type];
     }
@@ -1077,11 +1085,11 @@ function checkKlutz(pokemon) {
     }
 }
 
-function checkSeeds(pokemon, field){
-    if(pokemon.item ==="Psychic Seed" || pokemon.item === "Misty Seed"){
+function checkSeeds(pokemon, field) {
+    if ((pokemon.item === "Psychic Seed" && field.getTerrain() === "Psychic") || (pokemon.item === "Misty Seed" && field.getTerrain() === "Misty")) {
         pokemon.boosts[SD] = Math.min(6, pokemon.boosts[SD] + 1);
     }
-    else if(pokemon.item ==="Electric Seed" || pokemon.item === "Grassy Seed"){
+    else if ((pokemon.item === "Electric Seed" && field.getTerrain() === "Electric") || (pokemon.item === "Grassy Seed" && field.getTerrain() === "Grassy")) {
         pokemon.boosts[DF] = Math.min(6, pokemon.boosts[DF] + 1);
     }
 }
