@@ -372,10 +372,11 @@ function checkKlutz(pokemon) {
     }
 }
 
-function checkSeeds(pokemon, field) {
-    if ((pokemon.item === "Psychic Seed" && field.terrain === "Psychic") || (pokemon.item === "Misty Seed" && field.terrain === "Misty")) {
+function checkSeeds(pokemon, terrain) {
+    if ((pokemon.item === "Psychic Seed" && terrain === "Psychic") || (pokemon.item === "Misty Seed" && terrain === "Misty")){
         pokemon.boosts[SD] = Math.min(6, pokemon.boosts[SD] + 1);
-    } else if ((pokemon.item === "Electric Seed" && field.terrain === "Electric") || (pokemon.item === "Grassy Seed" && field.terrain === "Grassy")) {
+    }
+    else if ((pokemon.item === "Electric Seed" && terrain === "Electric") || (pokemon.item === "Grassy Seed" && terrain === "Grassy")) {
         pokemon.boosts[DF] = Math.min(6, pokemon.boosts[DF] + 1);
     }
 }
@@ -824,6 +825,16 @@ function immunityChecks(move, attacker, defender, field, description, defAbility
             "description": buildDescription(description)
         };
     }
+    //Remove if it makes the calc annoying to use
+    if (["Queenly Majesty", "Dazzling"].indexOf(defAbility) !== -1 && move.isPriority) {
+        description.defenderAbility = defAbility;
+        return { "damage": [0], "description": buildDescription(description) };
+    }
+    //Remove if it makes the calc annoying to use
+    if (field.terrain === "Psychic" && move.isPriority) {
+        description.terrain = field.terrain;
+        return { "damage": [0], "description": buildDescription(description) };
+    }
 
     return -1;
 }
@@ -1016,7 +1027,9 @@ function basePowerFunc(move, description, turnOrder, attacker, defender, field, 
             //g. Dichotomous BP
             //g.i. Acrobatics
         case "Acrobatics":
-            basePower = attacker.item === "Flying Gem" || attacker.item === "" ? 110 : 55;
+            basePower = ["Flying Gem", field.terrain + " Seed"].indexOf(attacker.item) !== -1
+                || (attacker.item === "Booster Energy" && ["Protosynthesis", "Quark Drive"].indexOf(attacker.ability) !== -1)
+                || attacker.item === "" ? 110 : 55;
             if (basePower !== move.bp) description.moveBP = basePower;
             break;
             //g.ii. Hex
@@ -1385,9 +1398,10 @@ function calcAttack(move, attacker, defender, description, isCritical, defAbilit
         //translated
         translate_stat(attackStat);
     //b. Unaware
-    if (defAbility === "Unaware") {
+    if (defAbility === "Unaware" && attackSource.boosts[attackStat] !== 0) {
         attack = attackSource.rawStats[attackStat];
         description.defenderAbility = defAbility;
+        description.attackBoost = attackSource.boosts[attackStat];
     }
     //Spectral Thief and Meteor Beam aren't part of the calculations but are instead here to properly account for the boosts they give
     else if (move.name === "Spectral Thief" && defender.boosts[attackStat] > 0) {
@@ -1399,7 +1413,12 @@ function calcAttack(move, attacker, defender, description, isCritical, defAbilit
     } //c. Crit
     else if (attackSource.boosts[attackStat] === 0 || (isCritical && attackSource.boosts[attackStat] < 0)) {
         attack = attackSource.rawStats[attackStat];
-    } //d. Attack boosts and drops
+    }
+    //THIS IS NEEDED TO GUARANTEE CATCH ALL UNAWARE CONDITIONS, WITHOUT IT SOME WILL SLIP BY!!!
+    else if (defAbility === "Unaware") {
+        attack = attackSource.rawStats[attackStat];
+    }
+    //d. Attack boosts and drops
     else {
         attack = attackSource.stats[attackStat];
         description.attackBoost = attackSource.boosts[attackStat];
@@ -1494,10 +1513,10 @@ function calcAtMods(move, attacker, defAbility, description, field) {
         atMods.push(0x2000);
         description.attackerAbility = attacker.ability;
     }
-    //e. 0.5x Defensive Abilities       (PURIFYING SALT IS AN EDUCATED GUESS)
-    if ((defAbility === "Thick Fat" && (move.type === "Fire" || move.type === "Ice")) ||
-        (defAbility === "Water Bubble" && move.type === "Fire") ||
-        (defAbility === "Purifying Salt" && move.type === "Ghost")) {
+    //e. 0.5x Defensive Abilities
+    if ((defAbility === "Thick Fat" && (move.type === "Fire" || move.type === "Ice"))
+        || (defAbility === "Water Bubble" && move.type === "Fire")
+        || (defAbility === "Purifying Salt" && move.type === "Ghost")) {
         atMods.push(0x800);
         description.defenderAbility = defAbility;
     }
@@ -1531,14 +1550,27 @@ function calcDefense(move, attacker, defender, description, hitsPhysical, isCrit
     //Spectral Thief isn't part of the calculations but is instead here to properly account for the boosts it takes
     if (move.name === "Spectral Thief" && defender.boosts[defenseStat] > 0) {
         defense = defender.rawStats[defenseStat];
-    } //c. Chip Away, Sacred Sword; d. Crits
-    else if (defender.boosts[defenseStat] === 0 || (isCritical && defender.boosts[defenseStat] > 0) || move.ignoresDefenseBoosts) {
-        defense = defender.rawStats[defenseStat];
-    } //e. Unaware
-    else if (attacker.ability === "Unaware") {
+    }
+    //c. Unaware
+    else if (attacker.ability === "Unaware" && defender.boosts[defenseStat] !== 0) {
         defense = defender.rawStats[defenseStat];
         description.attackerAbility = attacker.ability;
-    } //f. Defense drops and boosts
+        description.defenseBoost = defender.boosts[defenseStat];
+    }
+    //d. Chip Away, Sacred Sword
+    else if (move.ignoresDefenseBoosts && defender.boosts[defenseStat] !== 0) {
+        defense = defender.rawStats[defenseStat];
+        description.defenseBoost = defender.boosts[defenseStat];
+    }
+    //e. Crits
+    else if (defender.boosts[defenseStat] === 0 || (isCritical && defender.boosts[defenseStat] > 0)) {
+        defense = defender.rawStats[defenseStat];
+    }
+    //THIS IS NEEDED TO GUARANTEE CATCH ALL UNAWARE AND SACRED SWORD CONDITIONS, WITHOUT IT SOME WILL SLIP BY!!!
+    else if (move.ignoresDefenseBoosts || attacker.ability === "Unaware") {
+        defense = defender.rawStats[defenseStat];
+    }
+    // f. Defense drops and boosts
     else {
         defense = defender.stats[defenseStat];
         description.defenseBoost = defender.boosts[defenseStat];
@@ -1721,10 +1753,8 @@ function calcGeneralMods(baseDamage, move, attacker, defender, defAbility, field
     //GENERAL MODS CONTINUED
     for (var i = 0; i < 16; i++) { //e. Rand mod
         damage[i] = Math.floor(baseDamage * (85 + i) / 100);
-        //f. STAB mod
+        //f. STAB mod (with Terastal changes)
         damage[i] = pokeRound(damage[i] * stabMod / 0x1000);
-        ////g. Tera mod
-        //damage[i] = pokeRound(damage[i] * teraMod / 0x1000);
         //g. Type Effect mod
         damage[i] = Math.floor(damage[i] * typeEffectiveness);
         //h. Burn mod
