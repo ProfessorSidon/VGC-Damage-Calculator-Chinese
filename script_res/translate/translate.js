@@ -1,3 +1,5 @@
+$('[lang="en"]').hide();
+    
 function translate(str) {
 
 	let word_idxs = [], idx_wordStart = -1, idx_last = -1, idx;
