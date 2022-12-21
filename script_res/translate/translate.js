@@ -1678,7 +1678,8 @@ var MOVENAMES = {
     "Thousand Arrows": "千箭齐发",
     "Thousand Waves": "千波激荡",
     "Land's Wrath": "大地神力",
-    /*"Light Of Ruin": "破灭之光",*/ "Light of Ruin": "破灭之光",
+    /*"Light Of Ruin": "破灭之光",*/
+    "Light of Ruin": "破灭之光",
     "Origin Pulse": "根源波动",
     "Precipice Blades": "断崖之剑",
     "Dragon Ascent": "画龙点睛",
@@ -2791,13 +2792,126 @@ var POKENAMES = {
     "Zacian": "苍响",
     "Zamazenta": "藏玛然特",
     "Eternatus": "无极汰那",
+    "Kubfu": "熊徒弟",
+    "Urshifu": "武道熊师",
+    "Zarude": "萨戮德",
+    "Regieleki": "雷吉艾勒奇",
+    "Regidrago": "雷吉铎拉戈",
+    "Glastrier": "雪暴马",
+    "Spectrier": "灵幽马",
+    "Calyrex": "蕾冠王",
+    // 阿尔宙斯
     "Wyrdeer": "诡角鹿",
     "Kleavor": "劈斧螳螂",
     "Ursaluna": "月月熊",
     "Basculegion": "幽尾玄鱼",
     "Sneasler": "大狃拉",
     "Overqwil": "万针鱼",
-    "Enamorus": "眷恋云"
+    "Enamorus": "眷恋云",
+    // 朱紫
+    "Sprigatito": "新叶喵",
+    "Floragato": "蒂蕾喵",
+    "Meowscarada": "魔幻假面喵",
+    "Fuecoco": "呆火鳄",
+    "Crocalor": "炙烫鳄",
+    "Skeledirge": "骨纹巨声鳄",
+    "Quaxly": "润水鸭",
+    "Quaxwell": "涌跃鸭",
+    "Quaquaval": "狂欢浪舞鸭",
+    "Lechonk": "爱吃豚",
+    "Oinkologne": "飘香豚",
+    "Tarountula": "团珠蛛",
+    "Spidops": "操陷蛛",
+    "Nymble": "豆蟋蟀",
+    "Lokix": "烈腿蝗",
+    "Pawmi": "布拨",
+    "Pawmo": "布土拨",
+    "Pawmot": "巴布土拨",
+    "Tandemaus": "一对鼠",
+    "Maushold": "一家鼠",
+    "Fidough": "狗仔包",
+    "Dachsbun": "麻花犬",
+    "Smoliv": "迷你芙",
+    "Dolliv": "奥利纽",
+    "Arboliva": "奥利瓦",
+    "Squawkabilly": "怒鹦哥",
+    "Nacli": "盐石宝",
+    "Naclstack": "盐石垒",
+    "Garganacl": "盐石巨灵",
+    "Charcadet": "炭小侍",
+    "Armarouge": "红莲铠骑",
+    "Ceruledge": "苍炎刃鬼",
+    "Tadbulb": "光蚪仔",
+    "Bellibolt": "电肚蛙",
+    "Wattrel": "电海燕",
+    "Kilowattrel": "大电海燕",
+    "Maschiff": "偶叫獒",
+    "Mabosstiff": "獒教父",
+    "Shroodle": "滋汁鼹",
+    "Grafaiai": "涂标客",
+    "Bramblin": "纳噬草",
+    "Brambleghast": "怖纳噬草",
+    "Toedscool": "原野水母",
+    "Toedscruel": "陆地水母",
+    "Klawf": "毛崖蟹",
+    "Capsakid": "热辣娃",
+    "Scovillain": "狠辣椒",
+    "Rellor": "虫滚泥",
+    "Rabsca": "虫甲圣",
+    "Flittle": "飘飘雏",
+    "Espathra": "超能艳鸵",
+    "Tinkatink": "小锻匠",
+    "Tinkatuff": "巧锻匠",
+    "Tinkaton": "巨锻匠",
+    "Wiglett": "海地鼠",
+    "Wugtrio": "三海地鼠",
+    "Bombirdier": "下石鸟",
+    "Finizen": "波普海豚",
+    "Palafin": "海豚侠",
+    "Varoom": "噗隆隆",
+    "Revavroom": "普隆隆姆",
+    "Cyclizar": "摩托蜥",
+    "Orthworm": "拖拖蚓",
+    "Glimmet": "晶光芽",
+    "Glimmora": "晶光花",
+    "Greavard": "墓仔狗",
+    "Houndstone": "墓扬犬",
+    "Flamigo": "缠红鹤",
+    "Cetoddle": "走鲸",
+    "Cetitan": "浩大鲸",
+    "Veluza": "轻身鳕",
+    "Dondozo": "吃吼霸",
+    "Tatsugiri": "米立龙",
+    "Annihilape": "弃世猴",
+    "Clodsire": "土王",
+    "Farigiraf": "奇麒麟",
+    "Dudunsparce": "土龙节节",
+    "Kingambit": "仆刀将军",
+    "Great Tusk": "雄伟牙",
+    "Scream Tail": "吼叫尾",
+    "Brute Bonnet": "猛恶菇",
+    "Flutter Mane": "振翼发",
+    "Slither Wing": "爬地翅",
+    "Sandy Shocks": "沙铁皮",
+    "Iron Treads": "铁辙迹",
+    "Iron Bundle": "铁包袱",
+    "Iron Hands": "铁臂膀",
+    "Iron Jugulis": "铁脖颈",
+    "Iron Moth": "铁毒蛾",
+    "Iron Thorns": "铁荆棘",
+    "Frigibax": "凉脊龙",
+    "Arctibax": "冻脊龙",
+    "Baxcalibur": "戟脊龙",
+    "Gimmighoul": "索财灵",
+    "Gholdengo": "赛富豪",
+    "Wo-Chien": "古简蜗",
+    "Chien-Pao": "古剑豹",
+    "Ting-Lu": "古鼎鹿",
+    "Chi-Yu": "古玉鱼",
+    "Roaring Moon": "轰鸣月",
+    "Iron Valiant": "铁武者",
+    "Koraidon": "故勒顿",
+    "Miraidon": "密勒顿",
 }
 
 function pokemonname_noforme(name) {
@@ -2856,7 +2970,17 @@ function translate_pokemon(name) {
     }, {
         name: 'Giratina',
         types: {
-            'O': '起源形态',
+            'Origin': '起源形态',
+        }
+    }, {
+        name: 'Palkia',
+        types: {
+            'Origin': '起源形态',
+        }
+    }, {
+        name: 'Dialga',
+        types: {
+            'Origin': '起源形态',
         }
     }, {
         name: 'Deoxys',
@@ -3005,6 +3129,50 @@ function translate_pokemon(name) {
         name: 'Enamorus',
         types: {
             'T': '灵兽形态',
+        }
+    }, {
+        name: 'Calyrex',
+        types: {
+            'Ice Rider': '骑白马的样子',
+            'Shadow Rider': '骑黑马的样子',
+        }
+    }, {
+        name: 'Dudunsparce',
+        types: {
+            'Big': '三节形态',
+        }
+    }, {
+        name: 'Gimmighoul',
+        types: {
+            'Roam': '徒步形态',
+        }
+    }, {
+        name: 'Maushold',
+        types: {
+            'Four': '四只家庭',
+        }
+    }, {
+        name: 'Oinkologne',
+        types: {
+            'F': '雌',
+        }
+    }, {
+        name: 'Tauros',
+        types: {
+            'Paldea': '帕底亚',
+            'Paldea-Water': '帕底亚-水澜种',
+            'Paldea-Fire': '帕底亚-火炽种',
+        }
+    }, {
+        name: 'Wooper',
+        types: {
+            'Paldea': '帕底亚',
+        }
+    }, {
+        name: 'Urshifu',
+        types: {
+            'Single Strike': '一击流',
+            'Rapid Strike': '连击流',
         }
     }];
     idx = name.indexOf('-');
