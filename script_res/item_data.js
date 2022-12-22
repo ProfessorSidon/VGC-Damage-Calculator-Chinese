@@ -28,7 +28,6 @@ var ITEMS_GSC = [
     'TwistedSpoon',
     //NO FUNCT
     'Bright Powder',
-    'Leek',
     'Lucky Punch',
     'Quick Claw',
 ];
@@ -356,7 +355,10 @@ var ITEMS_SS = ITEMS_SM_NO_Z_MEGA.concat([
     'Throat Spray',
     'Rusted Sword',
     'Rusted Shield',
+    'Leek', // Renamed from Stick
 ]);
+
+ITEMS_SS.splice(ITEMS_SS.indexOf('Stick'), 1); // Renamed
 
 var ITEMS_SV = ITEMS_SS.concat([
     'Mirror Herb',  //copies stat boosts from last stat boosting move from opponent, no calc functionality
