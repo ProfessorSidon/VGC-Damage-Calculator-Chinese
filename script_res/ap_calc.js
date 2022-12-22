@@ -1299,7 +1299,9 @@ $(document).ready(function() {
         dropdownAutoWidth:true,
         matcher: function(term, text) {
             // 2nd condition is for Hidden Power
-            return text.toUpperCase().indexOf(term.toUpperCase()) === 0 || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0;
+            return (text.toUpperCase().indexOf(term.toUpperCase()) >= 0
+	            || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0);
+	            // TODO(Sidon): figure out how to search pinyin
         }
     });
     $(".set-selector").val(getSetOptions()[gen > 3 ? 1 : gen === 1 ? 5 : 3].id);
