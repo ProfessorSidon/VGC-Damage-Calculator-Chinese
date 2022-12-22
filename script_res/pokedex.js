@@ -12952,7 +12952,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
       "w": 22.2,
       "ab": "Technician",
   },
-  "Poiple": {
+  "Poipole": {
     "t1": "Poison",
     "bs": {
       "hp": 67,
