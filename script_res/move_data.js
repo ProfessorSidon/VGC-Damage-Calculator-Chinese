@@ -767,7 +767,7 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
         type: 'Normal',
         category: 'Status'
     },
-    'Desting Bond': {
+    'Destiny Bond': {
 
         type: 'Ghost',
         category: 'Status'
@@ -4686,7 +4686,7 @@ var MOVES_SS = $.extend(true, {}, MOVES_SM, {
         type: 'Fighting',
         category: 'Status'
     },
-    'Clangerous Soul': {
+    'Clangorous Soul': {
 
         type: 'Dragon',
         category: 'Status'
