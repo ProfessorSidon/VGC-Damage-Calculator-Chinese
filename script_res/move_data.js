@@ -5209,7 +5209,7 @@ var MOVES_SV_NATDEX = $.extend(true, {}, MOVES_SS_NATDEX, {
         category: 'Physical',
         makesContact: true,
     },
-    'Revival BLessing': {
+    'Revival Blessing': {
         type: 'Normal',
         category: 'Status',
     },
