@@ -723,7 +723,7 @@ function calculate() {
         maxPercent = Math.floor(maxDamage * 1000 / p2.maxHP) / 10;
         result.damageText = minDamage + "-" + maxDamage + " (" + minPercent + " - " + maxPercent + "%)";
         result.koChanceText = p1.moves[i].bp === 0 && p1.moves[i].category !== "Status" ? '<a href="https://bangumi.bilibili.com/anime/5761/play#97555">皮卡丘！加油！(避雷针？不存在的)</a>'
-                  : getKOChanceText(result.damage, p1.moves[i], p2, field.getSide(1), p1.ability === 'Bad Dreams');
+                  : translate_ko_text(getKOChanceText(result.damage, p1.moves[i], p2, field.getSide(1), p1.ability === 'Bad Dreams'));
         result.crit = p1.moves[i].isCrit
         if(p1.moves[i].isMLG){
             result.koChanceText = "<a href = 'https://www.youtube.com/watch?v=iD92h-M474g'>it's a one-hit KO!</a>"; //dank memes
@@ -743,7 +743,7 @@ function calculate() {
         maxPercent = Math.floor(maxDamage * 1000 / p1.maxHP) / 10;
         result.damageText = minDamage + "-" + maxDamage + " (" + minPercent + " - " + maxPercent + "%)";
         result.koChanceText = p2.moves[i].bp === 0 && p2.moves[i].category !== "Status" ? '<a href="https://bangumi.bilibili.com/anime/5761/play#97555">皮卡丘！加油！(避雷针？不存在的)</a>'
-                : getKOChanceText(result.damage, p2.moves[i], p1, field.getSide(0), p2.ability === 'Bad Dreams');
+                : translate_ko_text(getKOChanceText(result.damage, p2.moves[i], p1, field.getSide(0), p2.ability === 'Bad Dreams'));
         result.crit = p2.moves[i].isCrit
         if(p2.moves[i].isMLG){
             result.koChanceText = "<a href = 'https://www.youtube.com/watch?v=iD92h-M474g'>it's a one-hit KO!</a>";

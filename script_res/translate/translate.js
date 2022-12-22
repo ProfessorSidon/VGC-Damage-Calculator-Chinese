@@ -3392,6 +3392,65 @@ function translate_set(setName) {
     return setName;
 }
 
-// (function(){
-// 	$('td').each(function(){$(this).html(translate($(this).html()));})
-// })();
+var KO_REPLACE_TEXTS = {
+    "something broke; please tell nerd of now": "出错了",
+    "The battlers shared their pain": "双方平分了痛苦",
+    "Might as well Thunderbolt a Landorus": "并没有造成伤害",
+    "the Water-Type attack evaporated in the harsh sunlight": "水属性攻击因日光非常猛烈而蒸发",
+    "the Fire-Type attack fizzled out in the heavy rain": "火属性攻击因下大雨而熄灭",
+    "[The Smooth Taste Of] IMMUNE": "防御方免疫了伤害",
+    "guaranteed OHKO": "确定一击击杀",
+    "Stealth Rock": "隐形岩",
+    "layer of Spikes": "层撒菱",
+    "layers of Spikes": "层撒菱",
+    "Spikes": "撒菱",
+    "Dry Skin recovery": "干燥皮肤回复",
+    "Rain Dish recovery": "雨盘回复",
+    "sandstorm damage": "沙暴伤害",
+    "Ice Body recovery": "冰冻之躯回复",
+    "hail damage": "冰雹伤害",
+    "Leftovers recovery": "吃剩的东西回复",
+    "Black Sludge recovery": "黑色污泥回复",
+    "Black Sludge damage": "黑色污泥伤害",
+    "Grassy Terrain recovery": "青草场地回复",
+    "Poison Heal": "毒疗",
+    "poison damage": "中毒伤害",
+    "toxic damage": "剧毒伤害",
+    "reduced burn damage": "减少的烧伤伤害",
+    "burn damage": "烧伤伤害",
+    "Bad Dreams": "梦魇",
+    "G-Max field damage": "超极巨场地伤害",
+    "extra Salt Cure damage": "额外盐腌伤害",
+    "Salt Cure damage": "盐腌伤害",
+    "after": "在",
+    "very high chance to OHKO": "很高几率一击击杀",
+    "chance to OHKO": "几率一击击杀",
+    "Ripen Sitrus Berry recovery": "熟成文柚果回复(1/2HP)",
+    "Sitrus Berry recovery": "文柚果回复(1/4HP)",
+    "Gluttony pinch berry recovery": "贪吃鬼树果回复(1/2HP)",
+    "Ripen pinch berry recovery": "熟成树果回复(100% HP)",
+    "pinch berry recovery": "树果回复(1/2HP)",
+    "damage": "伤害",
+    "approx.": "约",
+    "guaranteed": "确定",
+    "very high": "很高",
+    "chance to": "几率",
+    "Miniscule": "很小",
+    "possible": "可能",
+    "HKO": "次攻击击杀",
+    "possibly the worst move ever": "没法更差了",
+    "and": "和",
+}
+
+
+function translate_ko_text(text) {
+    foundAfter = text.includes("after")
+    for (var en in KO_REPLACE_TEXTS) {
+        ch = KO_REPLACE_TEXTS[en]
+        text = text.replace(en, ch)
+    }
+    if (foundAfter) {
+      text+="后"
+    }
+    return text
+}
