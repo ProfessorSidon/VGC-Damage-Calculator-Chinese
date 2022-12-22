@@ -1278,7 +1278,7 @@ $(document).ready(function() {
                 var pokeName = setOptions[i].pokemon.toUpperCase()
 
                 if (!query.term
-                    || match_langs_pokemon(pokemonname_noforme(setOptions[i].pokemon), query.term.toUpperCase())
+                    || match_pokemon_name_inputs(pokemonname_noforme(setOptions[i].pokemon), query.term.toUpperCase())
                     || query.term.toUpperCase().split(" ").every(function (term) {
                     return pokeName.indexOf(term) === 0 || pokeName.indexOf("-" + term) >= 0 || pokeName.indexOf(" " + term) >= 0;
                 })) {
@@ -1303,7 +1303,7 @@ $(document).ready(function() {
 	            || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0
                     || option.val().toUpperCase().indexOf(term.toUpperCase()) === 0
                     || option.val().toUpperCase().indexOf(" " + term.toUpperCase()) >= 0
-                    || match_langs_move(option.val(), term.toUpperCase()));
+                    || match_move_name_inputs(option.val(), term.toUpperCase()));
         }
     });
     $(".set-selector").val(getSetOptions()[gen > 3 ? 1 : gen === 1 ? 5 : 3].id);

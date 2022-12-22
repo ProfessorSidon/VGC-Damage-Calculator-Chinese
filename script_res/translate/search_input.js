@@ -1,5 +1,5 @@
 // Pokemon names from https://github.com/MarkussLugia/Pboard
-const POKEMONNAMES_LANGS = {
+const POKEMON_NAMES_INPUTS = {
     "Bulbasaur": {
         "input0": "miaowazhongzi",
         "input1": "mwzz",
@@ -7389,7 +7389,7 @@ const POKEMONNAMES_LANGS = {
     }
 }
 
-const MOVENAMES_LANGS = {
+const MOVE_NAMES_INPUTS = {
     "Pound": {
         "chs": "拍击",
         "ja": "はたく",
@@ -20611,18 +20611,18 @@ const MOVENAMES_LANGS = {
     },
 };
 
-function match_langs_pokemon(name, term) {
-    var translates = POKEMONNAMES_LANGS[name];
-    for (lang in translates) {
-        if (translates[lang] && translates[lang].toUpperCase().indexOf(term.toUpperCase()) === 0) {
+function match_pokemon_name_inputs(name, term) {
+    var inputs = POKEMON_NAMES_INPUTS[name];
+    for (input_key in inputs) {
+        // term matching start of any input for this Pokemon.
+        if (inputs[input_key] && inputs[input_key].toUpperCase().indexOf(term.toUpperCase()) === 0) {
             return true;
         }
     }
-
     return false;
 }
 
-function match_langs_move(name, term) {
+function match_move_name_inputs(name, term) {
     if (name.toUpperCase().indexOf('HIDDEN POWER') == 0 && term.toUpperCase().indexOf('HP') == 0) {
         if (term.length == 2) {
             return true;
@@ -20658,13 +20658,13 @@ function match_langs_move(name, term) {
         }
     }
 
-    var translates = MOVENAMES_LANGS[name];
-    for (var lang in translates) {
-        if (translates[lang] && translates[lang].toUpperCase().indexOf(term.toUpperCase()) === 0) {
+    var inputs = MOVE_NAMES_INPUTS[name];
+    for (var input_key in inputs) {
+        // term matching start of any input for this move.
+        if (inputs[input_key] && inputs[input_key].toUpperCase().indexOf(term.toUpperCase()) === 0) {
             return true;
         }
     }
-
     return false;
 }
 
