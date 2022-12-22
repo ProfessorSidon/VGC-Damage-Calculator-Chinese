@@ -1297,11 +1297,13 @@ $(document).ready(function() {
     });
     $(".move-selector").select2({
         dropdownAutoWidth:true,
-        matcher: function(term, text) {
+        matcher: function(term, text, option) {
             // 2nd condition is for Hidden Power
             return (text.toUpperCase().indexOf(term.toUpperCase()) >= 0
-	            || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0);
-	            // TODO(Sidon): figure out how to search pinyin
+	            || text.toUpperCase().indexOf(" " + term.toUpperCase()) >= 0
+                    || option.val().toUpperCase().indexOf(term.toUpperCase()) === 0
+                    || option.val().toUpperCase().indexOf(" " + term.toUpperCase()) >= 0
+                    || match_langs_move(option.val(), term.toUpperCase()));
         }
     });
     $(".set-selector").val(getSetOptions()[gen > 3 ? 1 : gen === 1 ? 5 : 3].id);
