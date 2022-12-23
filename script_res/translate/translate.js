@@ -3092,6 +3092,11 @@ function pokemonname_noforme(name) {
         return name0;
     }
 
+    var dash_names = ['Ting-Lu', 'Chien-Pao', 'Wo-Chien', 'Chi-Yu']
+    if (dash_names.includes(name)) {
+        return name;
+    }
+
     idx = name.indexOf('-');
     if (idx != -1) {
         let name0 = name.substring(0, idx);
