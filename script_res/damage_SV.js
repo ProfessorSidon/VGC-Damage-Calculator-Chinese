@@ -74,6 +74,11 @@ function GET_DAMAGE_SV(attacker, defender, move, field) {
         "moveName": moveDescName,
         "defenderName": defender_name
     };
+    
+    // Translation
+    description["attackerName"] = translate_pokemon(attacker_name);
+    description["moveName"] = translate_move(moveDescName);
+    description["defenderName"] = translate_pokemon(defender_name);
 
     if (move.bp === 0 || move.category === "Status") {
         return statusMoves(move, attacker, defender, description);

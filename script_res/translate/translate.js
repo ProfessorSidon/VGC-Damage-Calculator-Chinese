@@ -361,17 +361,18 @@ function translate_ability(name) {
     return ABILITYNAMES[name] || name;
 }
 var FIELDNAMES = {
-    "Sun": "阳光",
+    "Sun": "晴天",
     "Rain": "下雨",
     "Sand": "沙暴",
     "Hail": "冰雹",
+    "Snow": "下雪",
     "Harsh Sun": "日光非常猛烈",
     "Heavy Rain": "下大雨",
     "Strong Wind": "空气湍流",
     "Aura Break": "气场破坏",
     "Fairy Aura": "妖精气场",
     "Dark Aura": "暗黑气场",
-    "Gravity": "岩石",
+    "Gravity": "重力",
     "Electric": "电气场地",
     "Grassy": "青草场地",
     "Misty": "薄雾场地",
@@ -3358,6 +3359,7 @@ function translate_pokemon(name) {
 
     return name;
 }
+
 var TYPENAMES = {
     "Normal": "一般",
     "Grass": "草",
@@ -3383,6 +3385,33 @@ var TYPENAMES = {
 function translate_type(name) {
     if (name == null) return null;
     return TYPENAMES[name] || name;
+}
+
+var TYPENAMES_SHORT = {
+    "Normal": "普",
+    "Grass": "草",
+    "Fire": "火",
+    "Water": "水",
+    "Electric": "电",
+    "Ice": "冰",
+    "Flying": "飞",
+    "Bug": "虫",
+    "Poison": "毒",
+    "Ground": "地",
+    "Rock": "岩",
+    "Fighting": "斗",
+    "Psychic": "超",
+    "Ghost": "鬼",
+    "Dragon": "龙",
+    "Dark": "恶",
+    "Steel": "钢",
+    "Typeless": "无",
+    "Fairy": "仙",
+}
+
+function translate_type_short(name) {
+    if (name == null) return null;
+    return TYPENAMES_SHORT[name] || name;
 }
 
 function translate_set(setName) {
@@ -3453,4 +3482,13 @@ function translate_ko_text(text) {
       text+="后"
     }
     return text
+}
+
+function translate_stat(stat) {
+    return stat === AT ? "攻"
+            : stat === DF ? "防"
+            : stat === SA ? "特攻"
+            : stat === SD ? "特防"
+            : stat === SP ? "速"
+            : "wtf";
 }

@@ -774,13 +774,13 @@ $(".result-move").change(function() {
             $("#mainResult").html(result.description + ": " + result.damageText + " -- " + result.koChanceText);
             if (result.parentDamage) {
                 if (result.child2Damage && result.child2Damage !== -1) {
-                    $("#damageValues").text("(First hit: " + result.parentDamage.join(", ") +
-                        "; Second hit: " + result.childDamage.join(", ") +
-                        "; Third hit: " + result.child2Damage.join(", ") + ")");
+                    $("#damageValues").text("(: 第一击: " + result.parentDamage.join(", ") +
+                        "; 第二击: " + result.childDamage.join(", ") +
+                        "; 第三击: " + result.child2Damage.join(", ") + ")");
                 }
                 else {
                     $("#damageValues").text("(First hit: " + result.parentDamage.join(", ") +
-                        "; Second hit: " + result.childDamage.join(", ") + ")");
+                        "; 第二击: " + result.childDamage.join(", ") + ")");
                 }
             }
             else {
@@ -935,7 +935,7 @@ function Field() {
     if (gen === 2) {
         spikes = [$("#gscSpikesL").prop("checked") ? 1 : 0, $("#gscSpikesR").prop("checked") ? 1 : 0];
         weather = $("input:radio[name='gscWeather']:checked").val();
-    } 
+    }
     else {
         weather = $("input:radio[name='weather']:checked").val();
         spikes = [~~$("input:radio[name='spikesL']:checked").val(), ~~$("input:radio[name='spikesR']:checked").val()];
