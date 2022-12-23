@@ -1,7 +1,7 @@
 //LIGHT AND DARK THEMES
 // Load theme according to localStorage
 if(localStorage.getItem("theme") == "dark"){
-	$("#switchTheme").html("Light theme");
+	$("#switchTheme").html("白天模式");
 	$("#switchTheme").val("light");
 	loadTheme("dark");
 }else{
@@ -23,13 +23,13 @@ $(function(){
 
 	$("#switchTheme").on("click", function(){
 		if($(this).val() == "dark"){
-			$(this).html("Light theme");
+			$(this).html("白天模式");
 			this.value = "light";
 			//	We load the dark theme
 			loadTheme("dark");
 			localStorage.setItem("theme", "dark");
 		}else{
-			$(this).html("Dark theme");
+			$(this).html("夜晚模式");
 			this.value = "dark";
 			// We load the light theme
 			loadTheme("light");

@@ -1,8 +1,11 @@
 /*here are the changes for dark mode */
 
 #switchTheme, #switchDex, .dex-change{
-	margin-left : 90px;
-	width: 100px;
+	float: right;
+	margin-left: 1px;
+	margin-right: 1px;
+	width: 80px;
+	font-size: 12px;
 }
 
 body.dark, html.dark {
@@ -26,7 +29,7 @@ body.dark, html.dark {
     /*border-bottom: 5px solid #103a52;
 }*/
 
-.dark .header {    
+.dark .header {
     color: #ffffff !important;
     background-color: #192121 !important;
     border-bottom: 5px solid #ce0000 !important;
@@ -48,7 +51,7 @@ body.dark, html.dark {
     border: #525252 solid 1px;
 }
 
-.dark .select2-drop {    
+.dark .select2-drop {
     background: #31313a;
     color: #d4d4d4;
 }
@@ -58,7 +61,7 @@ body.dark, html.dark {
     background: #5d5d5d;
 }
 
-.dark .select2-search input {    
+.dark .select2-search input {
     background: #31313a
 }
 
@@ -73,7 +76,7 @@ body.dark, html.dark {
     background: #31313a !important;
 }
 
-.dark textarea, .dark #spreadName {    
+.dark textarea, .dark #spreadName {
     color: #d4d4d4;
     border-color: rgb(169, 169, 169);
     background-color: #31313a;
@@ -84,7 +87,7 @@ body.dark, html.dark {
     color: #fff;
 }
 
-.dark .onoffswitch-inner:before {    
+.dark .onoffswitch-inner:before {
     background-color: #31313a;
 }
 

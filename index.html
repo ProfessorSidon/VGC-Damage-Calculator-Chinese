@@ -42,28 +42,24 @@
                 <label class="btn btn-small btn-mid" for="gen8">剑/盾</label>
                 <input class="gen btn-input" type="radio" name="gen" value="9" id="gen9" checked="checked" />
                 <label class="btn btn-small btn-right" for="gen9">朱/紫</label>
+
+                <button class="btn btn-small" id="switchTheme">夜晚模式</button>
                 <input class="btn-input" style="float: right;" type="checkbox" id="switchDex" />
                 <label class="btn btn-small dex-change gen-specific g8 g9" for="switchDex" title="是否包括全国图鉴？">全国图鉴</label>
             </span>
         </div>
-            <button class="btn btn-small" id="switchTheme" style="float: right;">夜晚模式</button>
 
         <hr />
-        <p><br /><br /></p>
-
-        <h3>中文翻译信息：</h3>
-        <p>由bikvy进行初始版本汉化，ProfessorSidon进行剑盾D L C/朱紫版本汉化及维护。
+        <h3>使用说明：</h3>
+        <p>搜索宝可梦名称：内置输入法支持，可以输入中文、拼音、英文、拼音缩写或者别名拼音。例如烈咬陆鲨可以输入"烈咬陆鲨"，"lieyaolusha"，"garchomp"，"lyls"，或"dilong"。
         </p>
-        <p>问题反馈:
-            <a href="https://github.com/ProfessorSidon/VGC-Damage-Calculator/issues">Github</a>
+        <p>搜索招式名称：可以输入任意招式内汉字，或者（仅支持剑盾为止技能）中文、拼音、英文、招式属性。例如搜索雷电拳可以输入"雷"，"电"，"拳"，"leidian"，"thunder"。
         </p>
-        <p>搜索宝可梦形态: 输入中文或拼音，如
-            <b>洛托姆-冲洗</b>、
-            <b>嘎啦嘎啦-阿罗拉</b>
+        <p>剑盾/朱紫默认仅包括游戏里可以使用的精灵。如果需要计算别的请点击"全国图鉴"。
         </p>
-        <h3>原作者信息：</h3>
-        <p>VGC 2023 calculator maintainenance by Alex Collins (<a href="https://twitter.com/nerd_of_now">@nerd_of_now</a>). Basis of the calculator by Jake White (<a href="https://twitter.com/squirrelboydev" target="_blank" rel="noopener noreferrer">@squirrelboydev</a>).</p>
-        
+        问题反馈:
+        <a href="https://github.com/ProfessorSidon/VGC-Damage-Calculator-Chinese/issues">Github</a>
+        <hr />
         <div class="move-result-group" title="Select a move to show detailed results.">
             <div class="move-result-subgroup">
                 <div class="result-move-header"><span id="resultHeaderL">宝可梦#1的招式(选择一个查看详细结果)</span></div>
@@ -604,9 +600,9 @@
         <div class="panel field-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    Field
+                    场地
                     <div id="autolevel">
-                        Auto-Level to:
+                        等级设定为:
                         <div class="onoffswitch" style="margin-left: 1em">
                             <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="douswitch" checked>
                             <label class="onoffswitch-label" for="douswitch">
@@ -1376,6 +1372,15 @@
                 </div>
             </div>
         </div>
+
+        <div style="clear:both"></div>
+        <h3>中文翻译信息：</h3>
+        <p>由bikvy进行初始版本汉化，ProfessorSidon进行剑盾D L C/朱紫版本汉化及维护。
+        </p>
+        <h3>原作者信息：</h3>
+        <p>VGC 2023 calculator maintainenance by Alex Collins (<a href="https://twitter.com/nerd_of_now">@nerd_of_now</a>). Basis of the calculator by Jake White (<a href="https://twitter.com/squirrelboydev" target="_blank" rel="noopener noreferrer">@squirrelboydev</a>).
+        </p>
+
         <div class="footer">
             <p><em>This calculator is based on the work of Tapin, Firestorm, and squirrelboy1225, whose work was in turn based on the work of Honko, gamut, and Zarel. It has been optimized for players in the current Pokémon Video Game Championship Series by nerd of now. <br />Many thanks to Nugget Bridge and Trainer Tower for hosting previous incarnations of this calculator in the past.</em></p>
         </div>
