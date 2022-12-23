@@ -33,7 +33,8 @@ function translate(str) {
         translate_move,
         translate_ability,
         translate_item,
-        translate_nature
+        translate_nature,
+        translate_field,
     ];
 
     for (let i = 0; i < names.length; i += 1) {
@@ -3423,7 +3424,38 @@ function translate_set(setName) {
     if (setName.toLowerCase().startsWith("default set")) {
         return "默认配置"
     }
-    return setName;
+    // Heuristically translate one or two words repeatedly.
+    words = setName.split(" ")
+    translated = ""
+    var startIdx= 0
+    while (startIdx < words.length) {
+      // Try translate two words first, then one word.
+      if (startIdx+1 < words.length) {
+        en = words[startIdx] + " " + words[startIdx+1]
+        ch = translate(en)
+        if (ch && (ch != en)) { // found translation
+          translated += ch
+          startIdx += 2
+          continue;
+        }
+      }
+      en = words[startIdx]
+      ch = translate(en)
+      if (!ch && en.toLowerCase() == "support") {
+        ch = "辅助"
+      } else if  (!ch && en.toLowerCase() == "scarf") {
+        ch = "围巾"
+      } else if  (!ch && en.toLowerCase() == "band") {
+        ch = "头带"
+      } else if  (!ch && en.toLowerCase() == "specs") {
+        ch = "眼镜"
+      } else if  (!ch && en.toLowerCase() == "set") {
+        ch = "配置"
+      }
+      translated += ch ? ch : en
+      startIdx += 1
+    }
+    return translated;
 }
 
 var KO_REPLACE_TEXTS = {
