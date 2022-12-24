@@ -1,4 +1,13 @@
-function translate(str) {
+const TRYLIST = [
+    translate_pokemon,
+    translate_move,
+    translate_ability,
+    translate_item,
+    translate_nature,
+    translate_field,
+];
+
+function translate(str, translate_funcs=TRYLIST) {
 
     let word_idxs = [],
         idx_wordStart = -1,
@@ -28,18 +37,9 @@ function translate(str) {
         }
     }
 
-    const TRYLIST = [
-        translate_pokemon,
-        translate_move,
-        translate_ability,
-        translate_item,
-        translate_nature,
-        translate_field,
-    ];
-
     for (let i = 0; i < names.length; i += 1) {
         let name = names[i];
-        for (translateFunc of TRYLIST) {
+        for (translateFunc of translate_funcs) {
             let trans = translateFunc(name[0]);
             if (trans != name[0]) {
                 return '' + trans + name[1];
@@ -3361,7 +3361,7 @@ function translate_pokemon(name) {
         }
     }
 
-    //console.warn('not translated',name);
+    console.warn('not translated',name);
 
     return name;
 }
@@ -3420,10 +3420,41 @@ function translate_type_short(name) {
     return TYPENAMES_SHORT[name] || name;
 }
 
+var SET_TEXT_REPLACE = {
+    "tera": "太晶",
+    "support": "辅助",
+    "offensive": "进攻",
+    "bulky": "肉",
+    "bulk": "肉",
+    "scarf": "围巾",
+    "band": "头带",
+    "specs": "眼镜",
+    "sash": "腰带",
+    "set": "配置",
+    "room": "空间",
+    "screens": "开墙",
+    "choice": "讲究",
+    "lifeorb": "命玉",
+    "orb": "命玉",
+    "physical": "物理",
+    "special": "特殊",
+    "sitrus": "文柚果",
+}
+
 function translate_set(setName) {
     if (setName.toLowerCase().startsWith("default set")) {
         return "默认配置"
     }
+    
+    var set_try_funcs = [
+        translate_move,
+        translate_ability,
+        translate_item,
+        translate_nature,
+        translate_field,
+    ];
+    // Split CamelCase
+    setName = setName.replace(/([^A-Z])([A-Z])/g, '$1 $2').replace(/\s\s+/g, ' ');
     // Heuristically translate one or two words repeatedly.
     words = setName.split(" ")
     translated = ""
@@ -3432,27 +3463,34 @@ function translate_set(setName) {
       // Try translate two words first, then one word.
       if (startIdx+1 < words.length) {
         en = words[startIdx] + " " + words[startIdx+1]
-        ch = translate(en)
+        ch = translate(en, translate_funcs=set_try_funcs)
         if (ch && (ch != en)) { // found translation
           translated += ch
           startIdx += 2
           continue;
         }
       }
-      en = words[startIdx]
-      ch = translate(en)
-      if (!ch && en.toLowerCase() == "support") {
-        ch = "辅助"
-      } else if  (!ch && en.toLowerCase() == "scarf") {
-        ch = "围巾"
-      } else if  (!ch && en.toLowerCase() == "band") {
-        ch = "头带"
-      } else if  (!ch && en.toLowerCase() == "specs") {
-        ch = "眼镜"
-      } else if  (!ch && en.toLowerCase() == "set") {
-        ch = "配置"
+      en_word = words[startIdx]
+      // Prefer using short types
+      ch_word = translate_type_short(en_word)
+      // Avoid further translation if matches short type
+      if (ch_word != en_word) {ch_word += "-"};
+      // Then try translate
+      if (!ch_word || (ch_word == en_word)) {
+        ch_word = translate(en_word, translate_funcs=set_try_funcs)
       }
-      translated += ch ? ch : en
+      // Then try replace the common words not properly named
+      if (!ch_word || (ch_word == en_word)) {
+        ch_word = en_word.toLowerCase()
+        for (var en in SET_TEXT_REPLACE) {
+            ch = SET_TEXT_REPLACE[en]
+            ch_word = ch_word.replace(en, ch)
+        }
+        if (ch_word.toLowerCase() == en_word.toLowerCase()){
+          ch_word = ch_word + " "
+        }
+      }
+      translated += ch_word ? ch_word : en_word
       startIdx += 1
     }
     return translated;
