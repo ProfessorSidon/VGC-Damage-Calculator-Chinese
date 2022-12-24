@@ -8,7 +8,6 @@ const TRYLIST = [
 ];
 
 function translate(str, translate_funcs=TRYLIST) {
-
     let word_idxs = [],
         idx_wordStart = -1,
         idx_last = -1,
@@ -3218,16 +3217,25 @@ function translate_pokemon(name) {
         name: 'Landorus',
         types: {
             'T': '灵兽形态',
+            'Therian': '灵兽形态',
         }
     }, {
         name: 'Tornadus',
         types: {
             'T': '灵兽形态',
+            'Therian': '灵兽形态',
         }
     }, {
         name: 'Thundurus',
         types: {
             'T': '灵兽形态',
+            'Therian': '灵兽形态',
+        }
+    }, {
+        name: 'Enamorus',
+        types: {
+            'T': '灵兽形态',
+            'Therian': '灵兽形态',
         }
     }, {
         name: 'Lycanroc',
@@ -3445,7 +3453,7 @@ function translate_set(setName) {
     if (setName.toLowerCase().startsWith("default set")) {
         return "默认配置"
     }
-    
+
     var set_try_funcs = [
         translate_move,
         translate_ability,
@@ -3453,7 +3461,7 @@ function translate_set(setName) {
         translate_nature,
         translate_field,
     ];
-    // Split CamelCase
+    // Split CamelCase into separate words.
     setName = setName.replace(/([^A-Z])([A-Z])/g, '$1 $2').replace(/\s\s+/g, ' ');
     // Heuristically translate one or two words repeatedly.
     words = setName.split(" ")
@@ -3465,6 +3473,13 @@ function translate_set(setName) {
         en = words[startIdx] + " " + words[startIdx+1]
         ch = translate(en, translate_funcs=set_try_funcs)
         if (ch && (ch != en)) { // found translation
+          // Translation only matched first word.
+          if (ch.split(" ")[1] == en.split(" ")[1]) {
+            translated += ch.split(" ")[0]
+            startIdx += 1
+            continue;
+          }
+
           translated += ch
           startIdx += 2
           continue;
@@ -3493,6 +3508,7 @@ function translate_set(setName) {
       translated += ch_word ? ch_word : en_word
       startIdx += 1
     }
+
     return translated;
 }
 
