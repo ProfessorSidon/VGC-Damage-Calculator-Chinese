@@ -3447,6 +3447,8 @@ var SET_TEXT_REPLACE = {
     "physical": "物理",
     "special": "特殊",
     "sitrus": "文柚果",
+    "press": "扑击",
+    "tr": "空间",
 }
 
 function translate_set(setName) {
@@ -3462,7 +3464,7 @@ function translate_set(setName) {
         translate_field,
     ];
     // Split CamelCase into separate words.
-    setName = setName.replace(/([^A-Z])([A-Z])/g, '$1 $2').replace(/\s\s+/g, ' ');
+    setName = setName.replace(/([^A-Z-])([A-Z])/g, '$1 $2').replace(/\s\s+/g, ' ');
     // Heuristically translate one or two words repeatedly.
     words = setName.split(" ")
     translated = ""
@@ -3508,7 +3510,7 @@ function translate_set(setName) {
       translated += ch_word ? ch_word : en_word
       startIdx += 1
     }
-
+    //if (translated.match(/[a-z]/g)) { console.log(translated) }
     return translated;
 }
 
