@@ -1,10 +1,29 @@
 ﻿<!doctype HTML>
 <html lang="us">
+<!--<link rel="icon" type="image/png" href="image_res/favicon.ico">-->
 <link rel="icon" type="image/png" href="image_res/Favicon-32px.ico">
 
+    <!--<link rel="image_src" href="https://damagecalc.trainertower.com/image_res/logo.png" />-->
     <link rel="image_src" href="image_res/Logo Nimbasa City Post PNG.png" />
     <html xmlns="http://www.w3.org/1999/xhtml"
           xmlns:og="http://ogp.me/ns#">
+    <!--<meta property="og:title" content="Trainer Tower Damage Calculator" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://damagecalc.trainertower.com/image_res/logo.png" />
+<script>
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-86401070-1', 'auto');
+    ga('send', 'pageview');
+
+
+
+</script>-->
     <head>
         <meta charset="UTF-8" />
         <title>Pokémon Damage Calculator</title>
@@ -48,9 +67,9 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>-->
             <p>VGC 2023 calculator maintainenance by Alex Collins (<a href="https://twitter.com/nerd_of_now">@nerd_of_now</a>). Basis of the calculator by Jake White (<a href="https://twitter.com/squirrelboydev" target="_blank" rel="noopener noreferrer">@squirrelboydev</a>).</p>
-            <!--<p><b>Is there an important or relevant set missing? <a href="https://forms.gle/zBbEnvp2vZ2UADUJA" target="_blank" rel="noopener noreferrer">Give us your suggestion!</a></b></p>-->
-            <p><b>Pokemon Scarlet and Violet are out now!</b> We are working on optimizing this calculator for the new games.
-            <br>This calculator contains spoilers for Scarlet and Violet. <b>Use at your own discretion.</b></p>
+            <p>Pokemon Scarlet and Violet are out now! We are working on optimizing this calculator for the new games.
+            <!--<br>This calculator contains spoilers for Scarlet and Violet. <b>Use at your own discretion.</b></p>-->
+            <br><b>Is there an important or relevant set missing? <a href="https://forms.gle/zBbEnvp2vZ2UADUJA" target="_blank" rel="noopener noreferrer">Give us your suggestion!</a></b></p>
             
             <p>If you like what we do here, please consider supporting us on <a href="https://www.buymeacoffee.com/NCPDamageCalc" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>!
             <br>For any issues with or other suggestions for this version of the Damage Calculator, contact Alex on <a href="https://github.com/nerd-of-now/NCP-VGC-Damage-Calculator/issues" target="_blank" rel="noopener noreferrer">Github</a> or <a href="https://twitter.com/nerd_of_now" target="_blank" rel="noopener noreferrer">Twitter</a>.</p>
@@ -135,6 +154,8 @@
                             <select class="ability terrain-trigger calc-trigger"></select>
                             <input class="abilityToggle calc-trigger hide" type="checkbox" title="Is this Ability active?">
                             <select class= "ability-supreme calc-trigger hide"><option value="0">0 down</option><option value="1">1 down</option><option value="2">2 down</option><option value="3">3 down</option><option value="4">4 down</option><option value="5">5 down</option></select>
+                            <input class="ability-advanced calc-trigger hide" type="checkbox" title="Click here manually choose the boost. Will be done automatically otherwise.">
+                            <select class= "ability-proto-quark calc-trigger hide"><option value="0">Attack</option><option value="1">Defense</option><option value="2">Sp. Atk</option><option value="3">Sp. Def</option><option value="4">Speed</option></select>
                         </div>
                         <div class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
                             <label>Item</label>
@@ -527,6 +548,8 @@
                             <select class="ability terrain-trigger calc-trigger"></select>
                             <input class="abilityToggle calc-trigger hide" type="checkbox" title="Is this Ability active?">
                             <select class="ability-supreme calc-trigger hide"><option value="0">0 down</option><option value="1">1 down</option><option value="2">2 down</option><option value="3">3 down</option><option value="4">4 down</option><option value="5">5 down</option></select>
+                            <input class="ability-advanced calc-trigger hide" type="checkbox" title="Click here manually choose the boost. Will be done automatically otherwise.">
+                            <select class= "ability-proto-quark calc-trigger hide"><option value="0">Attack</option><option value="1">Defense</option><option value="2">Sp. Atk</option><option value="3">Sp. Def</option><option value="4">Speed</option></select>
                         </div>
                         <div class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9">
                             <label>Item</label>
@@ -628,8 +651,6 @@
     </body>
 
     <script src="jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="script_res/translate/translate.js"></script>
-    <script type="text/javascript" src="script_res/translate/translate_langs.js"></script>
     <script type="text/javascript" src="script_res/switch_mode.js"></script>
     <script type="text/javascript" src="script_res/select2.min.js"></script>
     <script type="text/javascript" src="script_res/pokedex.js"></script>
@@ -666,7 +687,7 @@
     <script type="text/javascript" src="script_res/ap_calc.js"></script>
     <script type="text/javascript" src="script_res/damage_MASTER.js"></script>
     <script type="text/javascript" src="script_res/damage_SV.js"></script>
-    <script type="text/javascript" src="script_res/damage_SM-SS.js"></script>
+    <!--<script type="text/javascript" src="script_res/damage_SM-SS.js"></script>-->
     <!--<script type="text/javascript" src="script_res/damage.js"></script>-->
     <!--<script type="text/javascript" src="script_res/damage_sm.js"></script>-->
     <script type="text/javascript" src="script_res/damage_xy.js"></script>

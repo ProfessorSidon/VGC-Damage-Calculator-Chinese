@@ -17498,3 +17498,14 @@ var NO_FORMS_SV =
     ];
 
 NO_FORMS_SV.forEach(e => POKEDEX_SV[e].formes = null);
+//function tempCSV() {^M
+//    var pokemonCSV = "Pokemon,Type 1,Type 2,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed\n";^M
+//    Object.keys(POKEDEX_SV).forEach(i => pokemonCSV = POKEDEX_SV[i].t2 ? pokemonCSV + i + "," + POKEDEX_SV[i].t1 + "," + POKEDEX_SV[i].t2 + ","^M
+//        + POKEDEX_SV[i].bs.hp + "," + POKEDEX_SV[i].bs.at + "," + POKEDEX_SV[i].bs.df + "," + POKEDEX_SV[i].bs.sa + ","^M
+//        + POKEDEX_SV[i].bs.sd + "," + POKEDEX_SV[i].bs.sp + "\n"^M
+//        : pokemonCSV + i + "," + POKEDEX_SV[i].t1 + ",,"^M
+//        + POKEDEX_SV[i].bs.hp + "," + POKEDEX_SV[i].bs.at + "," + POKEDEX_SV[i].bs.df + "," + POKEDEX_SV[i].bs.sa + ","^M
+//        + POKEDEX_SV[i].bs.sd + "," + POKEDEX_SV[i].bs.sp + "\n");^M
+//    Clipboard_CopyTo(pokemonCSV);^M
+//    alert("Copied CSV.");^M
+//}
