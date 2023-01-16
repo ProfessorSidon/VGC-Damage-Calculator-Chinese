@@ -3,6 +3,7 @@ var SETDEX_CUSTOM_SV = {};
 
 var components = [
     SETDEX_VGC2023,
+    SETDEX_MISSING_VGC2023,
 ];
 
 for (var i=0; i<components.length; i++) {
