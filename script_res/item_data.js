@@ -71,22 +71,14 @@ var ITEMS_DPP = ITEMS_ADV.concat([
     'Coba Berry',
     'Colbur Berry',
     'Custap Berry',
-    'Draco Plate',
-    'Dread Plate',
     'Durin Berry',
-    'Earth Plate',
     'Enigma Berry',
     'Expert Belt',
-    'Fist Plate',
     'Flame Orb',
-    'Flame Plate',
     'Ganlon Berry',
     'Griseous Orb',
     'Haban Berry',
-    'Icicle Plate',
-    'Insect Plate',
     'Iron Ball',
-    'Iron Plate',
     'Jaboca Berry',
     'Kasib Berry',
     'Kebia Berry',
@@ -98,9 +90,7 @@ var ITEMS_DPP = ITEMS_ADV.concat([
     'Lum Berry',
     'Lustrous Orb',
     'Macho Brace',
-    'Meadow Plate',
     'Micle Berry',
-    'Mind Plate',
     'Muscle Band',
     'Occa Berry',
     'Odd Incense',
@@ -116,20 +106,14 @@ var ITEMS_DPP = ITEMS_ADV.concat([
     'Salac Berry',
     'Sea Incense',
     'Shuca Berry',
-    'Sky Plate',
-    'Splash Plate',
-    'Spooky Plate',
     'Starf Berry',
-    'Stone Plate',
     'Tanga Berry',
     'Toxic Orb',
-    'Toxic Plate',
     'Wacan Berry',
     'Watmel Berry',
     'Wave Incense',
     'Wise Glasses',
     'Yache Berry',
-    'Zap Plate',
     //NO FUNCT
     'Damp Rock',
     'Heat Rock',
@@ -157,6 +141,27 @@ var ITEMS_DPP = ITEMS_ADV.concat([
     'Wide Lens',
     'Zoom Lens',
 ]);
+
+var ITEMS_DPP_PLATES = [
+    'Meadow Plate',
+    'Flame Plate',
+    'Splash Plate',
+    'Zap Plate',
+    'Icicle Plate',
+    'Fist Plate',
+    'Toxic Plate',
+    'Earth Plate',
+    'Sky Plate',
+    'Mind Plate',
+    'Insect Plate',
+    'Stone Plate',
+    'Spooky Plate',
+    'Draco Plate',
+    'Dread Plate',
+    'Iron Plate',
+];
+
+var ITEMS_DPP = ITEMS_DPP.concat(ITEMS_DPP_PLATES)
 
 var ITEMS_GEMS = [
     'Bug Gem',
@@ -255,7 +260,6 @@ var ITEMS_XY_NO_MEGA = ITEMS_BW_NO_GEMS.concat([
     'Assault Vest',
     'Kee Berry',
     'Maranga Berry',
-    'Pixie Plate',
     'Roseli Berry',
     'Safety Goggles',
     //NO FUNCT
@@ -263,6 +267,15 @@ var ITEMS_XY_NO_MEGA = ITEMS_BW_NO_GEMS.concat([
     'Snowball',
     'Weakness Policy',
 ]);
+
+ITEMS_XY_PLATES = ITEMS_DPP_PLATES.concat([
+    'Pixie Plate',
+])
+
+for (i in ITEMS_DPP_PLATES) {
+    ITEMS_XY_NO_MEGA.splice(ITEMS_XY_NO_MEGA.indexOf(ITEMS_DPP_PLATES[i]), 1);
+}
+ITEMS_XY_NO_MEGA = ITEMS_XY_NO_MEGA.concat(ITEMS_XY_PLATES)
 
 ITEMS_XY_NO_MEGA.splice(ITEMS_XY_NO_MEGA.indexOf('BlackGlasses'), 1, 'Black Glasses');
 ITEMS_XY_NO_MEGA.splice(ITEMS_XY_NO_MEGA.indexOf('DeepSeaScale'), 1, 'Deep Sea Scale');
@@ -317,6 +330,13 @@ var ITEMS_SM_NO_Z_MEGA = ITEMS_XY_NO_MEGA.concat([
     'Misty Seed',
     'Electric Seed',
     'Grassy Seed',
+    //NO FUNCT
+    'Adrenaline Orb',   //sike it's implemented
+    'Protective Pads',  //this too
+    'Terrain Extender',
+]);
+
+var ITEMS_MEMORIES = [
     //SILVALLY MEMORIES
     'Bug Memory',
     'Dark Memory',
@@ -335,11 +355,8 @@ var ITEMS_SM_NO_Z_MEGA = ITEMS_XY_NO_MEGA.concat([
     'Rock Memory',
     'Steel Memory',
     'Water Memory',
-    //NO FUNCT
-    'Adrenaline Orb',   //sike it's implemented
-    'Protective Pads',  //this too
-    'Terrain Extender',
-]);
+]
+ITEMS_SM_NO_Z_MEGA = ITEMS_XY_NO_MEGA.concat(ITEMS_MEMORIES)
 
 var ITEMS_SM = ITEMS_SM_NO_Z_MEGA.concat(ITEMS_Z_AND_MEGA);
 
@@ -359,8 +376,6 @@ var NEW_ITEMS_SS = [
 var ITEMS_SS = ITEMS_SM_NO_Z_MEGA.concat(NEW_ITEMS_SS);
 ITEMS_SS.splice(ITEMS_SS.indexOf('Stick'), 1);
 
-ITEMS_SS.splice(ITEMS_SS.indexOf('Stick'), 1); // Renamed
-
 var NEW_ITEMS_SV = [
     'Mirror Herb',  //copies stat boosts from last stat boosting move from opponent, no calc functionality
     'Covert Cloak', //item Shield Dust, no calc functionality
@@ -375,6 +390,31 @@ var NEW_ITEMS_SV = [
 ];
 
 var ITEMS_SV = ITEMS_SS.concat(NEW_ITEMS_SV);
+
+for (i in ITEMS_MEMORIES) {
+    ITEMS_SV.splice(ITEMS_SV.indexOf(ITEMS_MEMORIES[i]), 1);
+}
+ITEMS_SV.splice(ITEMS_SV.indexOf('Berry Juice'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Leek'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Lucky Punch'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Deep Sea Scale'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Deep Sea Tooth'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Soul Dew'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Adamant Orb'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Lustrous Orb'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Griseous Orb'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Macho Brace'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Power Bracer'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Power Belt'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Power Lens'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Power Band'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Power Weight'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Burn Drive'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Chill Drive'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Douse Drive'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Shock Drive'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Rusted Sword'), 1); // no use
+ITEMS_SV.splice(ITEMS_SV.indexOf('Rusted Shield'), 1); // no use
 
 var ITEMS_SS_NATDEX = ITEMS_SM.concat(NEW_ITEMS_SS);
 var ITEMS_SV_NATDEX = ITEMS_SS_NATDEX.concat(NEW_ITEMS_SV);

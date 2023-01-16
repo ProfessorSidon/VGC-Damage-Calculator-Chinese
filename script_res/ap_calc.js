@@ -1162,7 +1162,7 @@ $(".gen").change(function () {
     $("select.move-selector").find("option").remove().end().append(moveOptions);
     var abilityOptions = getSelectOptions(abilities, true, undefined, translate_ability);
     $("select.ability").find("option").remove().end().append("<option value=\"\">(其他)</option>" + abilityOptions);
-    var itemOptions = getSelectOptions(items, true, undefined, translate_item);
+    var itemOptions = getSelectOptions(items, false, undefined, translate_item);
     $("select.item").find("option").remove().end().append("<option value=\"\">(无)</option>" + itemOptions);
 
     $(".set-selector").val(getSetOptions()[gen > 3 ? 1 : gen === 1 ? 5 : 3].id);
