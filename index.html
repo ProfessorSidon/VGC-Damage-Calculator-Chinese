@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="main-result-group">
-            <div class="big-text"><span id="mainResult">加载中...</span></div>
+            <div class="big-text"><span id="mainResult" onclick="Clipboard_CopyTo(this.textContent)" title="Click to copy the result.">加载中...</span></div>
             <div class="small-text"><span id="damageValues">(如果此条信息长时间显示，请尝试启用JavaScript，或者删除cookies)</span></div>
         </div>
         <div class="panel poke-info" id="p1">
@@ -598,7 +598,7 @@
                         <option value="6">6段效果</option>
                     </select>
                 </div>
-                    <!--<input class="glaive-rush calc-trigger hide" type="checkbox" id="glaiveL" title="Apply double damage from using Glaive Rush?" />-->
+                <input class="glaive-rush calc-trigger hide" type="checkbox" id="glaiveL" title="Apply double damage from using Glaive Rush?" />
                 <div class="info-group">
                     <input type="text" class="setCalc" id="setName1" style="width: 25%" value="个人配置">
                     <button type="button" onclick="savecalc1()">保存个人配置</button>
@@ -1382,7 +1382,7 @@
                         <option value="6">6段效果</option>
                     </select>
                 </div>
-                    <!--<input class="glaive-rush calc-trigger hide" type="checkbox" id="glaiveR" title="Apply double damage from using Glaive Rush?" />-->
+                <input class="glaive-rush calc-trigger hide" type="checkbox" id="glaiveL" title="Apply double damage from using Glaive Rush?" />
                 <div class="info-group">
                     <input type="text" class="setCalc"  id="setName2" style="width: 25%" value="个人配置">
                     <button type="button" onclick="savecalc2()">保存个人配置</button>
