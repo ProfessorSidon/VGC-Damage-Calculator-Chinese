@@ -332,8 +332,8 @@ function checkTrace(source, target) {
 }
 
 function checkNeutralGas(p1, p2, isNGas) {
-    var cannotSupress = ['As One', 'Battle Bond', 'Comatose', 'Commander', 'Disguise', 'Gulp Missile', 'Hadron Engine', 'Ice Face', 'Multitype',
-        'Orichalcum Pulse', 'Power Construct', 'Protosynthesis', 'Quark Drive', 'RKS System', 'Schooling', 'Shields Down', 'Stance Change', 'Zero to Hero'];
+    var cannotSupress = ['As One', 'Battle Bond', 'Comatose', 'Disguise', 'Gulp Missile', 'Ice Face', 'Multitype',
+        'Power Construct', 'Protosynthesis', 'Quark Drive', 'RKS System', 'Schooling', 'Shields Down', 'Stance Change', 'Zero to Hero'];
     if (isNGas) {
         if (cannotSupress.indexOf(p1.ability) == -1 && p1.item !== 'Ability Shield') p1.ability = '';
         if (cannotSupress.indexOf(p2.ability) == -1 && p2.item !== 'Ability Shield') p2.ability = '';
@@ -1324,36 +1324,26 @@ function calcBPMods(attacker, defender, field, move, description, ateIzeBoosted,
         description.attackerAbility = attacker.ability;
     }
 
-    //If the BP before this point would exceed 60 BP, don't apply it
-    //tempBP = attacker.ability === "Technician" ? pokeRound(basePower * chainMods(bpMods) / 0x1000) : tempBP; //MIGHT BE DONE THIS WAY, COMMENTED OUT FOR NOW
-    tempBP = pokeRound(basePower * chainMods(bpMods) / 0x1000);
-
-    //h. Tera boost for moves with <60 BP
-    if (attacker.isTerastalize && attacker.tera_type === move.type && tempBP < 60 && canTeraBoost60BP(move)) {
-        bpMods.push(60 / tempBP * 0x1000);
-        description.teraBPBoost = true;
-    }
-
-    //i. Heatproof
-    if (defAbility === "Heatproof" && move.type === "Fire") {
+    //h. Heatproof (pre Gen 9)
+    if (defAbility === "Heatproof" && move.type === "Fire" & gen < 9) {
         bpMods.push(0x800);
         description.defenderAbility = defAbility;
     }
 
-    //j. Dry Skin
+    //i. Dry Skin
     else if (defAbility === "Dry Skin" && move.type === "Fire") {
         bpMods.push(0x1400);
         description.defenderAbility = defAbility;
     }
 
-    //k. 1.1x Items
+    //j. 1.1x Items
     if ((attacker.item === "Muscle Band" && move.category === "Physical")
         || (attacker.item === "Wise Glasses" && move.category === "Special")) {
         bpMods.push(0x1199);
         description.attackerItem = attacker.item;
     }
 
-    //l. 1.2x Items
+    //k. 1.2x Items
     else if (getItemBoostType(attacker.item) === move.type) {
         var itemTypeMultiplier = gen > 3 ? 0x1333 : 0x1199;
         bpMods.push(itemTypeMultiplier);
@@ -1368,58 +1358,59 @@ function calcBPMods(attacker, defender, field, move, description, ateIzeBoosted,
         description.maskBoost = true;
     }
 
-    //m. Gems
+    //l. Gems
     else if (attacker.item === move.type + " Gem") {
         var gemMultiplier = gen > 5 ? 0x14CD : 0x1800;
         bpMods.push(gemMultiplier);
         description.attackerItem = attacker.item;
     }
 
-    //n. Solar Beam, Solar Blade
+    //m. Solar Beam, Solar Blade
     if ((move.name === "Solar Beam" || move.name === "SolarBeam" || move.name === "Solar Blade") && ["None", "Sun", "Harsh Sun", "Strong Winds", ""].indexOf(field.weather) === -1 && attacker.item !== 'Utility Umbrella') {
         bpMods.push(0x800);
         description.moveBP = move.bp / 2;
         description.weather = field.weather;
     }
 
-    //o. Me First
+    //n. Me First
 
-    //p. Knock Off
+    //o. Knock Off
     else if (gen > 5 && move.name === "Knock Off" && defender.name !== null && !cantRemoveItem(defender.item, defender.name, field.terrain)) {
         bpMods.push(0x1800);
         description.moveBP = move.bp * 1.5;
     }
-    //q. Psyblade
+    //p. Psyblade
     else if (field.terrain === "Electric" && move.name === "Psyblade") {
         bpMods.push(0x1800);
         description.moveBP = move.bp * 1.5;
         description.terrain = field.terrain;
     }
-    //r. Misty Explosion
+    //q. Misty Explosion
     else if ((move.name === "Misty Explosion" && field.terrain == "Misty" && attIsGrounded) ||
         (move.name === "Grav Apple" && field.isGravity)) {
         bpMods.push(0x1800);
         description.moveBP = move.bp * 1.5;
-    }//s. Expanding Force
+    }
+    //r. Expanding Force
     else if (move.name === "Expanding Force" && field.terrain == "Psychic" && attIsGrounded) {
         move.isSpread = true;
         bpMods.push(0x1800);
         description.moveBP = move.bp * 1.5;
     }
 
-    //t. Helping Hand
-    if (field.isHelpingHand) { //calculated differently in gen 3
+    //s. Helping Hand
+    if (field.isHelpingHand) {  //calculated differently in gen 3
         bpMods.push(0x1800);
         description.isHelpingHand = true;
     }
 
-    //u. Charge, Electromorphosis, Wind Power
+    //t. Charge, Electromorphosis, Wind Power
     if ((attacker.ability === "Electromorphosis" || attacker.ability === "Wind Power") && attacker.abilityOn && move.type === "Electric") {
         bpMods.push(0x2000);
         description.attackerAbility = attacker.ability;
     }
 
-    //v. Double power (Facade, Brine, Venoshock, Retaliate, Fusion Bolt, Fusion Flare, Lash Out)
+    //u. Double power (Facade, Brine, Venoshock, Retaliate, Fusion Bolt, Fusion Flare, Lash Out)
     if ((move.name === "Facade" && ["Burned", "Paralyzed", "Poisoned", "Badly Poisoned"].indexOf(attacker.status) !== -1) ||
         (move.name === "Brine" && defender.curHP <= defender.maxHP / 2) ||
         (["Venoshock", "Barb Barrage"].indexOf(move.name) !== -1 && (defender.status === "Poisoned" || defender.status === "Badly Poisoned")) ||
@@ -1428,7 +1419,7 @@ function calcBPMods(attacker, defender, field, move, description, ateIzeBoosted,
         description.moveBP = move.bp * 2;
     }
 
-    //w. Offensive Terrain
+    //v. Offensive Terrain
     if (attIsGrounded) {
         var terrainMultiplier = gen > 7 ? 0x14CD : 0x1800;
         if (field.terrain === "Electric" && move.type === "Electric") {
@@ -1441,7 +1432,8 @@ function calcBPMods(attacker, defender, field, move, description, ateIzeBoosted,
             bpMods.push(terrainMultiplier);
             description.terrain = field.terrain;
         }
-    }//x. Defensive Terrain
+    }
+    //w. Defensive Terrain
     if (defIsGrounded) {
         if ((field.terrain === "Misty" && move.type === "Dragon") ||
             (field.terrain === "Grassy" && (move.name === "Earthquake" || move.name === "Bulldoze"))) {
@@ -1450,19 +1442,28 @@ function calcBPMods(attacker, defender, field, move, description, ateIzeBoosted,
         }
     }
 
-    //y. Mud Sport, Water Sport
+    //x. Mud Sport, Water Sport
 
-    //z. Supreme Overlord (NUMBERS PAST 3 UNCONFIRMED)
+    //y. Supreme Overlord
     if (attacker.ability === "Supreme Overlord" && attacker.supremeOverlord > 0) {
         overlordBoost = [0x119A, 0x1333, 0x14CD, 0x1666, 0x1800];
         bpMods.push(overlordBoost[attacker.supremeOverlord - 1]);
         description.attackerAbility = attacker.supremeOverlord > 1 ? attacker.ability + " (" + attacker.supremeOverlord + " allies down)"
             : attacker.ability + " (1 ally down)";
     }
-    //aa. 1.1x Items
+    //z. 1.1x Items
     if (attacker.item === "Punching Glove" && move.isPunch) {
         bpMods.push(0x119A);
         description.attackerItem = attacker.item;
+    }
+
+    //If the BP before this point would exceed 60 BP, don't apply it
+    tempBP = pokeRound(basePower * chainMods(bpMods) / 0x1000);
+
+    //aa. Tera boost for moves with <60 BP
+    if (attacker.isTerastalize && attacker.tera_type === move.type && tempBP < 60 && canTeraBoost60BP(move)) {
+        bpMods.push(60 / tempBP * 0x1000);
+        description.teraBPBoost = true;
     }
 
     return [bpMods, description, move];
@@ -1599,7 +1600,6 @@ function calcAtMods(move, attacker, defAbility, description, field) {
     }
 
     //g. 2.0x Offensive Abilities
-    //Add Stakeout here as well
     if ((attacker.ability === "Water Bubble" && move.type === "Water") ||
         ((attacker.ability === "Huge Power" || attacker.ability === "Pure Power") && move.category === "Physical") ||
         (attacker.ability === "Stakeout" && attacker.abilityOn)) {
@@ -1609,7 +1609,8 @@ function calcAtMods(move, attacker, defAbility, description, field) {
     //h. 0.5x Defensive Abilities
     if ((defAbility === "Thick Fat" && (move.type === "Fire" || move.type === "Ice"))
         || (defAbility === "Water Bubble" && move.type === "Fire")
-        || (defAbility === "Purifying Salt" && move.type === "Ghost")) {
+        || (defAbility === "Purifying Salt" && move.type === "Ghost")
+        || (defAbility === 'Heatproof' && move.type === 'Fire' && gen >= 9)) {
         atMods.push(0x800);
         description.defenderAbility = defAbility;
     }
@@ -1721,8 +1722,7 @@ function calcDefMods(move, defender, field, description, hitsPhysical, defAbilit
         description.defenderAbility = defAbility;
     }
     //e. 2x Abilities
-    else if ((defAbility === "Fur Coat" && hitsPhysical) ||
-        (defAbility === "Ice Scales" && ((!hitsPhysical && !move.makesContact) || move.dealsPhysicalDamage))) {
+    else if (defAbility === "Fur Coat" && hitsPhysical) {
         dfMods.push(0x2000);
         description.defenderAbility = defAbility;
     }
@@ -1974,32 +1974,37 @@ function calcFinalMods(move, attacker, defender, field, description, isCritical,
         finalMods.push(0x800);
         description.defenderAbility = defAbility;
     }
-    //j. Friend Guard
+    //j. Ice Scales
+    if (defAbility === "Ice Scales" && ((!hitsPhysical && !move.makesContact) || move.dealsPhysicalDamage)) {
+        finalMods.push(0x800);
+        description.defenderAbility = defAbility;
+    }
+    //k. Friend Guard
     if (field.isFriendGuard) {
         finalMods.push(0xC00);
         description.isFriendGuard = true;
     }
-    //k. Solid Rock, Filter, Prism Armor
+    //l. Solid Rock, Filter, Prism Armor
     if ((defAbility === "Solid Rock" || defAbility === "Filter" || defAbility === "Prism Armor") && typeEffectiveness > 1) {
         finalMods.push(0xC00);
         description.defenderAbility = defAbility;
     }
-    //l. Metronome item
-    //m. Fluffy (fire moves)
+    //m. Metronome item
+    //n. Fluffy (fire moves)
     if (defAbility === "Fluffy" && move.type === "Fire") {
         finalMods.push(0x2000);
         description.defenderAbility = defAbility;
     }
-    //n. Expert Belt
+    //o. Expert Belt
     if (attacker.item === "Expert Belt" && typeEffectiveness > 1) {
         finalMods.push(0x1333);
         description.attackerItem = attacker.item;
-    } //o. Life Orb
+    } //p. Life Orb
     else if (attacker.item === "Life Orb") {
         finalMods.push(0x14CC);
         description.attackerItem = attacker.item;
     }
-    //p. Resist Berries
+    //q. Resist Berries
     if (getBerryResistType(defender.item) === move.type && (typeEffectiveness > 1 || move.type === "Normal") &&
         attacker.ability !== "Unnerve" && attacker.ability !== "As One") {
         if (defAbility === "Ripen") {
@@ -2010,9 +2015,9 @@ function calcFinalMods(move, attacker, defender, field, description, isCritical,
         }
         description.defenderItem = defender.item;
     }
-    //q. Doubled damage
-    //q.i. Body Slam, Stomp, Dragon Rush, Steamroller, Heat Crash, Heavy Slam, Flying Press, Malicious Moonsault
-    //q.ii. Earthquake
-    //q.iii. Surf, Whirlpool
+    //r. Doubled damage
+    //r.i. Body Slam, Stomp, Dragon Rush, Steamroller, Heat Crash, Heavy Slam, Flying Press, Malicious Moonsault
+    //r.ii. Earthquake
+    //r.iii. Surf, Whirlpool
     return [finalMods, description];
 }
