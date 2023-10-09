@@ -3081,6 +3081,16 @@ var POKENAMES = {
     "Iron Valiant": "铁武者",
     "Koraidon": "故勒顿",
     "Miraidon": "密勒顿",
+    "Walking Wake": "波荡水",
+    "Iron Leaves": "铁斑叶",
+    "Dipplin": "来悲粗茶",
+    "Poltchageist": "斯魔茶",
+    "Sinistcha": "来悲粗茶",
+    "Okidogi": "够赞狗",
+    "Munkidori": "愿增猿",
+    "Fezandipiti": "吉雉鸡",
+    "Ogerpon": "厄诡椪",
+    
 }
 
 function pokemonname_noforme(name) {
@@ -3303,6 +3313,13 @@ function translate_pokemon(name) {
             'M': '雄',
         }
     }, {
+        name: 'Basculin',
+        types: {
+            'Red-Striped': '红条纹的样子',
+            'Blue-Striped': '蓝条纹的样子',
+            'White-Striped': '白条纹的样子',
+        }
+    },{
         name: 'Basculegion',
         types: {
             'F': '雌',
@@ -3357,7 +3374,20 @@ function translate_pokemon(name) {
             'Single Strike': '一击流',
             'Rapid Strike': '连击流',
         }
-    }];
+    }, {
+        name: 'Ursaluna',
+        types: {
+            'Bloodmoon': '血月形态',
+        }
+    },{
+        name: 'Ogerpon',
+        types: {
+            'Cornerstone': '础石面具',
+            'Hearthflame': '火灶面具',
+            'Wellspring': '水井面具',
+        }
+    }
+    ];
     idx = name.indexOf('-');
     if (idx != -1) {
         for (let forme of formes) {
