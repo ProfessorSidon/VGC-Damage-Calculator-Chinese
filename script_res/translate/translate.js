@@ -3628,3 +3628,6 @@ function translate_stat(stat) {
             : stat === SP ? "速"
             : "wtf";
 }
+
+const ch_pokenames = () => POKENAMES;
+const ch_moves = () => MOVENAMES;
