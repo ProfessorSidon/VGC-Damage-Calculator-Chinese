@@ -348,6 +348,12 @@ var ABILITYNAMES = {
     "Armor Tail": "尾甲",
     "Earth Eater": "食土",
     "Mycelium Might": "菌丝之力",
+
+    "Hospitality": "款待",
+    "Mind's Eye": "心眼",
+    "Embody Aspect": "心眼",
+    "Toxic Chain": "毒锁链",
+    "Supersweet Syrup": "甘露之蜜",
 }
 
 function translate_ability(name) {
@@ -1137,6 +1143,7 @@ var ITEMNAMES = {
     "Booster Energy": "驱劲能量",
     "Clear Amulet": "清净坠饰",
     "Punching Glove": "拳击手套",
+    "Fairy Feather": "妖精之羽",
     // Missing previously
     "Leek": "大葱",
 }
@@ -2014,6 +2021,12 @@ var MOVENAMES = {
     'Noxious Torque': "剧毒暴冲",
     'Combat Torque': "格斗暴冲",
     'Magical Torque': "魔法暴冲",
+
+    // New in S/V DLC
+    'Blood Moon': "血月",
+    'Matcha Gotcha': "刷刷茶炮",
+    'Syrup Bomb': "糖浆炸弹",
+    'Ivy Cudgel': "棘藤棒",
 };
 
 function translate_move(name) {
