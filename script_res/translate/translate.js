@@ -351,7 +351,7 @@ var ABILITYNAMES = {
 
     "Hospitality": "款待",
     "Mind's Eye": "心眼",
-    "Embody Aspect": "心眼",
+    "Embody Aspect": "面影辉映",
     "Toxic Chain": "毒锁链",
     "Supersweet Syrup": "甘露之蜜",
 }
@@ -3096,7 +3096,7 @@ var POKENAMES = {
     "Miraidon": "密勒顿",
     "Walking Wake": "波荡水",
     "Iron Leaves": "铁斑叶",
-    "Dipplin": "来悲粗茶",
+    "Dipplin": "裹蜜虫",
     "Poltchageist": "斯魔茶",
     "Sinistcha": "来悲粗茶",
     "Okidogi": "够赞狗",
