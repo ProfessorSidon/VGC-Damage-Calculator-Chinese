@@ -1146,6 +1146,11 @@ var ITEMNAMES = {
     "Fairy Feather": "妖精之羽",
     // Missing previously
     "Leek": "大葱",
+    // New in SV DLC
+    'Cornerstone Mask': '础石面具',
+    'Hearthflame Mask': '火灶面具',
+    'Wellspring Mask': '水井面具',
+    
 }
 
 function translate_item(name) {
