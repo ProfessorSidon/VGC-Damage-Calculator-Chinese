@@ -73,6 +73,8 @@ function GET_DAMAGE_SV(attacker, defender, move, field) {
 
     if (move.name == "Nature Power" && attacker.item !== 'Assault Vest')
         [move, moveDescName] = NaturePower(move, field, moveDescName);
+    else if (move.name == 'Me First' && !move.isMeFirst && attacker.item !== 'Assault Vest')
+        [move, moveDescName] = checkMeFirst(move, moveDescName);
 
     if (move.isZ || move.isSignatureZ)
         [move, isQuarteredByProtect, moveDescName] = ZMoves(move, field, attacker, isQuarteredByProtect, moveDescName);
@@ -125,7 +127,7 @@ function GET_DAMAGE_SV(attacker, defender, move, field) {
 
     description.HPEVs = defender.HPEVs + " HP";
 
-    setDamageBuildDesc = setDamage(move, attacker, defender, description, isQuarteredByProtect);
+    setDamageBuildDesc = setDamage(move, attacker, defender, description, isQuarteredByProtect, field);
     if (setDamageBuildDesc !== -1) return setDamageBuildDesc;
 
     if (move.hits > 1) {
