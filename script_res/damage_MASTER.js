@@ -12,7 +12,7 @@ function GET_DAMAGE_HANDLER(attacker, defender, move, field) {
         case 4:
             return CALCULATE_DAMAGE_DPP(attacker, defender, move, field);
         case 5:
-            return GET_DAMAGE_BW(attacker, defender, move, field);
+            //return GET_DAMAGE_BW(attacker, defender, move, field);
         case 6:
             return GET_DAMAGE_XY(attacker, defender, move, field);
         case 7:
@@ -391,6 +391,8 @@ function checkMimicry(pokemon, terrain) {
 
 function checkTerastal(pokemon) {
     if (pokemon.isTerastalize) {
+        pokemon.teraSTAB1 = pokemon.type1;
+        pokemon.teraSTAB2 = pokemon.type2;
         pokemon.type1 = pokemon.tera_type;
         pokemon.type2 = '';
     }
@@ -795,7 +797,8 @@ function statusMoves(move, attacker, defender, description) {
 }
 
 function abilityIgnore(attacker, move, defAbility, description, defItem = "") {
-    if (['Shadow Shield', 'Full Metal Body', 'Prism Armor'].indexOf(defAbility) == -1 && defItem !== "Ability Shield" ) {
+    if (['Shadow Shield', 'Full Metal Body', 'Prism Armor', 'As One',
+        'Tablets of Ruin', 'Vessel of Ruin', 'Sword of Ruin', 'Beads of Ruin'].indexOf(defAbility) == -1 && defItem !== "Ability Shield") {
         if (["Mold Breaker", "Teravolt", "Turboblaze"].indexOf(attacker.ability) !== -1) {
             defAbility = "";
             description.attackerAbility = attacker.ability;
@@ -846,8 +849,9 @@ function ateIzeTypeChange(move, attacker, description) {
             }
             if (attacker.isDynamax)
                 description.moveName = MAXMOVES_LOOKUP[move.type] + " (" + move.bp + " BP)";
-            isBoosted = true; //indicates whether the move gets the boost or not
-        } else if (attacker.ability === "Normalize") { //Normalize
+            isBoosted = true;     //indicates whether the move gets the boost or not
+        }
+        else if(attacker.ability === "Normalize") {
             move.type = "Normal";
             if (attacker.isDynamax)
                 description.moveName = "Max Strike (" + move.bp + " BP)";
@@ -914,11 +918,11 @@ function immunityChecks(move, attacker, defender, field, description, defAbility
         };
     }
     if ((defAbility === "Damp" || attacker.ability === "Damp") && ["Self-Destruct", "Explosion", "Mind Blown", "Misty Explosion"].indexOf(move.name) !== -1) {
-        description.defenderAbility = defAbility;
-        return {
-            "damage": [0],
-            "description": buildDescription(description)
-        };
+        if (defAbility === "Damp")
+            description.defenderAbility = defAbility;
+        if (attacker.ability === "Damp")
+            description.attackerAbility = attacker.ability;
+        return { "damage": [0], "description": buildDescription(description) };
     }
     if (move.name === "Fling" && cantFlingItem(attacker.item, attacker.name, defAbility)) {
         description.attackerItem = attacker.item;
@@ -933,14 +937,15 @@ function immunityChecks(move, attacker, defender, field, description, defAbility
             "description": buildDescription(description)
         };
     }
-    //Remove if it makes the calc annoying to use
     if (["Queenly Majesty", "Dazzling", "Armor Tail"].indexOf(defAbility) !== -1 && move.isPriority) {
         description.defenderAbility = defAbility;
         return { "damage": [0], "description": buildDescription(description) };
     }
-    //Remove if it makes the calc annoying to use
     if (field.terrain === "Psychic" && move.isPriority && pIsGrounded(defender, field.terrain)) {
         description.terrain = field.terrain;
+        return { "damage": [0], "description": buildDescription(description) };
+    }
+    if (move.name === 'Dream Eater' && defender.status !== 'Asleep') {
         return { "damage": [0], "description": buildDescription(description) };
     }
 
@@ -960,7 +965,6 @@ function setDamage(move, attacker, defender, description, isQuarteredByProtect, 
             counteredMove.tripleHit3 = true;
         else if (defender.ability === 'Parental Bond' && (field.format === "Singles" || !counteredMove.isSpread))
             defender.isChild = true;
-        //if move can be countered (nested if)
         if (counteredMove.category !== 'Status') {
             counteredResult = GET_DAMAGE_HANDLER(defender, attacker, counteredMove, field);
             if (['Counter', 'Mirror Coat'].indexOf(move.name) !== -1 && move.category == counteredMove.category) {
@@ -1067,7 +1071,10 @@ function setDamage(move, attacker, defender, description, isQuarteredByProtect, 
 
     //f. OHKO moves
     if (move.isMLG) {
-        return { "damage": [defender.curHP], "description": buildDescription(description) };
+        if (move.name == 'Sheer Cold' && [defender.type1, defender.type2].indexOf('Ice') !== -1)
+            return { "damage": [defender.curHP], "description": buildDescription(description) };
+        else
+            return { "damage": [0], "description": buildDescription(description) };
     }
     //g. Psywave
 
@@ -1520,7 +1527,7 @@ function calcBPMods(attacker, defender, field, move, description, ateIzeBoosted,
         description.attackerAbility = attacker.supremeOverlord > 1 ? attacker.ability + " (" + attacker.supremeOverlord + " allies down)"
             : attacker.ability + " (1 ally down)";
     }
-    //z. 1.1x Items
+    //z. Punching Glove
     if (attacker.item === "Punching Glove" && move.isPunch) {
         bpMods.push(0x119A);
         description.attackerItem = attacker.item;
@@ -1542,8 +1549,7 @@ function canTeraBoost60BP(move) {
     var priority = move.isPriority;
     var multiHit = move.isMultiHit || move.isTenMultiHit || move.isTwoHit || move.isThreeHit || move.isTripleHit || move.name === "Dragon Darts";
     var otherExceptions = ["Crush Grip", "Dragon Energy", "Electro Ball", "Eruption", "Flail", "Fling", "Grass Knot", "Gyro Ball",
-        "Heat Crash", "Heavy Slam", "Low Kick", "Reversal", "Water Spout",
-    ].indexOf(move.name) !== -1;
+        "Heat Crash", "Heavy Slam", "Low Kick", "Reversal", "Water Spout","Wring Out",].indexOf(move.name) !== -1;
     return !priority && !multiHit && !otherExceptions;
 }
 
@@ -1692,7 +1698,8 @@ function calcAtMods(move, attacker, defAbility, description, field) {
         description.attackerItem = attacker.item;
     } //j. 1.5x Items
     else if ((attacker.item === "Choice Band" && move.category === "Physical" && !attacker.isDynamax) ||
-        (attacker.item === "Choice Specs" && move.category === "Special" && !attacker.isDynamax)) {
+        (attacker.item === "Choice Specs" && move.category === "Special" && !attacker.isDynamax) ||
+        (attacker.item === "Soul Dew" && ["Latias", "Latios"].indexOf(attacker.name) && move.category === 'Special' && gen <= 6)) {
         atMods.push(0x1800);
         description.attackerItem = attacker.item;
     }
@@ -1797,7 +1804,8 @@ function calcDefMods(move, defender, field, description, hitsPhysical, defAbilit
     }
     //f. 1.5x Items
     if ((defender.item === "Assault Vest" && !hitsPhysical) ||
-        (defender.item === "Eviolite" && defender.canEvolve)) {
+        (defender.item === "Eviolite" && defender.canEvolve) ||
+        (defender.item === "Soul Dew" && ["Latias", "Latios"].indexOf(defender.name) && !hitsPhysical && gen <= 6)) {
         dfMods.push(0x1800);
         description.defenderItem = defender.item;
     } //g. 2.0x Items
@@ -1821,7 +1829,8 @@ function calcGeneralMods(baseDamage, move, attacker, defender, defAbility, field
         baseDamage = pokeRound(baseDamage * 0xC00 / 0x1000);
     }
     //b. Parental Bond mod
-    baseDamage = attacker.isChild ? pokeRound(baseDamage * 0x0400 / 0x1000) : baseDamage; //should be accurate based on implementation
+    var childMod = gen >= 7 ? 0x0400 : 0x0800;
+    baseDamage = attacker.isChild ? pokeRound(baseDamage * childMod / 0x1000) : baseDamage;    //should be accurate based on implementation
     //c. Weather mod, Hydro Steam
     if (((field.weather.indexOf("Sun") > -1 && (move.type === "Fire" || move.name === "Hydro Steam")) || (field.weather.indexOf("Rain") > -1 && move.type === "Water")) && defender.item !== 'Utility Umbrella') {
         baseDamage = pokeRound(baseDamage * 0x1800 / 0x1000);
@@ -1862,23 +1871,21 @@ function calcGeneralMods(baseDamage, move, attacker, defender, defAbility, field
             }
         }
         else {
-            if (pokedex[attacker.name]) {   //catches any potential issues when switching between sv dex and national dex with a terastalized mon
-                if (move.type === attacker.tera_type && (pokedex[attacker.name].t1 === attacker.tera_type || pokedex[attacker.name].t2 === attacker.tera_type)) {
-                    if (attacker.ability === "Adaptability") {
-                        stabMod = 0x2400;
-                        description.attackerAbility = attacker.ability;
-                    } else {
-                        stabMod = 0x2000;
-                    }
+            if (move.type === attacker.tera_type && (attacker.teraSTAB1 === attacker.tera_type || attacker.teraSTAB2 === attacker.tera_type)) {
+                if (attacker.ability === "Adaptability") {
+                    stabMod = 0x2400;
+                    description.attackerAbility = attacker.ability;
+                } else {
+                    stabMod = 0x2000;
                 }
-                else if ((move.type !== attacker.tera_type && (pokedex[attacker.name].t1 === move.type || pokedex[attacker.name].t2 === move.type))
-                    || move.type === attacker.tera_type) {
-                    if (attacker.ability === "Adaptability" && move.type === attacker.tera_type) {
-                        stabMod = 0x2000;
-                        description.attackerAbility = attacker.ability;
-                    } else {
-                        stabMod = 0x1800;
-                    }
+            }
+            else if ((move.type !== attacker.tera_type && (attacker.teraSTAB1 === move.type || attacker.teraSTAB2 === move.type))
+                || move.type === attacker.tera_type) {
+                if (attacker.ability === "Adaptability" && move.type === attacker.tera_type) {
+                    stabMod = 0x2000;
+                    description.attackerAbility = attacker.ability;
+                } else {
+                    stabMod = 0x1800;
                 }
             }
         }
