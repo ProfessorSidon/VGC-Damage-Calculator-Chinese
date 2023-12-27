@@ -3355,6 +3355,12 @@ function translate_pokemon(name) {
             'Shadow Rider': '骑黑马的样子',
         }
     }, {
+        name: 'Zygarde',
+        types: {
+            '10%': '１０％形态',
+            'Complete': '完全体形态',
+        }
+    },{
         name: 'Dudunsparce',
         types: {
             'Big': '三节形态',
