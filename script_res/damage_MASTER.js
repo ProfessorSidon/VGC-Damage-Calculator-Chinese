@@ -179,7 +179,9 @@ function buildDescription(description) {
         output += " 击中要害";
     }
     if (description.isGlaiveMod) {
-        output += " after using Glaive Rush";
+        //output += " after using Glaive Rush";
+        // translated
+        output += " 用[" + translate_move("Glaive Rush") + "]后";
     }
     if (description.isFriendGuard) {
         //output += " with Friend Guard";
