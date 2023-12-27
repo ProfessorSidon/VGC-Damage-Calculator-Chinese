@@ -2032,6 +2032,25 @@ var MOVENAMES = {
     'Matcha Gotcha': "刷刷茶炮",
     'Syrup Bomb': "糖浆炸弹",
     'Ivy Cudgel': "棘藤棒",
+
+    // Missing previously
+    'Corrosive Gas': '腐蚀气体',
+    'Court Change': '换场',
+    'Cut': '居合劈',
+    'Hydro Steam': '水蒸气',
+    'Magic Powder': '魔法粉',
+    'Poison Sting': '毒针',
+    'Psybeam': '幻象光线',
+    'Psyblade': '精神剑',
+    'Splash': '跃起',
+    'Strength': '怪力',
+    'Tar Shot': '沥青射击',
+    'Teatime': '茶会',
+    'ThunderPunch': '雷电拳',
+    'Vise Grip': '夹住',
+    'Water Gun': '水枪',
+    'Whirlpool': '潮旋',
+    'Withdraw': '缩入壳中',
 };
 
 function translate_move(name) {
