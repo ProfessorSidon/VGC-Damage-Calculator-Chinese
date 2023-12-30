@@ -3492,6 +3492,7 @@ var TYPENAMES = {
     "Steel": "钢",
     "Typeless": "无属性",
     "Fairy": "妖精",
+    "Stellar": "星晶",
 }
 
 function translate_type(name) {
@@ -3519,6 +3520,7 @@ var TYPENAMES_SHORT = {
     "Steel": "钢",
     "Typeless": "无",
     "Fairy": "仙",
+    "Stellar": "星晶",
 }
 
 function translate_type_short(name) {

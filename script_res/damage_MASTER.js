@@ -87,9 +87,9 @@ function buildDescription(description) {
         output += "[" + translate_ability("Flower Gift") + "] ";
     }
     if (description.meFirst) {
-        output += "Me First ";
+        output += translate_move("Me First") + " ";
     }
-    output += description.moveName + " ";
+    output += translate_move(description.moveName) + " ";
     if (description.moveBP && description.moveType) {
         //output += "(" + description.moveBP + " BP " + description.moveType + ") ";
         // translated
@@ -117,10 +117,10 @@ function buildDescription(description) {
         output += "(太晶化补足60威力) "
     }
     if (description.maskBoost) {
-        output += "(1.2x Mask Boost) "
+        output += "(1.2x 面具加成) "
     }
     if (description.stellarBoost) {
-        output += "(1st Use) "
+        output += "(首次威力加成) "
     }
     output += "vs. ";
     if (description.defenseBoost) {
