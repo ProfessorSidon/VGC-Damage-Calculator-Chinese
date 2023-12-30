@@ -3145,7 +3145,14 @@ var POKENAMES = {
     "Munkidori": "愿增猿",
     "Fezandipiti": "吉雉鸡",
     "Ogerpon": "厄诡椪",
-    
+    "Archaludon": "铝钢桥龙",
+    "Hydrapple": "蜜集大蛇",
+    "Gouging Fire": "破空焰",
+    "Raging Bolt": "猛雷鼓",
+    "Iron Boulder": "铁磐岩",
+    "Iron Crown": "铁头壳",
+    "Terapagos": "太乐巴戈斯",
+    "Pecharunt": "桃歹郎"
 }
 
 function pokemonname_noforme(name) {

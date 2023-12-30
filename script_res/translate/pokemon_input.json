@@ -1,0 +1,58 @@
+{
+    "Archaludon": {
+        "input0": "铝钢桥龙",
+        "input1": "ブリジュラス",
+        "input2": "Archaludon",
+        "input3": "lvgangqiaolong",
+        "input4": "lgql"
+    },
+    "Hydrapple": {
+        "input0": "蜜集大蛇",
+        "input1": "カミツオロチ",
+        "input2": "Hydrapple",
+        "input3": "mijidashe",
+        "input4": "mjds"
+    },
+    "Gouging Fire": {
+        "input0": "破空焰",
+        "input1": "ウガツホムラ",
+        "input2": "Gouging Fire",
+        "input3": "pokongyan",
+        "input4": "pky"
+    },
+    "Raging Bolt": {
+        "input0": "猛雷鼓",
+        "input1": "タケルライコ",
+        "input2": "Raging Bolt",
+        "input3": "mengleigu",
+        "input4": "mlg"
+    },
+    "Iron Boulder": {
+        "input0": "铁磐岩",
+        "input1": "テツノイワオ",
+        "input2": "Iron Boulder",
+        "input3": "tiepanyan",
+        "input4": "tpy"
+    },
+    "Iron Crown": {
+        "input0": "铁头壳",
+        "input1": "テツノカシラ",
+        "input2": "Iron Crown",
+        "input3": "tietouke",
+        "input4": "ttk"
+    },
+    "Terapagos": {
+        "input0": "太乐巴戈斯",
+        "input1": "テラパゴス",
+        "input2": "Terapagos",
+        "input3": "tailebagesi",
+        "input4": "tlbgs"
+    },
+    "Pecharunt": {
+        "input0": "桃歹郎",
+        "input1": "モモワロウ",
+        "input2": "Pecharunt",
+        "input3": "taodailang",
+        "input4": "tdl"
+    }
+}
