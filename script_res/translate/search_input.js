@@ -21346,7 +21346,7 @@ const MOVE_NAMES_INPUTS = {
   },
     "Syrup Bomb":
   {
-    "en": "Syrup Bomb‎",
+    "en": "Syrup Bomb",
     "chs": "糖浆炸弹",
     "ja": "みずあめボム",
     "pinyin": "tangjiangzhadan",
@@ -21359,7 +21359,112 @@ const MOVE_NAMES_INPUTS = {
     "ja": "ツタこんぼう",
     "pinyin": "jitengbang",
     "pingyin-first": "jtb"
-  } 
+  },
+    "Electro Shot": {
+        "en": "Electro Shot",
+        "chs": "电光束",
+        "ja": "エレクトロビーム",
+        "pinyin": "dianguangshu",
+        "pinyin-first": "dgs"
+    },
+    "Tera Starstorm": {
+        "en": "Tera Starstorm",
+        "chs": "晶光星群",
+        "ja": "テラクラスター",
+        "pinyin": "jingguangxingqun",
+        "pinyin-first": "jgxq"
+    },
+    "Fickle Beam": {
+        "en": "Fickle Beam",
+        "chs": "随机光",
+        "ja": "きまぐレーザー",
+        "pinyin": "suijiguang",
+        "pinyin-first": "sjg"
+    },
+    "Burning Bulwark": {
+        "en": "Burning Bulwark",
+        "chs": "火焰守护",
+        "ja": "かえんのまもり",
+        "pinyin": "huoyanshouhu",
+        "pinyin-first": "hysh"
+    },
+    "Thunderclap": {
+        "en": "Thunderclap",
+        "chs": "迅雷",
+        "ja": "じんらい",
+        "pinyin": "xunlei",
+        "pinyin-first": "xl"
+    },
+    "Mighty Cleave": {
+        "en": "Mighty Cleave",
+        "chs": "强刃攻击",
+        "ja": "パワフルエッジ",
+        "pinyin": "qiangrengongji",
+        "pinyin-first": "qrgj"
+    },
+    "Tachyon Cutter": {
+        "en": "Tachyon Cutter",
+        "chs": "迅子利刃",
+        "ja": "タキオンカッター",
+        "pinyin": "xunziliren",
+        "pinyin-first": "xzlr"
+    },
+    "Hard Press": {
+        "en": "Hard Press",
+        "chs": "硬压",
+        "ja": "ハードプレス",
+        "pinyin": "yingya",
+        "pinyin-first": "yy"
+    },
+    "Dragon Cheer": {
+        "en": "Dragon Cheer",
+        "chs": "龙声鼓舞",
+        "ja": "ドラゴンエール",
+        "pinyin": "longshengguwu",
+        "pinyin-first": "lsgw"
+    },
+    "Alluring Voice": {
+        "en": "Alluring Voice",
+        "chs": "魅诱之声",
+        "ja": "みわくのボイス",
+        "pinyin": "meiyouzhisheng",
+        "pinyin-first": "myzs"
+    },
+    "Temper Flare": {
+        "en": "Temper Flare",
+        "chs": "豁出去",
+        "ja": "やけっぱち",
+        "pinyin": "huochuqu",
+        "pinyin-first": "hcq"
+    },
+    "Supercell Slam": {
+        "en": "Supercell Slam",
+        "chs": "闪电强袭",
+        "ja": "サンダーダイブ",
+        "pinyin": "shandianqiangxi",
+        "pinyin-first": "sdqx"
+    },
+    "Psychic Noise": {
+        "en": "Psychic Noise",
+        "chs": "精神噪音",
+        "ja": "サイコノイズ",
+        "pinyin": "jingshenzaoyin",
+        "pinyin-first": "jszy"
+    },
+    "Upper Hand": {
+        "en": "Upper Hand",
+        "chs": "快手还击",
+        "ja": "はやてがえし",
+        "pinyin": "kuaishouhaiji",
+        "pinyin-first": "kshj"
+    },
+    "Malignant Chain": {
+        "en": "Malignant Chain",
+        "chs": "邪毒锁链",
+        "ja": "じゃどくのくさり",
+        "pinyin": "xiedusuolian",
+        "pinyin-first": "xdsl"
+    }
 };
 
 function match_pokemon_name_inputs(name, term) {

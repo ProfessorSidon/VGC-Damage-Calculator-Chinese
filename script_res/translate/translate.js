@@ -2043,6 +2043,7 @@ var MOVENAMES = {
     'Psybeam': '幻象光线',
     'Psyblade': '精神剑',
     'Splash': '跃起',
+    'Strange Steam': '神奇蒸汽',
     'Strength': '怪力',
     'Tar Shot': '沥青射击',
     'Teatime': '茶会',
@@ -2051,6 +2052,23 @@ var MOVENAMES = {
     'Water Gun': '水枪',
     'Whirlpool': '潮旋',
     'Withdraw': '缩入壳中',
+
+    // New in S/V DLC2
+    "Electro Shot": "电光束",
+    "Tera Starstorm": "晶光星群",
+    "Fickle Beam": "随机光",
+    "Burning Bulwark": "火焰守护",
+    "Thunderclap": "迅雷",
+    "Mighty Cleave": "强刃攻击",
+    "Tachyon Cutter": "迅子利刃",
+    "Hard Press": "硬压",
+    "Dragon Cheer": "龙声鼓舞",
+    "Alluring Voice": "魅诱之声",
+    "Temper Flare": "豁出去",
+    "Supercell Slam": "闪电强袭",
+    "Psychic Noise": "精神噪音",
+    "Upper Hand": "快手还击",
+    "Malignant Chain": "邪毒锁链"
 };
 
 function translate_move(name) {
