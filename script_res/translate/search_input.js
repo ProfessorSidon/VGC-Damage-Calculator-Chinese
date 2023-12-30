@@ -1053,22 +1053,19 @@ const POKEMON_NAMES_INPUTS = {
         "input0": "jidongniao",
         "input1": "jdn",
         "input2": "articuno",
-        "input3": "freezer",
-        "input4": "急冻鸟"
+        "input3": "急冻鸟"
     },
     "Zapdos": {
         "input0": "shandianniao",
         "input1": "sdn",
         "input2": "zapdos",
-        "input3": "thunder",
-        "input4": "闪电鸟"
+        "input3": "闪电鸟"
     },
     "Moltres": {
         "input0": "huoyanniao",
         "input1": "hyn",
         "input2": "moltres",
-        "input3": "fire",
-        "input4": "火焰鸟"
+        "input3": "火焰鸟"
     },
     "Dratini": {
         "input0": "minilong",
@@ -1835,19 +1832,17 @@ const POKEMON_NAMES_INPUTS = {
     "Lugia": {
         "input0": "luoqiya",
         "input1": "lqy",
-        "input2": "yinniao",
-        "input3": "lugia",
-        "input4": "rugia",
-        "input5": "洛奇亚"
+        "input2": "lugia",
+        "input3": "rugia",
+        "input4": "洛奇亚"
     },
     "Ho-Oh": {
         "input0": "fengwang",
         "input1": "fw",
-        "input2": "jinniao",
-        "input3": "fenghuang",
-        "input4": "hooh",
-        "input5": "houou",
-        "input6": "凤王"
+        "input2": "fenghuang",
+        "input3": "hooh",
+        "input4": "houou",
+        "input5": "凤王"
     },
     "Celebi": {
         "input0": "shilabi",
@@ -2372,7 +2367,7 @@ const POKEMON_NAMES_INPUTS = {
         "input4": "呆火驼"
     },
     "Camerupt": {
-        "input0": "penghuotuo",
+        "input0": "penhuotuo",
         "input1": "pht",
         "input2": "camerupt",
         "input3": "bakuuda",
@@ -2792,7 +2787,7 @@ const POKEMON_NAMES_INPUTS = {
         "input0": "ladiyasi",
         "input1": "ldys",
         "input2": "hongshuidu",
-        "input3": "hongfeiji",
+        "input3": "meimei",
         "input4": "latias",
         "input5": "拉帝亚斯"
     },
@@ -2800,7 +2795,7 @@ const POKEMON_NAMES_INPUTS = {
         "input0": "ladiousi",
         "input1": "ldos",
         "input2": "lanshuidu",
-        "input3": "lanfeiji",
+        "input3": "gege",
         "input4": "latios",
         "input5": "拉帝欧斯"
     },
@@ -2854,10 +2849,9 @@ const POKEMON_NAMES_INPUTS = {
     "Deoxys": {
         "input0": "daiouqixisi",
         "input1": "doqxs",
-        "input2": "waixingren",
-        "input3": "dna",
-        "input4": "deoxys",
-        "input5": "代欧奇希斯"
+        "input2": "dna",
+        "input3": "deoxys",
+        "input4": "代欧奇希斯"
     },
     "Turtwig": {
         "input0": "caomiaogui",
@@ -3599,18 +3593,16 @@ const POKEMON_NAMES_INPUTS = {
         "input3": "ganglong",
         "input4": "shijianlong",
         "input5": "shijianshen",
-        "input6": "zuanshi",
-        "input7": "dialga",
-        "input8": "帝牙卢卡"
+        "input6": "dialga",
+        "input7": "帝牙卢卡"
     },
     "Palkia": {
         "input0": "paluqiya",
         "input1": "plqy",
         "input2": "kongjianlong",
         "input3": "kongjianshen",
-        "input4": "zhenzhu",
-        "input5": "palkia",
-        "input6": "帕路奇亚"
+        "input4": "palkia",
+        "input5": "帕路奇亚"
     },
     "Heatran": {
         "input0": "xiduolanen",
@@ -3853,7 +3845,7 @@ const POKEMON_NAMES_INPUTS = {
         "input3": "食梦梦"
     },
     "Musharna": {
-        "input0": "mengmeng",
+        "input0": "mengmengshi",
         "input1": "mms",
         "input2": "musharna",
         "input3": "梦梦蚀"
@@ -3936,7 +3928,7 @@ const POKEMON_NAMES_INPUTS = {
         "input4": "螺钉地鼠"
     },
     "Excadrill": {
-        "input0": "lontoudishu",
+        "input0": "longtoudishu",
         "input1": "ltds",
         "input2": "excadrill",
         "input3": "doryuzu",
@@ -4667,7 +4659,7 @@ const POKEMON_NAMES_INPUTS = {
         "input3": "秃鹰娜"
     },
     "Heatmor": {
-        "input0": "ronyishou",
+        "input0": "rongyishou",
         "input1": "rys",
         "input2": "heatmor",
         "input3": "kuitaran",
@@ -5403,11 +5395,10 @@ const POKEMON_NAMES_INPUTS = {
     "Primarina": {
         "input0": "xishihairen",
         "input1": "xshr",
-        "input2": "haishi",
-        "input3": "weinianghaishi",
-        "input4": "primarina",
-        "input5": "ashirenu",
-        "input6": "西狮海壬"
+        "input2": "weinianghaishi",
+        "input3": "primarina",
+        "input4": "ashirenu",
+        "input5": "西狮海壬"
     },
     "Pikipek": {
         "input0": "xiaoduer",
