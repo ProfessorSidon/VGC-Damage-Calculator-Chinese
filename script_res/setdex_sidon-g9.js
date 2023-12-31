@@ -684,5 +684,46 @@ var SETDEX_MISSING_VGC2023 = {
             ]
         },
     },
+    "Urshifu-Rapid Strike": {
+        "James Boyt's Mystic Water Swords Dance": {
+            "level": 50,
+            "evs": {
+                "hp": 236,
+                "at": 76,
+                "df": 4,
+                "sa": 0,
+                "sd": 172,
+                "sp": 20
+            },
+            "nature": "Adament",
+            "moves": [
+                "Surging Strikes",
+                "Drain Punch",
+                "Swords Dance",
+                "Detect"
+            ]
+        },
+    },
+    "Urshifu-Single Strike": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 0,
+                "sp": 252
+            },
+            "nature": "Jolly",
+            "item": "Black Glasses",
+            "moves": [
+                "Wicked Blow",
+                "Close Combat",
+                "Sucker Punch",
+                "Detect"
+            ]
+        },
+    },
 
 }
