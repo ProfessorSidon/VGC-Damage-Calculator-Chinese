@@ -149,32 +149,27 @@ var SETDEX_VGC2023 = {
 
     },
     //"Spidops": {
-    //    "Actually worse than Ledian": {
+    //    "very weak bug": {
     //        "level": 50,
     //        "evs": {
-    //            "hp": 0,
+    //            "hp": 252,
     //            "at": 0,
-    //            "df": 0,
+    //            "df": 252,
     //            "sa": 0,
-    //            "sd": 0,
+    //            "sd": 4,
     //            "sp": 0
     //        },
-    //        "ivs": {
-    //            "at": 0,
-    //            "sp": 0
-    //        },
-    //        "nature": "",
-    //        "ability": "",
-    //        "tera_type": "",
-    //        "item": "",
+    //        "nature": "Impish",
+    //        "ability": "Insomnia",
+    //        "tera_type": "Water",
+    //        "item": "Focus Sash",
     //        "moves": [
-    //            "",
-    //            "",
-    //            "",
-    //            ""
+    //            "Circle Throw",
+    //            "Counter",
+    //            "Toxic Spikes",
+    //            "Silk Trap"
     //        ]
     //    },
-
     //},
     "Lokix": {
         "Choice Band Set": {
@@ -3830,6 +3825,27 @@ var SETDEX_VGC2023 = {
 
     },
     "Brambleghast": {
+        "Regulation E Offense": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 0,
+                "sp": 252
+            },
+            "nature": "Adamant",
+            "ability": "Wind Rider",
+            "tera_type": "Ghost",
+            "item": "Focus Sash",
+            "moves": [
+                "Power Whip",
+                "Shadow Sneak",
+                "Poltergeist",
+                "Seed Bomb"
+            ]
+        },
         "Emilio Forbes' 2023 Worlds Top 16 Sash": {
             "level": 50,
             "evs": {
@@ -3928,33 +3944,32 @@ var SETDEX_VGC2023 = {
     //        ]
     //    },
     //},
-    //"Lurantis": {
-    //    "": {
-    //        "level": 50,
-    //        "evs": {
-    //            "hp": 0,
-    //            "at": 0,
-    //            "df": 0,
-    //            "sa": 0,
-    //            "sd": 0,
-    //            "sp": 0
-    //        },
-    //        "ivs": {
-    //            "at": 0,
-    //            "sp": 0
-    //        },
-    //        "nature": "",
-    //        "ability": "",
-    //        "tera_type": "",
-    //        "item": "",
-    //        "moves": [
-    //            "",
-    //            "",
-    //            "",
-    //            ""
-    //        ]
-    //    },
-    //},
+    "Lurantis": {
+        "TR Sitrus Set": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 4,
+                "sp": 0
+            },
+            "ivs": {
+                "sp": 0
+            },
+            "nature": "Brave",
+            "ability": "Contrary",
+            "tera_type": "Poison",
+            "item": "Sitrus Berry",
+            "moves": [
+                "Superpower",
+                "Knock Off",
+                "Leaf Blade",
+                "Petal Blizzard"
+            ]
+        },
+    },
     //"Klawf": {
     //    "": {
     //        "level": 50,
@@ -4386,6 +4401,30 @@ var SETDEX_VGC2023 = {
 
     },
     "Salamence": {
+        "Bulky Rocky Helmet": {
+            "level": 50,
+            "evs": {
+                "hp": 236,
+                "at": 0,
+                "df": 172,
+                "sa": 4,
+                "sd": 12,
+                "sp": 84
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Modest",
+            "ability": "Intimidate",
+            "tera_type": "Poison",
+            "item": "Rocky Helmet",
+            "moves": [
+                "Draco Meteor",
+                "Air Slash",
+                "Tailwind",
+                "Roost"
+            ]
+        },
         "Tera Steel Dragon Dance": {
             "level": 50,
             "evs": {
@@ -5172,6 +5211,27 @@ var SETDEX_VGC2023 = {
     //    },
     //},
     "Tyranitar": {
+        "EternalSnowman's Sacramento 1st AV Tera Psychic": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 252,
+                "df": 4,
+                "sa": 0,
+                "sd": 4,
+                "sp": 244
+            },
+            "nature": "Adamant",
+            "ability": "Sand Stream",
+            "tera_type": "Psychic",
+            "item": "Assault Vest",
+            "moves": [
+                "Rock Slide",
+                "Knock Off",
+                "Low Kick",
+                "Tera Blast"
+            ]
+        },
         "Tera Flying AV": {
             "level": 50,
             "evs": {
@@ -5727,7 +5787,7 @@ var SETDEX_VGC2023 = {
                 "sp": 20
             },
             "nature": "Adamant",
-            "ability": "Multiscale",
+            "ability": "Inner Focus",
             "tera_type": "Normal",
             "item": "Choice Band",
             "moves": [
@@ -6443,6 +6503,29 @@ var SETDEX_VGC2023 = {
 
     },
     "Flutter Mane": {
+        "Bulky Speed Booster Energy": {
+            "level": 50,
+            "evs": {
+                "hp": 212,
+                "at": 0,
+                "df": 132,
+                "sa": 36,
+                "sd": 4,
+                "sp": 124
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Timid",
+            "item": "Booster Energy",
+            "tera_type": "Fairy",
+            "moves": [
+                "Shadow Ball",
+                "Moonblast",
+                "Dazzling Gleam",
+                "Icy Wind"
+            ]
+        },
         "Sash Set": {
             "level": 50,
             "evs": {
@@ -6512,7 +6595,6 @@ var SETDEX_VGC2023 = {
                 "Protect"
             ]
         },
-
     },
     "Slither Wing": {
         "Tera Fire Booster Energy": {
@@ -7050,7 +7132,7 @@ var SETDEX_VGC2023 = {
             "moves": [
                 "Sucker Punch",
                 "Icicle Crash",
-                "Crunch",
+                "Lash Out",
                 "Sacred Sword"
             ]
         },
@@ -8178,31 +8260,32 @@ var SETDEX_VGC2023 = {
             ]
         },
     },
-    //"Articuno-Galar": {
-    //    "": {
-    //        "level": 50,
-    //        "evs": {
-    //            "hp": 0,
-    //            "at": 0,
-    //            "df": 0,
-    //            "sa": 0,
-    //            "sd": 0,
-    //            "sp": 0
-    //        },
-    //        "ivs": {
-    //            "at": 0,
-    //        },
-    //        "nature": "",
-    //        "ability": "",
-    //        "item": "",
-    //        "moves": [
-    //            "",
-    //            "",
-    //            "",
-    //            ""
-    //        ]
-    //    },
-    //},
+    "Articuno-Galar": {
+        "Jamie Boyt's Gda\u0144sk Tera Ground": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 140,
+                "sa": 44,
+                "sd": 12,
+                "sp": 60
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Modest",
+            "ability": "Competitive",
+            "tera_type": "Ground",
+            "item": "Rocky Helmet",
+            "moves": [
+                "Freezing Glare",
+                "Tera Blast",
+                "Calm Mind",
+                "Recover"
+            ]
+        },
+    },
     "Zapdos": {
         "Bold Rocky Helmet": {
             "level": 50,
@@ -8406,6 +8489,29 @@ var SETDEX_VGC2023 = {
     //    },
     //},
     "Heatran": {
+        "Offensive Life Orb": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 4
+            },
+            "ivs": {
+                "at": 0,
+            },
+            "nature": "Modest",
+            "tera_type": "Fairy",
+            "item": "Life Orb",
+            "moves": [
+                "Heat Wave",
+                "Flash Cannon",
+                "Earth Power",
+                "Flamethrower"
+            ]
+        },
         "Kenji Miura's 2023 Worlds Top 16 Magma Storm": {
             "level": 50,
             "evs": {
@@ -8427,29 +8533,6 @@ var SETDEX_VGC2023 = {
                 "Earth Power",
                 "Tera Blast",
                 "Protect"
-            ]
-        },
-        "Offensive Life Orb": {
-            "level": 50,
-            "evs": {
-                "hp": 252,
-                "at": 0,
-                "df": 0,
-                "sa": 252,
-                "sd": 0,
-                "sp": 4
-            },
-            "ivs": {
-                "at": 0,
-            },
-            "nature": "Modest",
-            "tera_type": "Grass",
-            "item": "Life Orb",
-            "moves": [
-                "Heat Wave",
-                "Flash Cannon",
-                "Earth Power",
-                "Tera Blast"
             ]
         },
     },
@@ -8527,6 +8610,31 @@ var SETDEX_VGC2023 = {
                 "Tailwind"
             ]
         },
+        "Thiago Lattanzi's 2024 LAIC Finalist Bulky Set": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 252,
+                "sa": 0,
+                "sd": 4,
+                "sp": 0
+            },
+            "ivs": {
+                "at": 0,
+                "sp": 28,
+            },
+            "nature": "Bold",
+            "ability": "Prankster",
+            "tera_type": "Dark",
+            "item": "Safety Goggles",
+            "moves": [
+                "Bleakwind Storm",
+                "Protect",
+                "Rain Dance",
+                "Tailwind"
+            ]
+        },
     },
     //"Tornadus-Therian": {
     //    "": {
@@ -8596,7 +8704,7 @@ var SETDEX_VGC2023 = {
                 "at": 0,
             },
             "nature": "Timid",
-            "tera_type": "Ice",
+            "tera_type": "Flying",
             "item": "Life Orb",
             "moves": [
                 "Wildbolt Storm",
@@ -9755,6 +9863,27 @@ var SETDEX_VGC2023 = {
                 "Clangerous Soul"
             ]
         },
+        "EternalSnowman's Sacramento 1st Body Press": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 4,
+                "df": 156,
+                "sa": 0,
+                "sd": 92,
+                "sp": 4
+            },
+            "nature": "Impish",
+            "ability": "Bulletproof",
+            "tera_type": "Steel",
+            "item": "Leftovers",
+            "moves": [
+                "Body Press",
+                "Iron Head",
+                "Iron Defense",
+                "Protect"
+            ]
+        },
     },
     "Weezing": {
         "General Disruption": {
@@ -9767,15 +9896,12 @@ var SETDEX_VGC2023 = {
                 "sd": 252,
                 "sp": 0
             },
-            "ivs": {
-                "at": 0,
-            },
-            "nature": "Bold",
+            "nature": "Impish",
             "ability": "Neutralizing Gas",
             "tera_type": "Grass",
             "item": "Sitrus Berry",
             "moves": [
-                "Sludge Bomb",
+                "Gunk Shot",
                 "Pain Split",
                 "Will-O-Wisp",
                 "Taunt"
@@ -9956,7 +10082,7 @@ var SETDEX_VGC2023 = {
                 "Icy Wind",
                 "Moonblast",
                 "Follow Me",
-                "Heling Hand"
+                "Helping Hand"
             ]
         },
     },
@@ -10313,7 +10439,7 @@ var SETDEX_VGC2023 = {
         },
     },
     "Ursaluna-Bloodmoon": {
-        "Trick Room Throat Spray": {
+        "Trick Room Special Offense": {
             "level": 50,
             "evs": {
                 "hp": 252,
@@ -10329,7 +10455,7 @@ var SETDEX_VGC2023 = {
             },
             "nature": "Quiet",
             "tera_type": "Normal",
-            "item": "Throat Spray",
+            "item": "Life Orb",
             "moves": [
                 "Hyper Voice",
                 "Earth Power",

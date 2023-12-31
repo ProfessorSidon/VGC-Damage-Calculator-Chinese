@@ -5636,6 +5636,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 31
     },
       "w": 20.0,
+      "ab": "Unaware",
       "canEvolve": true,
   },
   "Bonsly": {
@@ -5677,6 +5678,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 23
     },
       "w": 60.5,
+      "ab": "Levitate",
       "canEvolve": true,
   },
   "Budew": {
@@ -5691,6 +5693,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 55
     },
       "w": 1.2,
+      "ab": "Natural Cure",
       "canEvolve": true,
   },
   "Buizel": {
@@ -5718,6 +5721,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 85
     },
       "w": 5.5,
+      "ab": "Klutz",
       "canEvolve": true,
   },
   "Burmy": {
@@ -5731,6 +5735,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 36
     },
       "w": 3.4,
+      "ab": "Shed Skin",
       "canEvolve": true,
   },
   "Carnivine": {
@@ -5757,7 +5762,8 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sd": 42,
       "sp": 91
     },
-    "w": 1.9
+      "w": 1.9,
+      "ab": "Tangled Feet",
   },
   "Cherrim": {
     "t1": "Grass",
@@ -5826,6 +5832,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 70
     },
       "w": 5.5,
+      "ab": "Honey Gather",
       "canEvolve": true,
   },
   "Cranidos": {
@@ -5839,6 +5846,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 58
     },
       "w": 31.5,
+      "ab": "Mold Breaker",
       "canEvolve": true,
   },
   "Cresselia": {
@@ -5866,6 +5874,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 50
     },
       "w": 23.0,
+      "ab": "Dry Skin",
       "canEvolve": true,
   },
   "Darkrai": {
@@ -5935,6 +5944,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 70
     },
       "w": 1.2,
+      "ab": "Unburden",
       "canEvolve": true,
   },
   "Dusknoir": {
@@ -5988,6 +5998,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 66
     },
       "w": 7.0,
+      "ab": "Swift Swim",
       "canEvolve": true,
   },
   "Floatzel": {
@@ -6141,6 +6152,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 85
     },
       "w": 3.9,
+      "ab": "Own Tempo",
       "canEvolve": true,
   },
   "Gliscor": {
@@ -6182,6 +6194,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 30
     },
       "w": 24.4,
+      "ab": "Natural Cure",
       "canEvolve": true,
   },
   "Heatran": {
@@ -6264,6 +6277,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 25
     },
       "w": 2.2,
+      "ab": "Shed Skin",
       "canEvolve": true,
   },
   "Kricketune": {
@@ -6289,7 +6303,8 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sd": 65,
       "sp": 95
     },
-    "w": 25.5
+      "w": 25.5,
+      "ab": "Leaf Guard",
   },
   "Lickilicky": {
     "t1": "Normal",
@@ -6355,6 +6370,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 60
     },
       "w": 30.5,
+      "ab": "Intimidate",
       "canEvolve": true,
   },
   "Luxray": {
@@ -6463,6 +6479,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 60
     },
       "w": 13.0,
+      "ab": "Filter",
       "canEvolve": true,
   },
   "Mismagius": {
@@ -6518,6 +6535,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 5
     },
       "w": 105.0,
+      "ab": "Thick Fat",
       "canEvolve": true,
   },
   "Pachirisu": {
@@ -6530,7 +6548,8 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sd": 90,
       "sp": 95
     },
-    "w": 3.9
+      "w": 3.9,
+      "ab": "Volt Absorb",
   },
   "Palkia": {
     "t1": "Water",
@@ -6678,6 +6697,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 60
     },
       "w": 20.2,
+      "ab": "Steadfast",
       "canEvolve": true,
   },
   "Roserade": {
@@ -6816,6 +6836,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 34
     },
       "w": 6.3,
+      "ab": "Storm Drain",
       "canEvolve": true,
   },
   "Shieldon": {
@@ -6830,6 +6851,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 30
     },
       "w": 57.0,
+      "ab": "Sturdy",
       "canEvolve": true,
   },
   "Shinx": {
@@ -6843,6 +6865,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 45
     },
       "w": 9.5,
+      "ab": "Intimidate",
       "canEvolve": true,
   },
   "Skorupi": {
@@ -6857,6 +6880,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 65
     },
       "w": 12.0,
+      "ab": "Sniper",
       "canEvolve": true,
   },
   "Skuntank": {
@@ -6943,6 +6967,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 60
     },
       "w": 2.0,
+      "ab": "Intimidate",
       "canEvolve": true,
   },
   "Stunky": {
@@ -6957,6 +6982,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sp": 74
     },
       "w": 19.2,
+      "ab": "Aftermath",
       "canEvolve": true,
   },
   "Tangrowth": {
@@ -7052,7 +7078,8 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sd": 102,
       "sp": 40
     },
-    "w": 38.5
+      "w": 38.5,
+      "ab": "Pressure",
   },
   "Weavile": {
     "t1": "Dark",
@@ -7079,7 +7106,8 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sd": 105,
       "sp": 36
     },
-    "w": 6.5
+      "w": 6.5,
+      "ab": "Anticipation",
   },
   "Wormadam-Sandy": {
     "t1": "Bug",
@@ -7092,7 +7120,8 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sd": 85,
       "sp": 36
     },
-    "w": 6.5
+      "w": 6.5,
+      "ab": "Anticipation",
   },
   "Wormadam-Trash": {
     "t1": "Bug",
@@ -7105,7 +7134,8 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
       "sd": 95,
       "sp": 36
     },
-    "w": 6.5
+      "w": 6.5,
+      "ab": "Anticipation",
   },
   "Yanmega": {
     "t1": "Bug",
@@ -7129,6 +7159,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
     "Hitmonlee": { "ab": "Reckless" },
     "Hitmonchan": { "ab": "Iron Fist" },
     "Kangaskhan": { "ab": "Scrappy" },
+    "Scyther": { "ab": "Technician" },
     "Scizor": { "ab": "Technician" },
     "Sunflora": { "ab": "Solar Power" },
     "Miltank": { "ab": "Scrappy" },
@@ -15348,80 +15379,14 @@ POKEDEX_SS["Charizard"].formes = ['Charizard', 'Charizard-Gmax'];
 POKEDEX_SS["Blastoise"].formes = ['Blastoise', 'Blastoise-Gmax'];
 POKEDEX_SS["Gengar"].formes = ['Gengar', 'Gengar-Gmax'];
 
-delete POKEDEX_SS["Rattata-Alola"];
-delete POKEDEX_SS["Raticate-Alola"];
-delete POKEDEX_SS["Geodude-Alola"];
-delete POKEDEX_SS["Graveler-Alola"];
-delete POKEDEX_SS["Golem-Alola"];
-delete POKEDEX_SS["Grimer-Alola"];
-delete POKEDEX_SS["Muk-Alola"];
-delete POKEDEX_SS["Snivy"];
-delete POKEDEX_SS["Servine"];
-delete POKEDEX_SS["Serperior"];
-delete POKEDEX_SS["Tepig"];
-delete POKEDEX_SS["Pignite"];
-delete POKEDEX_SS["Emboar"];
-delete POKEDEX_SS["Oshawott"];
-delete POKEDEX_SS["Dewott"];
-delete POKEDEX_SS["Samurott"];
-delete POKEDEX_SS["Patrat"];
-delete POKEDEX_SS["Watchog"];
-delete POKEDEX_SS["Pansage"];
-delete POKEDEX_SS["Simisage"];
-delete POKEDEX_SS["Pansear"];
-delete POKEDEX_SS["Simisear"];
-delete POKEDEX_SS["Panpour"];
-delete POKEDEX_SS["Simipour"];
-delete POKEDEX_SS["Blitzle"];
-delete POKEDEX_SS["Zebstrika"];
-delete POKEDEX_SS["Sewaddle"];
-delete POKEDEX_SS["Swadloon"];
-delete POKEDEX_SS["Leavanny"];
-delete POKEDEX_SS["Ducklett"];
-delete POKEDEX_SS["Swanna"];
-delete POKEDEX_SS["Deerling"];
-delete POKEDEX_SS["Sawsbuck"];
-delete POKEDEX_SS["Alomomola"];
-delete POKEDEX_SS["Tynamo"];
-delete POKEDEX_SS["Eelektrik"];
-delete POKEDEX_SS["Eelektross"];
-delete POKEDEX_SS["Meloetta"];
-delete POKEDEX_SS["Chespin"];
-delete POKEDEX_SS["Quilladin"];
-delete POKEDEX_SS["Chesnaught"];
-delete POKEDEX_SS["Fennekin"];
-delete POKEDEX_SS["Braixen"];
-delete POKEDEX_SS["Delphox"];
-delete POKEDEX_SS["Froakie"];
-delete POKEDEX_SS["Frogadier"];
-delete POKEDEX_SS["Greninja"];
-delete POKEDEX_SS["Scatterbug"];
-delete POKEDEX_SS["Spewpa"];
-delete POKEDEX_SS["Vivillon"];
-delete POKEDEX_SS["Litleo"];
-delete POKEDEX_SS["Pyroar"];
-delete POKEDEX_SS["Flabebe"];
-delete POKEDEX_SS["Floette"];
-delete POKEDEX_SS["Florges"];
-delete POKEDEX_SS["Skiddo"];
-delete POKEDEX_SS["Gogoat"];
-delete POKEDEX_SS["Furfrou"];
-delete POKEDEX_SS["Hoopa"];
-delete POKEDEX_SS["Hoopa-Unbound"];
-delete POKEDEX_SS["Pikipek"];
-delete POKEDEX_SS["Trumbeak"];
-delete POKEDEX_SS["Toucannon"];
-delete POKEDEX_SS["Yungoos"];
-delete POKEDEX_SS["Gumshoos"];
-delete POKEDEX_SS["Crabrawler"];
-delete POKEDEX_SS["Crabominable"];
-delete POKEDEX_SS["Oricorio-Pom-Pom"];
-delete POKEDEX_SS["Oricorio-Baile"];
-delete POKEDEX_SS["Oricorio-Sensu"];
-delete POKEDEX_SS["Oricorio-Pa'u"];
-delete POKEDEX_SS["Minior"];
-delete POKEDEX_SS["Komala"];
-delete POKEDEX_SS["Bruxish"];
+["Rattata-Alola", "Raticate-Alola", "Geodude-Alola", "Graveler-Alola", "Golem-Alola", "Grimer-Alola", "Muk-Alola", "Snivy", "Servine",
+    "Serperior", "Tepig", "Pignite", "Emboar", "Oshawott", "Dewott", "Samurott", "Patrat", "Watchog", "Pansage", "Simisage", "Pansear",
+    "Simisear", "Panpour", "Simipour", "Blitzle", "Zebstrika", "Sewaddle", "Swadloon", "Leavanny", "Ducklett", "Swanna", "Deerling",
+    "Sawsbuck", "Alomomola", "Tynamo", "Eelektrik", "Eelektross", "Meloetta", "Chespin", "Quilladin", "Chesnaught", "Fennekin",
+    "Braixen", "Delphox", "Froakie", "Frogadier", "Greninja", "Scatterbug", "Spewpa", "Vivillon", "Litleo", "Pyroar", "Flabebe", "Floette",
+    "Florges", "Skiddo", "Gogoat", "Furfrou", "Hoopa", "Hoopa-Unbound", "Pikipek", "Trumbeak", "Toucannon", "Yungoos", "Gumshoos",
+    "Crabrawler", "Crabominable", "Oricorio-Pom-Pom", "Oricorio-Baile", "Oricorio-Sensu", "Oricorio-Pa'u", "Minior", "Komala", "Bruxish"
+].forEach(e => delete POKEDEX_SS[e]);
 
 
 var POKEDEX_LA = $.extend(true, {}, POKEDEX_SS_NATDEX, {
@@ -15830,6 +15795,12 @@ var POKEDEX_LA = $.extend(true, {}, POKEDEX_SS_NATDEX, {
 });
 
 var POKEDEX_SV_NATDEX = $.extend(true, {}, POKEDEX_LA, {
+    //Minor Nat Dex Housekeeping
+    "Venusaur": { "formes": null },
+    "Charizard": { "formes": null },
+    "Blastoise": { "formes": null },
+    "Gengar": { "formes": null },
+
     //Past Pokemon Changes
     "Primeape": { "canEvolve": true, },
     "Dunsparce": { "canEvolve": true, },
@@ -15852,7 +15823,7 @@ var POKEDEX_SV_NATDEX = $.extend(true, {}, POKEDEX_LA, {
     },
     "Zacian-Crowned": {
         "bs": {
-            "at":150,
+            "at": 150,
         },
     },
     "Zamazenta": {
@@ -16226,7 +16197,7 @@ var POKEDEX_SV_NATDEX = $.extend(true, {}, POKEDEX_LA, {
             "sd": 97,
             "sp": 68,
         },
-        "w": 15.0, 
+        "w": 15.0,
         "ab": "Sand Rush",
     },
     "Flittle": {
@@ -17626,7 +17597,163 @@ var POKEDEX_SV_NATDEX = $.extend(true, {}, POKEDEX_LA, {
         "w": 39.8,
         "ab": "Sturdy",
     },
+    //Indigo Disk DLC new additions
+    "Duraludon": { "canEvolve": true, },
+    "Hydrapple": {
+        "t1": "Grass",
+        "t2": "Dragon",
+        "bs": {
+            "hp": 106,
+            "at": 80,
+            "df": 110,
+            "sa": 120,
+            "sd": 80,
+            "sp": 44,
+        },
+        "w": 93.0,
+        "ab": "Regenerator",
+    },
+    "Archaludon": {
+        "t1": "Steel",
+        "t2": "Dragon",
+        "bs": {
+            "hp": 90,
+            "at": 105,
+            "df": 130,
+            "sa": 125,
+            "sd": 65,
+            "sp": 85,
+        },
+        "w": 60.0,
+        "ab": "Stalwart",
+    },
+    "Gouging Fire": {
+        "t1": "Fire",
+        "t2": "Dragon",
+        "bs": {
+            "hp": 105,
+            "at": 115,
+            "df": 121,
+            "sa": 65,
+            "sd": 93,
+            "sp": 91,
+        },
+        "w": 590.0,
+        "ab": "Protosynthesis",
+    },
+    "Raging Bolt": {
+        "t1": "Electric",
+        "t2": "Dragon",
+        "bs": {
+            "hp": 125,
+            "at": 73,
+            "df": 91,
+            "sa": 137,
+            "sd": 89,
+            "sp": 75,
+        },
+        "w": 480.0,
+        "ab": "Protosynthesis",
+    },
+    "Iron Boulder": {
+        "t1": "Rock",
+        "t2": "Psychic",
+        "bs": {
+            "hp": 90,
+            "at": 120,
+            "df": 80,
+            "sa": 68,
+            "sd": 108,
+            "sp": 124,
+        },
+        "w": 162.5,
+        "ab": "Quark Drive",
+    },
+    "Iron Crown": {
+        "t1": "Steel",
+        "t2": "Psychic",
+        "bs": {
+            "hp": 90,
+            "at": 72,
+            "df": 100,
+            "sa": 122,
+            "sd": 108,
+            "sp": 98,
+        },
+        "w": 156.0,
+        "ab": "Quark Drive",
+    },
+    "Terapagos": {
+        "t1": "Normal",
+        "bs": {
+            "hp": 90,
+            "at": 65,
+            "df": 85,
+            "sa": 65,
+            "sd": 85,
+            "sp": 60,
+        },
+        "w": 6.5,
+        "ab": "Tera Shift",
+        'formes': [
+            'Terapagos',
+            'Terapagos-Terastal',
+        ],
+    },
+    "Terapagos-Terastal": {
+        "t1": "Normal",
+        "bs": {
+            "hp": 95,
+            "at": 95,
+            "df": 110,
+            "sa": 105,
+            "sd": 110,
+            "sp": 85,
+        },
+        "w": 16.0,
+        "ab": "Tera Shell",
+        isAlternateForme: true,
+    },
+    "Terapagos-Stellar": {
+        "t1": "Normal",
+        "bs": {
+            "hp": 160,
+            "at": 105,
+            "df": 110,
+            "sa": 130,
+            "sd": 110,
+            "sp": 85,
+        },
+        "w": 77.0,
+        "ab": "Teraform Zero",
+        isAlternateForme: true,
+    },
+    "Pecharunt": {
+        "t1": "Poison",
+        "t2": "Ghost",
+        "bs": {
+            "hp": 88,
+            "at": 88,
+            "df": 160,
+            "sa": 88,
+            "sd": 88,
+            "sp": 88,
+        },
+        "w": 0.3,
+        "ab": "Poison Puppeteer",
+    },
 });
+
+['Butterfree', 'Pikachu', 'Meowth', 'Machamp', 'Kingler', 'Lapras', 'Eevee', 'Snorlax', 'Garbodor', 'Melmetal',
+    'Corviknight', 'Orbeetle', 'Drednaw', 'Coalossal', 'Flapple', 'Appletun', 'Sandaconda', 'Toxtricity', 'Centiskorch', 'Hatterene',
+    'Grimmsnarl', 'Alcremie', 'Copperajah', 'Duraludon', 'Rillaboom', 'Cinderace', 'Inteleon', 'Urshifu-Single Strike', 'Urshifu-Rapid Strike'
+].forEach(e => POKEDEX_SV_NATDEX[e].formes = null);
+
+
+POKEDEX_SV_NATDEX["Venusaur"].formes = ["Venusaur", "Mega Venusaur"];
+POKEDEX_SV_NATDEX["Charizard"].formes = ["Charizard", "Mega Charizard X", "Mega Charizard Y"];
+POKEDEX_SV_NATDEX["Blastoise"].formes = ["Blastoise", "Mega Blastoise"];
+POKEDEX_SV_NATDEX["Gengar"].formes = ["Gengar", "Mega Gengar"];
 
 var POKEDEX_SV = {};
 [
@@ -17700,6 +17827,23 @@ var POKEDEX_SV = {};
     //Forms for Teal Mask Pokemon
     'Sandshrew-Alola', 'Sandslash-Alola', 'Vulpix-Alola', 'Ninetales-Alola', 'Geodude-Alola', 'Graveler-Alola', 'Golem-Alola', 'Weezing-Galar', 'Shaymin-Sky',
     'Ursaluna-Bloodmoon', 'Ogerpon-Hearthflame', 'Ogerpon-Wellspring', 'Ogerpon-Cornerstone',
+    //Indigo Disk DLC Pokemon
+    'Bulbasaur', 'Ivysaur', 'Venusaur', 'Squirtle', 'Wartortle', 'Blastoise', 'Oddish', 'Gloom', 'Vileplume', 'Tentacool', 'Tentacruel', 'Doduo', 'Dodrio',
+    'Seel', 'Dewgong', 'Exeggcute', 'Exeggutor', 'Hitmonlee', 'Hitmonchan', 'Rhyhorn', 'Rhydon', 'Horsea', 'Seadra', 'Electabuzz', 'Magmar', 'Lapras',
+    'Porygon', 'Chikorita', 'Bayleef', 'Meganium', 'Totodile', 'Croconaw', 'Feraligatr', 'Chinchou', 'Lanturn', 'Bellossom', 'Snubbull', 'Granbull',
+    'Skarmory', 'Kingdra', 'Porygon2', 'Smeargle', 'Tyrogue', 'Hitmontop', 'Elekid', 'Magby', 'Raikou', 'Entei', 'Suicune', 'Lugia', 'Ho-Oh',
+    'Treecko', 'Grovyle', 'Sceptile', 'Torchic', 'Combusken', 'Blaziken', 'Mudkip', 'Marshtomp', 'Swampert', 'Plusle', 'Minun',
+    'Trapinch', 'Vibrava', 'Flygon', 'Beldum', 'Metang', 'Metagross', 'Regirock', 'Regice', 'Registeel', 'Latias', 'Latios',
+    'Deoxys', 'Cranidos', 'Rampardos', 'Shieldon', 'Bastiodon', 'Rhyperior', 'Electivire',
+    'Magmortar', 'Porygon-Z', 'Regigigas', 'Snivy', 'Servine', 'Serperior', 'Tepig', 'Pignite', 'Emboar', 'Blitzle', 'Zebstrika', 'Drilbur', 'Excadrill',
+    'Cottonee', 'Whimsicott', 'Scraggy', 'Scrafty', 'Minccino', 'Cinccino', 'Solosis', 'Duosion', 'Reuniclus', 'Joltik', 'Galvantula', 'Golett', 'Golurk',
+    'Cobalion', 'Terrakion', 'Virizion', 'Reshiram', 'Zekrom', 'Kyurem', 'Keldeo', 'Inkay', 'Malamar', 'Espurr', 'Meowstic', 'Litten',
+    'Torracat', 'Incineroar', 'Popplio', 'Brionne', 'Primarina', 'Pikipek', 'Trumbeak', 'Toucannon', 'Dewpider', 'Araquanid', 'Comfey', 'Minior',
+    'Cosmog', 'Cosmoem', 'Solgaleo', 'Lunala', 'Necrozma', 'Milcery', 'Alcremie', 'Duraludon', 'Hydrapple', 'Archaludon', 'Gouging Fire', 'Raging Bolt',
+    'Iron Boulder', 'Iron Crown', 'Terapagos', 'Pecharunt',
+    //Forms for Indigo Disk Pokemon
+    'Exeggutor-Alola', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Kyurem-Black', 'Kyurem-White', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings',
+    'Terapagos-Terastal','Terapagos-Stellar',
 ].forEach(e => POKEDEX_SV[e] = POKEDEX_SV_NATDEX[e]);
 
 //performs deep copy; necessary to preserve form data for nat dex
@@ -17707,11 +17851,11 @@ POKEDEX_SV = $.extend(true, {}, POKEDEX_SV);
 
 var NO_FORMS_SV =
     [
-        'Charizard', 'Pikachu', 'Slowbro', 'Gengar', 'Gyarados', 'Eevee', 'Mewtwo', 'Ampharos', 'Scizor', 'Heracross',
+        'Charizard', 'Slowbro', 'Gengar', 'Gyarados', 'Mewtwo', 'Ampharos', 'Scizor', 'Heracross',
         'Houndoom', 'Tyranitar', 'Gardevoir', 'Sableye', 'Medicham', 'Camerupt', 'Altaria', 'Banette', 'Glalie', 'Salamence',
-        'Kyogre', 'Groudon', 'Rayquaza', 'Garchomp', 'Lucario', 'Abomasnow', 'Gallade', 'Diancie', 'Rillaboom', 'Cinderace',
-        'Inteleon', 'Corviknight', 'Drednaw', 'Coalossal', 'Flapple', 'Appletun', 'Sandaconda', 'Toxtricity', 'Hatterene', 'Grimmsnarl',
-        'Copperajah', 'Urshifu-Single Strike', 'Urshifu-Rapid Strike', 'Greninja', 'Snorlax'
+        'Kyogre', 'Groudon', 'Rayquaza', 'Garchomp', 'Lucario', 'Abomasnow', 'Gallade', 'Diancie', 'Greninja',
+        //Indigo Disk additions (none in Teal Mask)
+        'Venusaur', 'Blastoise', 'Sceptile', 'Blaziken', 'Swampert', 'Metagross', 'Latias', 'Latios', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings',
     ];
 
 NO_FORMS_SV.forEach(e => POKEDEX_SV[e].formes = null);

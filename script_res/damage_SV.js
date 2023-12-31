@@ -64,14 +64,21 @@ function GET_DAMAGE_SV(attacker, defender, move, field) {
     var moveDescName = move.name;
     var isQuarteredByProtect = false;
 
+    var attIsGrounded = pIsGrounded(attacker, field);
+    var defIsGrounded = pIsGrounded(defender, field);
+
     checkMoveTypeChange(move, field, attacker);
     checkConditionalPriority(move, field.terrain);
+    checkConditionalSpread(move, field.terrain, attacker, attIsGrounded);
+    checkContactOverride(move, attacker);
 
     if (attacker.isDynamax)
         [move, isQuarteredByProtect, moveDescName] = MaxMoves(move, attacker, isQuarteredByProtect, moveDescName, field);
 
-    if (move.name == "Nature Power")
+    if (move.name == "Nature Power" && attacker.item !== 'Assault Vest')
         [move, moveDescName] = NaturePower(move, field, moveDescName);
+    else if (move.name == 'Me First' && !move.isMeFirst && attacker.item !== 'Assault Vest')
+        [move, moveDescName] = checkMeFirst(move, moveDescName);
 
     if (move.isZ || move.isSignatureZ)
         [move, isQuarteredByProtect, moveDescName] = ZMoves(move, field, attacker, isQuarteredByProtect, moveDescName);
@@ -91,6 +98,8 @@ function GET_DAMAGE_SV(attacker, defender, move, field) {
     description["moveName"] = translate_move(moveDescName);
     description["defenderName"] = translate_pokemon(defender_name);
 
+    addLevelDesc(attacker, defender, description);
+
     if (move.bp === 0 || move.category === "Status") {
         return statusMoves(move, attacker, defender, description);
     }
@@ -98,15 +107,10 @@ function GET_DAMAGE_SV(attacker, defender, move, field) {
     description.attackerTera = attacker.isTerastalize ? attacker.tera_type : false;
     description.defenderTera = defender.isTerastalize ? defender.tera_type : false;
 
-
     var defAbility = defender.ability;
     [defAbility, description] = abilityIgnore(attacker, move, defAbility, description, defender.item);
 
     var isCritical = critMove(move, defAbility);
-
-    if (move.name == "Aura Wheel" && attacker.name == "Morpeko-Hangry") {
-        move.type = "Dark";
-    }
 
     var ateIzeAbility = ATE_IZE_ABILITIES.indexOf(attacker.ability);    //Confirms abilities like Normalize and Pixilate but not Liquid Voice
     var ateIzeBoosted;
@@ -115,23 +119,21 @@ function GET_DAMAGE_SV(attacker, defender, move, field) {
         [move, description, ateIzeBoosted] = ateIzeTypeChange(move, attacker, description);
     }
 
-    var typeEffect1 = getMoveEffectiveness(move, defender.type1, defender.type2, ["Scrappy", "Mind's Eye"].indexOf(attacker.ability) != -1 || field.isForesight, field.isGravity, defender.item, field.weather === "Strong Winds");
-    var typeEffect2 = defender.type2 && defender.type2 !== defender.type1 ? getMoveEffectiveness(move, defender.type2, defender.type1, ["Scrappy", "Mind's Eye"].indexOf(attacker.ability) != -1 || field.isForesight, field.isGravity, defender.item, field.weather === "Strong Winds") : 1;
+    var typeEffect1 = getMoveEffectiveness(move, defender.type1, defender.type2, ["Scrappy", "Mind's Eye"].indexOf(attacker.ability) != -1 || field.isForesight, field.isGravity, defender.item, field.weather === "Strong Winds", defender.ability === 'Tera Shell' && defender.curHP === defender.maxHP, defender.isTerastalize);
+    var typeEffect2 = defender.type2 && defender.type2 !== defender.type1 && move.type !== 'Stellar' ? getMoveEffectiveness(move, defender.type2, defender.type1, ["Scrappy", "Mind's Eye"].indexOf(attacker.ability) != -1 || field.isForesight, field.isGravity, defender.item, field.weather === "Strong Winds", defender.ability === 'Tera Shell' && defender.curHP === defender.maxHP, defender.isTerastalize) : 1;
     var typeEffectiveness = typeEffect1 * typeEffect2;
     immuneBuildDesc = immunityChecks(move, attacker, defender, field, description, defAbility, typeEffectiveness);
     if (immuneBuildDesc !== -1) return immuneBuildDesc;
 
     description.HPEVs = defender.HPEVs + " HP";
 
-    setDamageBuildDesc = setDamage(move, attacker, defender, description, isQuarteredByProtect);
+    setDamageBuildDesc = setDamage(move, attacker, defender, description, isQuarteredByProtect, field);
     if (setDamageBuildDesc !== -1) return setDamageBuildDesc;
 
     if (move.hits > 1) {
         description.hits = move.hits;
     }
     var turnOrder = attacker.stats[SP] > defender.stats[SP] ? "FIRST" : "LAST";
-    var attIsGrounded = pIsGrounded(attacker, field);
-    var defIsGrounded = pIsGrounded(defender, field);
 
     ////////////////////////////////
     ////////// BASE POWER //////////

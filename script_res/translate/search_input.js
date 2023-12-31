@@ -1053,22 +1053,19 @@ const POKEMON_NAMES_INPUTS = {
         "input0": "jidongniao",
         "input1": "jdn",
         "input2": "articuno",
-        "input3": "freezer",
-        "input4": "急冻鸟"
+        "input3": "急冻鸟"
     },
     "Zapdos": {
         "input0": "shandianniao",
         "input1": "sdn",
         "input2": "zapdos",
-        "input3": "thunder",
-        "input4": "闪电鸟"
+        "input3": "闪电鸟"
     },
     "Moltres": {
         "input0": "huoyanniao",
         "input1": "hyn",
         "input2": "moltres",
-        "input3": "fire",
-        "input4": "火焰鸟"
+        "input3": "火焰鸟"
     },
     "Dratini": {
         "input0": "minilong",
@@ -1835,19 +1832,17 @@ const POKEMON_NAMES_INPUTS = {
     "Lugia": {
         "input0": "luoqiya",
         "input1": "lqy",
-        "input2": "yinniao",
-        "input3": "lugia",
-        "input4": "rugia",
-        "input5": "洛奇亚"
+        "input2": "lugia",
+        "input3": "rugia",
+        "input4": "洛奇亚"
     },
     "Ho-Oh": {
         "input0": "fengwang",
         "input1": "fw",
-        "input2": "jinniao",
-        "input3": "fenghuang",
-        "input4": "hooh",
-        "input5": "houou",
-        "input6": "凤王"
+        "input2": "fenghuang",
+        "input3": "hooh",
+        "input4": "houou",
+        "input5": "凤王"
     },
     "Celebi": {
         "input0": "shilabi",
@@ -2372,7 +2367,7 @@ const POKEMON_NAMES_INPUTS = {
         "input4": "呆火驼"
     },
     "Camerupt": {
-        "input0": "penghuotuo",
+        "input0": "penhuotuo",
         "input1": "pht",
         "input2": "camerupt",
         "input3": "bakuuda",
@@ -2792,7 +2787,7 @@ const POKEMON_NAMES_INPUTS = {
         "input0": "ladiyasi",
         "input1": "ldys",
         "input2": "hongshuidu",
-        "input3": "hongfeiji",
+        "input3": "meimei",
         "input4": "latias",
         "input5": "拉帝亚斯"
     },
@@ -2800,7 +2795,7 @@ const POKEMON_NAMES_INPUTS = {
         "input0": "ladiousi",
         "input1": "ldos",
         "input2": "lanshuidu",
-        "input3": "lanfeiji",
+        "input3": "gege",
         "input4": "latios",
         "input5": "拉帝欧斯"
     },
@@ -2854,10 +2849,9 @@ const POKEMON_NAMES_INPUTS = {
     "Deoxys": {
         "input0": "daiouqixisi",
         "input1": "doqxs",
-        "input2": "waixingren",
-        "input3": "dna",
-        "input4": "deoxys",
-        "input5": "代欧奇希斯"
+        "input2": "dna",
+        "input3": "deoxys",
+        "input4": "代欧奇希斯"
     },
     "Turtwig": {
         "input0": "caomiaogui",
@@ -3599,18 +3593,16 @@ const POKEMON_NAMES_INPUTS = {
         "input3": "ganglong",
         "input4": "shijianlong",
         "input5": "shijianshen",
-        "input6": "zuanshi",
-        "input7": "dialga",
-        "input8": "帝牙卢卡"
+        "input6": "dialga",
+        "input7": "帝牙卢卡"
     },
     "Palkia": {
         "input0": "paluqiya",
         "input1": "plqy",
         "input2": "kongjianlong",
         "input3": "kongjianshen",
-        "input4": "zhenzhu",
-        "input5": "palkia",
-        "input6": "帕路奇亚"
+        "input4": "palkia",
+        "input5": "帕路奇亚"
     },
     "Heatran": {
         "input0": "xiduolanen",
@@ -3853,7 +3845,7 @@ const POKEMON_NAMES_INPUTS = {
         "input3": "食梦梦"
     },
     "Musharna": {
-        "input0": "mengmeng",
+        "input0": "mengmengshi",
         "input1": "mms",
         "input2": "musharna",
         "input3": "梦梦蚀"
@@ -3936,7 +3928,7 @@ const POKEMON_NAMES_INPUTS = {
         "input4": "螺钉地鼠"
     },
     "Excadrill": {
-        "input0": "lontoudishu",
+        "input0": "longtoudishu",
         "input1": "ltds",
         "input2": "excadrill",
         "input3": "doryuzu",
@@ -4667,7 +4659,7 @@ const POKEMON_NAMES_INPUTS = {
         "input3": "秃鹰娜"
     },
     "Heatmor": {
-        "input0": "ronyishou",
+        "input0": "rongyishou",
         "input1": "rys",
         "input2": "heatmor",
         "input3": "kuitaran",
@@ -5403,11 +5395,10 @@ const POKEMON_NAMES_INPUTS = {
     "Primarina": {
         "input0": "xishihairen",
         "input1": "xshr",
-        "input2": "haishi",
-        "input3": "weinianghaishi",
-        "input4": "primarina",
-        "input5": "ashirenu",
-        "input6": "西狮海壬"
+        "input2": "weinianghaishi",
+        "input3": "primarina",
+        "input4": "ashirenu",
+        "input5": "西狮海壬"
     },
     "Pikipek": {
         "input0": "xiaoduer",
@@ -7448,6 +7439,62 @@ const POKEMON_NAMES_INPUTS = {
       "input1": "egp",
       "input2": "ogerpon",
       "input3": "厄诡椪"
+    },
+    "Archaludon": {
+        "input0": "铝钢桥龙",
+        "input1": "ブリジュラス",
+        "input2": "Archaludon",
+        "input3": "lvgangqiaolong",
+        "input4": "lgql"
+    },
+    "Hydrapple": {
+        "input0": "蜜集大蛇",
+        "input1": "カミツオロチ",
+        "input2": "Hydrapple",
+        "input3": "mijidashe",
+        "input4": "mjds"
+    },
+    "Gouging Fire": {
+        "input0": "破空焰",
+        "input1": "ウガツホムラ",
+        "input2": "Gouging Fire",
+        "input3": "pokongyan",
+        "input4": "pky"
+    },
+    "Raging Bolt": {
+        "input0": "猛雷鼓",
+        "input1": "タケルライコ",
+        "input2": "Raging Bolt",
+        "input3": "mengleigu",
+        "input4": "mlg"
+    },
+    "Iron Boulder": {
+        "input0": "铁磐岩",
+        "input1": "テツノイワオ",
+        "input2": "Iron Boulder",
+        "input3": "tiepanyan",
+        "input4": "tpy"
+    },
+    "Iron Crown": {
+        "input0": "铁头壳",
+        "input1": "テツノカシラ",
+        "input2": "Iron Crown",
+        "input3": "tietouke",
+        "input4": "ttk"
+    },
+    "Terapagos": {
+        "input0": "太乐巴戈斯",
+        "input1": "テラパゴス",
+        "input2": "Terapagos",
+        "input3": "tailebagesi",
+        "input4": "tlbgs"
+    },
+    "Pecharunt": {
+        "input0": "桃歹郎",
+        "input1": "モモワロウ",
+        "input2": "Pecharunt",
+        "input3": "taodailang",
+        "input4": "tdl"
     }
 }
 
@@ -21346,7 +21393,7 @@ const MOVE_NAMES_INPUTS = {
   },
     "Syrup Bomb":
   {
-    "en": "Syrup Bomb‎",
+    "en": "Syrup Bomb",
     "chs": "糖浆炸弹",
     "ja": "みずあめボム",
     "pinyin": "tangjiangzhadan",
@@ -21359,7 +21406,112 @@ const MOVE_NAMES_INPUTS = {
     "ja": "ツタこんぼう",
     "pinyin": "jitengbang",
     "pingyin-first": "jtb"
-  } 
+  },
+    "Electro Shot": {
+        "en": "Electro Shot",
+        "chs": "电光束",
+        "ja": "エレクトロビーム",
+        "pinyin": "dianguangshu",
+        "pinyin-first": "dgs"
+    },
+    "Tera Starstorm": {
+        "en": "Tera Starstorm",
+        "chs": "晶光星群",
+        "ja": "テラクラスター",
+        "pinyin": "jingguangxingqun",
+        "pinyin-first": "jgxq"
+    },
+    "Fickle Beam": {
+        "en": "Fickle Beam",
+        "chs": "随机光",
+        "ja": "きまぐレーザー",
+        "pinyin": "suijiguang",
+        "pinyin-first": "sjg"
+    },
+    "Burning Bulwark": {
+        "en": "Burning Bulwark",
+        "chs": "火焰守护",
+        "ja": "かえんのまもり",
+        "pinyin": "huoyanshouhu",
+        "pinyin-first": "hysh"
+    },
+    "Thunderclap": {
+        "en": "Thunderclap",
+        "chs": "迅雷",
+        "ja": "じんらい",
+        "pinyin": "xunlei",
+        "pinyin-first": "xl"
+    },
+    "Mighty Cleave": {
+        "en": "Mighty Cleave",
+        "chs": "强刃攻击",
+        "ja": "パワフルエッジ",
+        "pinyin": "qiangrengongji",
+        "pinyin-first": "qrgj"
+    },
+    "Tachyon Cutter": {
+        "en": "Tachyon Cutter",
+        "chs": "迅子利刃",
+        "ja": "タキオンカッター",
+        "pinyin": "xunziliren",
+        "pinyin-first": "xzlr"
+    },
+    "Hard Press": {
+        "en": "Hard Press",
+        "chs": "硬压",
+        "ja": "ハードプレス",
+        "pinyin": "yingya",
+        "pinyin-first": "yy"
+    },
+    "Dragon Cheer": {
+        "en": "Dragon Cheer",
+        "chs": "龙声鼓舞",
+        "ja": "ドラゴンエール",
+        "pinyin": "longshengguwu",
+        "pinyin-first": "lsgw"
+    },
+    "Alluring Voice": {
+        "en": "Alluring Voice",
+        "chs": "魅诱之声",
+        "ja": "みわくのボイス",
+        "pinyin": "meiyouzhisheng",
+        "pinyin-first": "myzs"
+    },
+    "Temper Flare": {
+        "en": "Temper Flare",
+        "chs": "豁出去",
+        "ja": "やけっぱち",
+        "pinyin": "huochuqu",
+        "pinyin-first": "hcq"
+    },
+    "Supercell Slam": {
+        "en": "Supercell Slam",
+        "chs": "闪电强袭",
+        "ja": "サンダーダイブ",
+        "pinyin": "shandianqiangxi",
+        "pinyin-first": "sdqx"
+    },
+    "Psychic Noise": {
+        "en": "Psychic Noise",
+        "chs": "精神噪音",
+        "ja": "サイコノイズ",
+        "pinyin": "jingshenzaoyin",
+        "pinyin-first": "jszy"
+    },
+    "Upper Hand": {
+        "en": "Upper Hand",
+        "chs": "快手还击",
+        "ja": "はやてがえし",
+        "pinyin": "kuaishouhaiji",
+        "pinyin-first": "kshj"
+    },
+    "Malignant Chain": {
+        "en": "Malignant Chain",
+        "chs": "邪毒锁链",
+        "ja": "じゃどくのくさり",
+        "pinyin": "xiedusuolian",
+        "pinyin-first": "xdsl"
+    }
 };
 
 function match_pokemon_name_inputs(name, term) {

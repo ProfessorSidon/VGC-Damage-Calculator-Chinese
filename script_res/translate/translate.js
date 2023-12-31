@@ -2043,6 +2043,7 @@ var MOVENAMES = {
     'Psybeam': '幻象光线',
     'Psyblade': '精神剑',
     'Splash': '跃起',
+    'Strange Steam': '神奇蒸汽',
     'Strength': '怪力',
     'Tar Shot': '沥青射击',
     'Teatime': '茶会',
@@ -2051,6 +2052,23 @@ var MOVENAMES = {
     'Water Gun': '水枪',
     'Whirlpool': '潮旋',
     'Withdraw': '缩入壳中',
+
+    // New in S/V DLC2
+    "Electro Shot": "电光束",
+    "Tera Starstorm": "晶光星群",
+    "Fickle Beam": "随机光",
+    "Burning Bulwark": "火焰守护",
+    "Thunderclap": "迅雷",
+    "Mighty Cleave": "强刃攻击",
+    "Tachyon Cutter": "迅子利刃",
+    "Hard Press": "硬压",
+    "Dragon Cheer": "龙声鼓舞",
+    "Alluring Voice": "魅诱之声",
+    "Temper Flare": "豁出去",
+    "Supercell Slam": "闪电强袭",
+    "Psychic Noise": "精神噪音",
+    "Upper Hand": "快手还击",
+    "Malignant Chain": "邪毒锁链"
 };
 
 function translate_move(name) {
@@ -3127,7 +3145,14 @@ var POKENAMES = {
     "Munkidori": "愿增猿",
     "Fezandipiti": "吉雉鸡",
     "Ogerpon": "厄诡椪",
-    
+    "Archaludon": "铝钢桥龙",
+    "Hydrapple": "蜜集大蛇",
+    "Gouging Fire": "破空焰",
+    "Raging Bolt": "猛雷鼓",
+    "Iron Boulder": "铁磐岩",
+    "Iron Crown": "铁头壳",
+    "Terapagos": "太乐巴戈斯",
+    "Pecharunt": "桃歹郎"
 }
 
 function pokemonname_noforme(name) {
@@ -3467,6 +3492,7 @@ var TYPENAMES = {
     "Steel": "钢",
     "Typeless": "无属性",
     "Fairy": "妖精",
+    "Stellar": "星晶",
 }
 
 function translate_type(name) {
@@ -3494,6 +3520,7 @@ var TYPENAMES_SHORT = {
     "Steel": "钢",
     "Typeless": "无",
     "Fairy": "仙",
+    "Stellar": "星晶",
 }
 
 function translate_type_short(name) {
@@ -3591,6 +3618,8 @@ var KO_REPLACE_TEXTS = {
     "something broke; please tell nerd of now": "出错了",
     "The battlers shared their pain": "双方平分了痛苦",
     "Might as well Thunderbolt a Landorus": "并没有造成伤害",
+    "No damage for you": "并没有造成伤害",
+    "It's a status move, it won't deal damage": "变化招式并不造成伤害",
     "the Water-Type attack evaporated in the harsh sunlight": "水属性攻击因日光非常猛烈而蒸发",
     "the Fire-Type attack fizzled out in the heavy rain": "火属性攻击因下大雨而熄灭",
     "[The Smooth Taste Of] IMMUNE": "防御方免疫了伤害",

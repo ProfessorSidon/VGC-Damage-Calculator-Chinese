@@ -1,0 +1,709 @@
+{
+    "Thunder Cage": {
+        "en": "Thunder Cage",
+        "chs": "雷电囚笼",
+        "ja": "サンダープリズン",
+        "pinyin": "leidianqiulong",
+        "pinyin-first": "ldql"
+    },
+    "Dragon Energy": {
+        "en": "Dragon Energy",
+        "chs": "巨龙威能",
+        "ja": "ドラゴンエナジー",
+        "pinyin": "julongweineng",
+        "pinyin-first": "jlwn"
+    },
+    "Freezing Glare": {
+        "en": "Freezing Glare",
+        "chs": "冰冷视线",
+        "ja": "いてつくしせん",
+        "pinyin": "binglengshixian",
+        "pinyin-first": "blsx"
+    },
+    "Fiery Wrath": {
+        "en": "Fiery Wrath",
+        "chs": "怒火中烧",
+        "ja": "もえあがるいかり",
+        "pinyin": "nuhuozhongshao",
+        "pinyin-first": "nhzs"
+    },
+    "Thunderous Kick": {
+        "en": "Thunderous Kick",
+        "chs": "雷鸣蹴击",
+        "ja": "らいめいげり",
+        "pinyin": "leimingcuji",
+        "pinyin-first": "lmcj"
+    },
+    "Glacial Lance": {
+        "en": "Glacial Lance",
+        "chs": "雪矛",
+        "ja": "ブリザードランス",
+        "pinyin": "xuemao",
+        "pinyin-first": "xm"
+    },
+    "Astral Barrage": {
+        "en": "Astral Barrage",
+        "chs": "星碎",
+        "ja": "アストラルビット",
+        "pinyin": "xingsui",
+        "pinyin-first": "xs"
+    },
+    "Eerie Spell": {
+        "en": "Eerie Spell",
+        "chs": "诡异咒语",
+        "ja": "ぶきみなじゅもん",
+        "pinyin": "guiyizhouyu",
+        "pinyin-first": "gyzy"
+    },
+    "Dire Claw": {
+        "en": "Dire Claw",
+        "chs": "克命爪",
+        "ja": "フェイタルクロー",
+        "pinyin": "kemingzhao",
+        "pinyin-first": "kmz"
+    },
+    "Psyshield Bash": {
+        "en": "Psyshield Bash",
+        "chs": "屏障猛攻",
+        "ja": "バリアーラッシュ",
+        "pinyin": "pingzhangmenggong",
+        "pinyin-first": "pzmg"
+    },
+    "Power Shift": {
+        "en": "Power Shift",
+        "chs": "力量转换",
+        "ja": "パワーシフト",
+        "pinyin": "liliangzhuanhuan",
+        "pinyin-first": "llzh"
+    },
+    "Stone Axe": {
+        "en": "Stone Axe",
+        "chs": "岩斧",
+        "ja": "がんせきアックス",
+        "pinyin": "yanfu",
+        "pinyin-first": "yf"
+    },
+    "Springtide Storm": {
+        "en": "Springtide Storm",
+        "chs": "阳春风暴",
+        "ja": "はるのあらし",
+        "pinyin": "yangchunfengbao",
+        "pinyin-first": "ycfb"
+    },
+    "Mystical Power": {
+        "en": "Mystical Power",
+        "chs": "神秘之力",
+        "ja": "しんぴのちから",
+        "pinyin": "shenmizhili",
+        "pinyin-first": "smzl"
+    },
+    "Raging Fury": {
+        "en": "Raging Fury",
+        "chs": "大愤慨",
+        "ja": "だいふんげき",
+        "pinyin": "dafenkai",
+        "pinyin-first": "dfk"
+    },
+    "Wave Crash": {
+        "en": "Wave Crash",
+        "chs": "波动冲",
+        "ja": "ウェーブタックル",
+        "pinyin": "bodongchong",
+        "pinyin-first": "bdc"
+    },
+    "Chloroblast": {
+        "en": "Chloroblast",
+        "chs": "叶绿爆震",
+        "ja": "クロロブラスト",
+        "pinyin": "yelübaozhen",
+        "pinyin-first": "ylbz"
+    },
+    "Mountain Gale": {
+        "en": "Mountain Gale",
+        "chs": "冰山风",
+        "ja": "ひょうざんおろし",
+        "pinyin": "bingshanfeng",
+        "pinyin-first": "bsf"
+    },
+    "Victory Dance": {
+        "en": "Victory Dance",
+        "chs": "胜利之舞",
+        "ja": "しょうりのまい",
+        "pinyin": "shenglizhiwu",
+        "pinyin-first": "slzw"
+    },
+    "Headlong Rush": {
+        "en": "Headlong Rush",
+        "chs": "突飞猛扑",
+        "ja": "ぶちかまし",
+        "pinyin": "tufeimengpu",
+        "pinyin-first": "tfmp"
+    },
+    "Barb Barrage": {
+        "en": "Barb Barrage",
+        "chs": "毒千针",
+        "ja": "どくばりセンボン",
+        "pinyin": "duqianzhen",
+        "pinyin-first": "dqz"
+    },
+    "Esper Wing": {
+        "en": "Esper Wing",
+        "chs": "气场之翼",
+        "ja": "オーラウイング",
+        "pinyin": "qichangzhiyi",
+        "pinyin-first": "qczy"
+    },
+    "Bitter Malice": {
+        "en": "Bitter Malice",
+        "chs": "冤冤相报",
+        "ja": "うらみつらみ",
+        "pinyin": "yuanyuanxiangbao",
+        "pinyin-first": "yyxb"
+    },
+    "Shelter": {
+        "en": "Shelter",
+        "chs": "闭关",
+        "ja": "たてこもる",
+        "pinyin": "biguan",
+        "pinyin-first": "bg"
+    },
+    "Triple Arrows": {
+        "en": "Triple Arrows",
+        "chs": "三连箭",
+        "ja": "３ぼんのや",
+        "pinyin": "sanlianjian",
+        "pinyin-first": "slj"
+    },
+    "Infernal Parade": {
+        "en": "Infernal Parade",
+        "chs": "群魔乱舞",
+        "ja": "ひゃっきやこう",
+        "pinyin": "qunmoluanwu",
+        "pinyin-first": "qmlw"
+    },
+    "Ceaseless Edge": {
+        "en": "Ceaseless Edge",
+        "chs": "秘剑・千重涛",
+        "ja": "ひけん・ちえなみ",
+        "pinyin": "mijian・qianzhongtao",
+        "pinyin-first": "mjqzt"
+    },
+    "Bleakwind Storm": {
+        "en": "Bleakwind Storm",
+        "chs": "枯叶风暴",
+        "ja": "こがらしあらし",
+        "pinyin": "kuyefengbao",
+        "pinyin-first": "kyfb"
+    },
+    "Wildbolt Storm": {
+        "en": "Wildbolt Storm",
+        "chs": "鸣雷风暴",
+        "ja": "かみなりあらし",
+        "pinyin": "mingleifengbao",
+        "pinyin-first": "mlfb"
+    },
+    "Sandsear Storm": {
+        "en": "Sandsear Storm",
+        "chs": "热沙风暴",
+        "ja": "ねっさのあらし",
+        "pinyin": "reshafengbao",
+        "pinyin-first": "rsfb"
+    },
+    "Lunar Blessing": {
+        "en": "Lunar Blessing",
+        "chs": "新月祈祷",
+        "ja": "みかづきのいのり",
+        "pinyin": "xinyueqidao",
+        "pinyin-first": "xyqd"
+    },
+    "Take Heart": {
+        "en": "Take Heart",
+        "chs": "勇气填充",
+        "ja": "ブレイブチャージ",
+        "pinyin": "yongqitianchong",
+        "pinyin-first": "yqtc"
+    },
+    "Tera Blast": {
+        "en": "Tera Blast",
+        "chs": "太晶爆发",
+        "ja": "テラバースト",
+        "pinyin": "taijingbaofa",
+        "pinyin-first": "tjbf"
+    },
+    "Silk Trap": {
+        "en": "Silk Trap",
+        "chs": "线阱",
+        "ja": "スレッドトラップ",
+        "pinyin": "xianjing",
+        "pinyin-first": "xj"
+    },
+    "Axe Kick": {
+        "en": "Axe Kick",
+        "chs": "下压踢",
+        "ja": "かかとおとし",
+        "pinyin": "xiayati",
+        "pinyin-first": "xyt"
+    },
+    "Last Respects": {
+        "en": "Last Respects",
+        "chs": "扫墓",
+        "ja": "おはかまいり",
+        "pinyin": "saomu",
+        "pinyin-first": "sm"
+    },
+    "Lumina Crash": {
+        "en": "Lumina Crash",
+        "chs": "琉光冲激",
+        "ja": "ルミナコリジョン",
+        "pinyin": "liuguangchongji",
+        "pinyin-first": "lgcj"
+    },
+    "Order Up": {
+        "en": "Order Up",
+        "chs": "上菜",
+        "ja": "いっちょうあがり",
+        "pinyin": "shangcai",
+        "pinyin-first": "sc"
+    },
+    "Jet Punch": {
+        "en": "Jet Punch",
+        "chs": "喷射拳",
+        "ja": "ジェットパンチ",
+        "pinyin": "penshequan",
+        "pinyin-first": "psq"
+    },
+    "Spicy Extract": {
+        "en": "Spicy Extract",
+        "chs": "辣椒精华",
+        "ja": "ハバネロエキス",
+        "pinyin": "lajiaojinghua",
+        "pinyin-first": "ljjh"
+    },
+    "Spin Out": {
+        "en": "Spin Out",
+        "chs": "疾速转轮",
+        "ja": "ホイールスピン",
+        "pinyin": "jisuzhuanlun",
+        "pinyin-first": "jszl"
+    },
+    "Population Bomb": {
+        "en": "Population Bomb",
+        "chs": "鼠数儿",
+        "ja": "ネズミざん",
+        "pinyin": "shushuer",
+        "pinyin-first": "sse"
+    },
+    "Ice Spinner": {
+        "en": "Ice Spinner",
+        "chs": "冰旋",
+        "ja": "アイススピナー",
+        "pinyin": "bingxuan",
+        "pinyin-first": "bx"
+    },
+    "Glaive Rush": {
+        "en": "Glaive Rush",
+        "chs": "巨剑突击",
+        "ja": "きょけんとつげき",
+        "pinyin": "jujiantuji",
+        "pinyin-first": "jjtj"
+    },
+    "Revival Blessing": {
+        "en": "Revival Blessing",
+        "chs": "复生祈祷",
+        "ja": "さいきのいのり",
+        "pinyin": "fushengqidao",
+        "pinyin-first": "fsqd"
+    },
+    "Salt Cure": {
+        "en": "Salt Cure",
+        "chs": "盐腌",
+        "ja": "しおづけ",
+        "pinyin": "yanyan",
+        "pinyin-first": "yy"
+    },
+    "Triple Dive": {
+        "en": "Triple Dive",
+        "chs": "三连钻",
+        "ja": "トリプルダイブ",
+        "pinyin": "sanlianzuan",
+        "pinyin-first": "slz"
+    },
+    "Mortal Spin": {
+        "en": "Mortal Spin",
+        "chs": "晶光转转",
+        "ja": "キラースピン",
+        "pinyin": "jingguangzhuanzhuan",
+        "pinyin-first": "jgzz"
+    },
+    "Doodle": {
+        "en": "Doodle",
+        "chs": "描绘",
+        "ja": "うつしえ",
+        "pinyin": "miaohui",
+        "pinyin-first": "mh"
+    },
+    "Fillet Away": {
+        "en": "Fillet Away",
+        "chs": "甩肉",
+        "ja": "みをけずる",
+        "pinyin": "shuairou",
+        "pinyin-first": "sr"
+    },
+    "Kowtow Cleave": {
+        "en": "Kowtow Cleave",
+        "chs": "仆刀",
+        "ja": "ドゲザン",
+        "pinyin": "pudao",
+        "pinyin-first": "pd"
+    },
+    "Flower Trick": {
+        "en": "Flower Trick",
+        "chs": "千变万花",
+        "ja": "トリックフラワー",
+        "pinyin": "qianbian[wan mo]hua",
+        "pinyin-first": "qb[mh"
+    },
+    "Torch Song": {
+        "en": "Torch Song",
+        "chs": "闪焰高歌",
+        "ja": "フレアソング",
+        "pinyin": "shanyangaoge",
+        "pinyin-first": "sygg"
+    },
+    "Aqua Step": {
+        "en": "Aqua Step",
+        "chs": "流水旋舞",
+        "ja": "アクアステップ",
+        "pinyin": "liushuixuanwu",
+        "pinyin-first": "lsxw"
+    },
+    "Raging Bull": {
+        "en": "Raging Bull",
+        "chs": "怒牛",
+        "ja": "レイジングブル",
+        "pinyin": "nuniu",
+        "pinyin-first": "nn"
+    },
+    "Make It Rain": {
+        "en": "Make It Rain",
+        "chs": "淘金潮",
+        "ja": "ゴールドラッシュ",
+        "pinyin": "taojinchao",
+        "pinyin-first": "tjc"
+    },
+    "Psyblade": {
+        "en": "Psyblade",
+        "chs": "精神剑",
+        "ja": "サイコブレイド",
+        "pinyin": "jingshenjian",
+        "pinyin-first": "jsj"
+    },
+    "Hydro Steam": {
+        "en": "Hydro Steam",
+        "chs": "水蒸气",
+        "ja": "ハイドロスチーム",
+        "pinyin": "shuizhengqi",
+        "pinyin-first": "szq"
+    },
+    "Ruination": {
+        "en": "Ruination",
+        "chs": "大灾难",
+        "ja": "カタストロフィ",
+        "pinyin": "dazainan",
+        "pinyin-first": "dzn"
+    },
+    "Collision Course": {
+        "en": "Collision Course",
+        "chs": "全开猛撞",
+        "ja": "アクセルブレイク",
+        "pinyin": "quankaimengzhuang",
+        "pinyin-first": "qkmz"
+    },
+    "Electro Drift": {
+        "en": "Electro Drift",
+        "chs": "闪电猛冲",
+        "ja": "イナズマドライブ",
+        "pinyin": "shandianmengchong",
+        "pinyin-first": "sdmc"
+    },
+    "Shed Tail": {
+        "en": "Shed Tail",
+        "chs": "断尾",
+        "ja": "しっぽきり",
+        "pinyin": "duanwei",
+        "pinyin-first": "dw"
+    },
+    "Chilly Reception": {
+        "en": "Chilly Reception",
+        "chs": "冷笑话",
+        "ja": "さむいギャグ",
+        "pinyin": "lengxiaohua",
+        "pinyin-first": "lxh"
+    },
+    "Tidy Up": {
+        "en": "Tidy Up",
+        "chs": "大扫除",
+        "ja": "おかたづけ",
+        "pinyin": "dasaochu",
+        "pinyin-first": "dsc"
+    },
+    "Snowscape": {
+        "en": "Snowscape",
+        "chs": "雪景",
+        "ja": "ゆきげしき",
+        "pinyin": "xuejing",
+        "pinyin-first": "xj"
+    },
+    "Pounce": {
+        "en": "Pounce",
+        "chs": "虫扑",
+        "ja": "とびつく",
+        "pinyin": "chongpu",
+        "pinyin-first": "cp"
+    },
+    "Trailblaze": {
+        "en": "Trailblaze",
+        "chs": "起草",
+        "ja": "くさわけ",
+        "pinyin": "qicao",
+        "pinyin-first": "qc"
+    },
+    "Chilling Water": {
+        "en": "Chilling Water",
+        "chs": "泼冷水",
+        "ja": "ひやみず",
+        "pinyin": "polengshui",
+        "pinyin-first": "pls"
+    },
+    "Hyper Drill": {
+        "en": "Hyper Drill",
+        "chs": "强力钻",
+        "ja": "ハイパードリル",
+        "pinyin": "qianglizuan",
+        "pinyin-first": "qlz"
+    },
+    "Twin Beam": {
+        "en": "Twin Beam",
+        "chs": "双光束",
+        "ja": "ツインビーム",
+        "pinyin": "shuangguangshu",
+        "pinyin-first": "sgs"
+    },
+    "Rage Fist": {
+        "en": "Rage Fist",
+        "chs": "愤怒之拳",
+        "ja": "ふんどのこぶし",
+        "pinyin": "fennuzhiquan",
+        "pinyin-first": "fnzq"
+    },
+    "Armor Cannon": {
+        "en": "Armor Cannon",
+        "chs": "铠农炮",
+        "ja": "アーマーキャノン",
+        "pinyin": "kainongpao",
+        "pinyin-first": "knp"
+    },
+    "Bitter Blade": {
+        "en": "Bitter Blade",
+        "chs": "悔念剑",
+        "ja": "むねんのつるぎ",
+        "pinyin": "huinianjian",
+        "pinyin-first": "hnj"
+    },
+    "Double Shock": {
+        "en": "Double Shock",
+        "chs": "电光双击",
+        "ja": "でんこうそうげき",
+        "pinyin": "dianguangshuangji",
+        "pinyin-first": "dgsj"
+    },
+    "Gigaton Hammer": {
+        "en": "Gigaton Hammer",
+        "chs": "巨力锤",
+        "ja": "デカハンマー",
+        "pinyin": "julichui",
+        "pinyin-first": "jlc"
+    },
+    "Comeuppance": {
+        "en": "Comeuppance",
+        "chs": "复仇",
+        "ja": "ほうふく",
+        "pinyin": "fuchou",
+        "pinyin-first": "fc"
+    },
+    "Aqua Cutter": {
+        "en": "Aqua Cutter",
+        "chs": "水波刀",
+        "ja": "アクアカッター",
+        "pinyin": "shuibodao",
+        "pinyin-first": "sbd"
+    },
+    "Blazing Torque": {
+        "en": "Blazing Torque",
+        "chs": "灼热暴冲",
+        "ja": "バーンアクセル",
+        "pinyin": "zhuorebaochong",
+        "pinyin-first": "zrbc"
+    },
+    "Wicked Torque": {
+        "en": "Wicked Torque",
+        "chs": "黑暗暴冲",
+        "ja": "ダークアクセル",
+        "pinyin": "heianbaochong",
+        "pinyin-first": "habc"
+    },
+    "Noxious Torque": {
+        "en": "Noxious Torque",
+        "chs": "剧毒暴冲",
+        "ja": "ポイズンアクセル",
+        "pinyin": "judubaochong",
+        "pinyin-first": "jdbc"
+    },
+    "Combat Torque": {
+        "en": "Combat Torque",
+        "chs": "格斗暴冲",
+        "ja": "ファイトアクセル",
+        "pinyin": "gedoubaochong",
+        "pinyin-first": "gdbc"
+    },
+    "Magical Torque": {
+        "en": "Magical Torque",
+        "chs": "魔法暴冲",
+        "ja": "マジカルアクセル",
+        "pinyin": "mofabaochong",
+        "pinyin-first": "mfbc"
+    },
+    "Blood Moon": {
+        "en": "Blood Moon",
+        "chs": "血月",
+        "ja": "ブラッドムーン",
+        "pinyin": "xueyue",
+        "pinyin-first": "xy"
+    },
+    "Matcha Gotcha": {
+        "en": "Matcha Gotcha",
+        "chs": "刷刷茶炮",
+        "ja": "シャカシャカほう",
+        "pinyin": "shuashuachapao",
+        "pinyin-first": "sscp"
+    },
+    "Syrup Bomb": {
+        "en": "Syrup Bomb",
+        "chs": "糖浆炸弹",
+        "ja": "みずあめボム‎",
+        "pinyin": "tangjiangzhadan",
+        "pinyin-first": "tjzd"
+    },
+    "Ivy Cudgel": {
+        "en": "Ivy Cudgel",
+        "chs": "棘藤棒",
+        "ja": "ツタこんぼう",
+        "pinyin": "jitengbang",
+        "pinyin-first": "jtb"
+    },
+    "Electro Shot": {
+        "en": "Electro Shot",
+        "chs": "电光束",
+        "ja": "エレクトロビーム",
+        "pinyin": "dianguangshu",
+        "pinyin-first": "dgs"
+    },
+    "Tera Starstorm": {
+        "en": "Tera Starstorm",
+        "chs": "晶光星群",
+        "ja": "テラクラスター",
+        "pinyin": "jingguangxingqun",
+        "pinyin-first": "jgxq"
+    },
+    "Fickle Beam": {
+        "en": "Fickle Beam",
+        "chs": "随机光",
+        "ja": "きまぐレーザー",
+        "pinyin": "suijiguang",
+        "pinyin-first": "sjg"
+    },
+    "Burning Bulwark": {
+        "en": "Burning Bulwark",
+        "chs": "火焰守护",
+        "ja": "かえんのまもり",
+        "pinyin": "huoyanshouhu",
+        "pinyin-first": "hysh"
+    },
+    "Thunderclap": {
+        "en": "Thunderclap",
+        "chs": "迅雷",
+        "ja": "じんらい",
+        "pinyin": "xunlei",
+        "pinyin-first": "xl"
+    },
+    "Mighty Cleave": {
+        "en": "Mighty Cleave",
+        "chs": "强刃攻击",
+        "ja": "パワフルエッジ",
+        "pinyin": "qiangrengongji",
+        "pinyin-first": "qrgj"
+    },
+    "Tachyon Cutter": {
+        "en": "Tachyon Cutter",
+        "chs": "迅子利刃",
+        "ja": "タキオンカッター",
+        "pinyin": "xunziliren",
+        "pinyin-first": "xzlr"
+    },
+    "Hard Press": {
+        "en": "Hard Press",
+        "chs": "硬压",
+        "ja": "ハードプレス",
+        "pinyin": "yingya",
+        "pinyin-first": "yy"
+    },
+    "Dragon Cheer": {
+        "en": "Dragon Cheer",
+        "chs": "龙声鼓舞",
+        "ja": "ドラゴンエール",
+        "pinyin": "longshengguwu",
+        "pinyin-first": "lsgw"
+    },
+    "Alluring Voice": {
+        "en": "Alluring Voice",
+        "chs": "魅诱之声",
+        "ja": "みわくのボイス",
+        "pinyin": "meiyouzhisheng",
+        "pinyin-first": "myzs"
+    },
+    "Temper Flare": {
+        "en": "Temper Flare",
+        "chs": "豁出去",
+        "ja": "やけっぱち",
+        "pinyin": "huochuqu",
+        "pinyin-first": "hcq"
+    },
+    "Supercell Slam": {
+        "en": "Supercell Slam",
+        "chs": "闪电强袭",
+        "ja": "サンダーダイブ",
+        "pinyin": "shandianqiangxi",
+        "pinyin-first": "sdqx"
+    },
+    "Psychic Noise": {
+        "en": "Psychic Noise",
+        "chs": "精神噪音",
+        "ja": "サイコノイズ",
+        "pinyin": "jingshenzaoyin",
+        "pinyin-first": "jszy"
+    },
+    "Upper Hand": {
+        "en": "Upper Hand",
+        "chs": "快手还击",
+        "ja": "はやてがえし",
+        "pinyin": "kuaishouhaiji",
+        "pinyin-first": "kshj"
+    },
+    "Malignant Chain": {
+        "en": "Malignant Chain",
+        "chs": "邪毒锁链",
+        "ja": "じゃどくのくさり",
+        "pinyin": "xiedusuolian",
+        "pinyin-first": "xdsl"
+    }
+}

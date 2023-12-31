@@ -50,6 +50,9 @@
         </div>
 
         <hr />
+        <h3>更新：</h3>
+        <p>12/31/2023: 更新朱紫DLC2 [蓝之圆盘] 的新宝可梦+招式！
+        </p>
         <h3>使用说明：</h3>
         <p>搜索宝可梦名称：内置输入法支持，可以输入中文、拼音、英文、拼音缩写或者别名拼音。例如烈咬陆鲨可以输入"烈咬陆鲨"，"lieyaolusha"，"garchomp"，"lyls"，或"dilong"。
         </p>
@@ -387,10 +390,7 @@
                         <option value="4">4次命中</option>
                         <option value="5">5次命中</option>
                     </select>
-                    <select class="move-double calc-trigger hide">
-                        <option value="0">正常威力</option>
-                        <option value="1">翻倍</option>
-                    </select>
+                    <input class="move-double calc-trigger btn-input hide" type="checkbox" id="doubleL1"/><label class="double-btn btn x-btn" for="doubleL1" title="计算时取2倍威力?">翻倍</label>
                     <select class="move-hits2 calc-trigger hide">
                         <option value="1">1次命中</option>
                         <option value="2">2次命中</option>
@@ -426,6 +426,7 @@
                         <option value="5">5段效果</option>
                         <option value="6">6段效果</option>
                     </select>
+                    <input class="move-stellar calc-trigger btn-input hide" type="checkbox" id="stellarL1" checked="checked" /><label class="stellar-btn btn x-btn" for="stellarL1" title="太晶后首次使用？">首招</label> 
                 </div>
                 <div class="move2">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -444,10 +445,7 @@
                         <option value="4">4次命中</option>
                         <option value="5">5次命中</option>
                     </select>
-                    <select class="move-double calc-trigger hide">
-                        <option value="0">正常威力</option>
-                        <option value="1">翻倍</option>
-                    </select>
+                    <input class="move-double calc-trigger btn-input hide" type="checkbox" id="doubleL2"/><label class="double-btn btn x-btn" for="doubleL2" title="计算时取2倍威力?">翻倍</label>
                     <select class="move-hits2 calc-trigger hide">
                         <option value="1">1次命中</option>
                         <option value="2">2次命中</option>
@@ -483,6 +481,7 @@
                         <option value="5">5段效果</option>
                         <option value="6">6段效果</option>
                     </select>
+                    <input class="move-stellar calc-trigger btn-input hide" type="checkbox" id="stellarL2" checked="checked" /><label class="stellar-btn btn x-btn" for="stellarL2" title="太晶后首次使用？">首招</label> 
                 </div>
                 <div class="move3">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -501,10 +500,7 @@
                         <option value="4">4次命中</option>
                         <option value="5">5次命中</option>
                     </select>
-                    <select class="move-double calc-trigger hide">
-                        <option value="0">正常威力</option>
-                        <option value="1">翻倍</option>
-                    </select>
+                    <input class="move-double calc-trigger btn-input hide" type="checkbox" id="doubleL3"/><label class="double-btn btn x-btn" for="doubleL3" title="计算时取2倍威力?">翻倍</label>
                     <select class="move-hits2 calc-trigger hide">
                         <option value="1">1次命中</option>
                         <option value="2">2次命中</option>
@@ -540,6 +536,7 @@
                         <option value="5">5段效果</option>
                         <option value="6">6段效果</option>
                     </select>
+                    <input class="move-stellar calc-trigger btn-input hide" type="checkbox" id="stellarL3" checked="checked" /><label class="stellar-btn btn x-btn" for="stellarL3" title="太晶后首次使用？">首招</label> 
                 </div>
                 <div class="move4">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -558,10 +555,7 @@
                         <option value="4">4次命中</option>
                         <option value="5">5次命中</option>
                     </select>
-                    <select class="move-double calc-trigger hide">
-                        <option value="0">正常威力</option>
-                        <option value="1">翻倍</option>
-                    </select>
+                    <input class="move-double calc-trigger btn-input hide" type="checkbox" id="doubleL4"/><label class="double-btn btn x-btn" for="doubleL4" title="计算时取2倍威力?">翻倍</label>
                     <select class="move-hits2 calc-trigger hide">
                         <option value="1">1次命中</option>
                         <option value="2">2次命中</option>
@@ -597,6 +591,7 @@
                         <option value="5">5段效果</option>
                         <option value="6">6段效果</option>
                     </select>
+                    <input class="move-stellar calc-trigger btn-input hide" type="checkbox" id="stellarL4" checked="checked" /><label class="stellar-btn btn x-btn" for="stellarL4" title="太晶后首次使用？">首招</label> 
                 </div>
                 <input class="glaive-rush calc-trigger hide" type="checkbox" id="glaiveL" title="是否被巨剑突击影响？" />
                 <div class="info-group">
@@ -660,28 +655,28 @@
                     <input class="btn-input calc-trigger" type="checkbox" name="aura" value="Fairy Aura" id="fairy-aura" /><label class="btn btn-wide btn-mid" for="fairy-aura">妖精气场</label>
                     <input class="btn-input calc-trigger" type="checkbox" name="aura" value="Dark Aura" id="dark-aura" /><label class="btn btn-wide btn-right" for="dark-aura">暗黑气场</label>
                 </div>
-                <div class="gen-specific g9" style="width: 19em; margin: 5px auto;" title="选择当前的灾祸.">
-                    <input class="btn-input calc-trigger" type="checkbox" name="ruin" value="Tablets of Ruin" id="tablets-of-ruin" /><label class="btn btn-xxxwide btn-left" for="tablets-of-ruin">灾祸之简 <u>(-攻击)</u></label>
-                    <input class="btn-input calc-trigger" type="checkbox" name="ruin" value="Vessel of Ruin" id="vessel-of-ruin" /><label class="btn btn-xxxwide btn-right" for="vessel-of-ruin">灾祸之鼎 <u>(-特攻)</u></label>
+                <div class="gen-specific g9" style="width: 21em; margin: 5px auto;" title="选择当前的灾祸.">
+                    <input class="btn-input calc-trigger" type="checkbox" name="ruin" value="Tablets of Ruin" id="tablets-of-ruin" /><label class="btn btn-xxxxwide btn-left" for="tablets-of-ruin">灾祸之简 <u>(-攻击)</u></label>
+                    <input class="btn-input calc-trigger" type="checkbox" name="ruin" value="Vessel of Ruin" id="vessel-of-ruin" /><label class="btn btn-xxxxwide btn-right" for="vessel-of-ruin">灾祸之鼎 <u>(-特攻)</u></label>
                     <br />
-                    <input class="btn-input calc-trigger" type="checkbox" name="ruin" value="Sword of Ruin" id="sword-of-ruin" /><label class="btn btn-xxxwide btn-left" for="sword-of-ruin">灾祸之剑 <u>(-防御)</u></label>
-                    <input class="btn-input calc-trigger" type="checkbox" name="ruin" value="Beads of Ruin" id="beads-of-ruin" /><label class="btn btn-xxxwide btn-right" for="beads-of-ruin">灾祸之玉 <u>(-特防)</u></label>
+                    <input class="btn-input calc-trigger" type="checkbox" name="ruin" value="Sword of Ruin" id="sword-of-ruin" /><label class="btn btn-xxxxwide btn-left" for="sword-of-ruin">灾祸之剑 <u>(-防御)</u></label>
+                    <input class="btn-input calc-trigger" type="checkbox" name="ruin" value="Beads of Ruin" id="beads-of-ruin" /><label class="btn btn-xxxxwide btn-right" for="beads-of-ruin">灾祸之玉 <u>(-特防)</u></label>
                 </div>
-                <div class="gen-specific g4 g5 g6 g7 g8 g9" style="width: 14.6em; margin: 5px auto;">
+                <div class="gen-specific g4 g5 g6 g7 g8 g9" style="width: 17em; margin: 5px auto;">
                     <div class="gen-specific g4 g5 g6 g7 divider">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
                     <input class="btn-input calc-trigger" type="checkbox" id="gravity" /><label class="btn" for="gravity" title="重力是否正在生效?">重力</label>
                     <div class="gen-specific g8 g9 divider">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class="btn-input calc-trigger" type="checkbox" id="neutralizingGas" /><label class="btn btn-xwide" for="neutralizingGas" title="化学变化气体生效?">化学变化气体 </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="btn-input calc-trigger" type="checkbox" id="neutralizingGas" /><label class="btn btn-xxwide" for="neutralizingGas" title="化学变化气体生效?">化学变化气体 </label>
                     </div>
                 </div>
                 </div>
                 <!-- Note: I know the html is clunky but it does make it look nicer so idk probably worth
                 I have the original code commented out anyways if I change my mind -->
                 <hr class="gen-specific g2 g3 g4 g5 g6 g7 g8 g9" />
-                <div class="btn-group gen-specific g7 g8">
+                <div class="btn-group gen-specific g7 g8" id="protect-field">
                     <div class="left" title="此宝可梦是否守住?">
                         <input class="btn-input calc-trigger" type="checkbox" id="protectL" /><label class="btn btn-xwide" for="protectL">守住</label>
                     </div>
@@ -769,7 +764,7 @@
                         <input class="btn-input calc-trigger" type="radio" name="spikesR" value="3" id="spikesR3" /><label class="btn btn-wide btn-right" for="spikesR3">3 撒菱</label>
                     </div>
                 </div>
-                <div class="btn-group gen-specific g4 g5 g6 g7 g8">
+                <div class="btn-group gen-specific g4 g5 g6 g7 g8" id="flower-gift">
                     <div class="left" title="是否受友方花之礼加成?">
                         <input class="btn-input calc-trigger" type="checkbox" id="flowerGiftL" /><label class="btn btn-xxwide" for="flowerGiftL">花之礼</label>
                     </div>
@@ -835,10 +830,10 @@
                 </div>
                 <div class="btn-group gen-specific g2">
                     <div class="left" title="是否有撒菱位于这一侧场地?">
-                        <input class="btn-input calc-trigger" type="checkbox" id="gscSpikesL" /><label class="btn" for="gscSpikesL">Spikes</label>
+                        <input class="btn-input calc-trigger" type="checkbox" id="gscSpikesL" /><label class="btn" for="gscSpikesL">撒菱</label>
                     </div>
                     <div class="right" title="是否有撒菱位于这一侧场地?">
-                        <input class="btn-input calc-trigger" type="checkbox" id="gscSpikesR" /><label class="btn" for="gscSpikesR">Spikes</label>
+                        <input class="btn-input calc-trigger" type="checkbox" id="gscSpikesR" /><label class="btn" for="gscSpikesR">撒菱</label>
                     </div>
                 </div>
                 <div class="btn-group gen-specific g2 g3 g4 g5 g6 g7">
@@ -1166,10 +1161,7 @@
                         <option value="4">4次命中</option>
                         <option value="5">5次命中</option>
                     </select>
-                    <select class="move-double calc-trigger hide">
-                        <option value="0">正常威力</option>
-                        <option value="1">翻倍</option>
-                    </select>
+                    <input class="move-double calc-trigger btn-input hide" type="checkbox" id="doubleR1"/><label class="double-btn btn x-btn" for="doubleR1" title="计算时取2倍威力?">翻倍</label>
                     <select class="move-hits2 calc-trigger hide">
                         <option value="1">1次命中</option>
                         <option value="2">2次命中</option>
@@ -1205,6 +1197,7 @@
                         <option value="5">5段效果</option>
                         <option value="6">6段效果</option>
                     </select>
+                    <input class="move-stellar calc-trigger btn-input hide" type="checkbox" id="stellarR1" checked="checked" /><label class="stellar-btn btn x-btn" for="stellarR1" title="太晶后首次使用？">首招</label> 
                 </div>
                 <div class="move2">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -1223,10 +1216,7 @@
                         <option value="4">4次命中</option>
                         <option value="5">5次命中</option>
                     </select>
-                    <select class="move-double calc-trigger hide">
-                        <option value="0">正常威力</option>
-                        <option value="1">翻倍</option>
-                    </select>
+                    <input class="move-double calc-trigger btn-input hide" type="checkbox" id="doubleR2"/><label class="double-btn btn x-btn" for="doubleR2" title="计算时取2倍威力?">翻倍</label>
                     <select class="move-hits2 calc-trigger hide">
                         <option value="1">1次命中</option>
                         <option value="2">2次命中</option>
@@ -1262,6 +1252,7 @@
                         <option value="5">5段效果</option>
                         <option value="6">6段效果</option>
                     </select>
+                    <input class="move-stellar calc-trigger btn-input hide" type="checkbox" id="stellarR2" checked="checked" /><label class="stellar-btn btn x-btn" for="stellarR2" title="太晶后首次使用？">首招</label> 
                 </div>
                 <div class="move3">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -1280,10 +1271,7 @@
                         <option value="4">4次命中</option>
                         <option value="5">5次命中</option>
                     </select>
-                    <select class="move-double calc-trigger hide">
-                        <option value="0">正常威力</option>
-                        <option value="1">翻倍</option>
-                    </select>
+                    <input class="move-double calc-trigger btn-input hide" type="checkbox" id="doubleR3"/><label class="double-btn btn x-btn" for="doubleR3" title="计算时取2倍威力?">翻倍</label>
                     <select class="move-hits2 calc-trigger hide">
                         <option value="1">1次命中</option>
                         <option value="2">2次命中</option>
@@ -1319,6 +1307,7 @@
                         <option value="5">5段效果</option>
                         <option value="6">6段效果</option>
                     </select>
+                    <input class="move-stellar calc-trigger btn-input hide" type="checkbox" id="stellarR3" checked="checked" /><label class="stellar-btn btn x-btn" for="stellarR3" title="太晶后首次使用？">首招</label> 
                 </div>
                 <div class="move4">
                     <select class="move-selector calc-trigger small-select"></select>
@@ -1337,10 +1326,7 @@
                         <option value="4">4次命中</option>
                         <option value="5">5次命中</option>
                     </select>
-                    <select class="move-double calc-trigger hide">
-                        <option value="0">正常威力</option>
-                        <option value="1">翻倍</option>
-                    </select>
+                    <input class="move-double calc-trigger btn-input hide" type="checkbox" id="doubleR4"/><label class="double-btn btn x-btn" for="doubleR4" title="计算时取2倍威力?">翻倍</label>
                     <select class="move-hits2 calc-trigger hide">
                         <option value="1">1次命中</option>
                         <option value="2">2次命中</option>
@@ -1376,6 +1362,7 @@
                         <option value="5">5段效果</option>
                         <option value="6">6段效果</option>
                     </select>
+                    <input class="move-stellar calc-trigger btn-input hide" type="checkbox" id="stellarR4" checked="checked" /><label class="stellar-btn btn x-btn" for="stellarR4" title="太晶后首次使用？">首招</label> 
                 </div>
                 <input class="glaive-rush calc-trigger hide" type="checkbox" id="glaiveR" title="是否被巨剑突击影响？" />
                 <div class="info-group">
@@ -1426,7 +1413,7 @@
 <script type="text/javascript" src="script_res/setdex_sm.js" id="SMScript"></script>
 <script type="text/javascript" src="script_res/setdex_ss.js" id="SSScript"></script>
 <script type="text/javascript" src="script_res/setdex_sv.js" id="SVScript"></script>
-<script type="text/javascript" src="script_res/setdex_bdsp.js" id="BDSPScript"></script>
+<!--<script type="text/javascript" src="script_res/setdex_bdsp.js" id="BDSPScript"></script>-->
 <script type="text/javascript" src="script_res/setdex_bw.js"></script>
 <script type="text/javascript" src="script_res/setdex_dpp.js"></script>
 <script type="text/javascript" src="script_res/setdex_rse.js"></script>
@@ -1446,7 +1433,7 @@
 <!--<script type="text/javascript" src="script_res/damage.js"></script>-->
 <!--<script type="text/javascript" src="script_res/damage_sm.js"></script>-->
 <script type="text/javascript" src="script_res/damage_xy.js"></script>
-<script type="text/javascript" src="script_res/damage_bw.js"></script>
+<!--<script type="text/javascript" src="script_res/damage_bw.js"></script>-->
 <script type="text/javascript" src="script_res/damage_dpp.js"></script>
 <script type="text/javascript" src="script_res/damage_rse.js"></script>
 <script type="text/javascript" src="script_res/damage_gsc.js"></script>
