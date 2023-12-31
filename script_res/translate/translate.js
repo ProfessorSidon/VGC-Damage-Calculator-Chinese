@@ -354,6 +354,11 @@ var ABILITYNAMES = {
     "Embody Aspect": "面影辉映",
     "Toxic Chain": "毒锁链",
     "Supersweet Syrup": "甘露之蜜",
+
+    "Tera Shift": "太晶变形",
+    "Tera Shell": "太晶甲壳",
+    "Teraform Zero": "归零化境",
+    "Poison Puppeteer": "毒傀儡",
 }
 
 function translate_ability(name) {
@@ -3453,6 +3458,12 @@ function translate_pokemon(name) {
             'Cornerstone': '础石面具',
             'Hearthflame': '火灶面具',
             'Wellspring': '水井面具',
+        }
+    },{
+        name: 'Terapagos',
+        types: {
+            'Terastal': '太晶形态',
+            'Stellar': '星晶形态',
         }
     }
     ];
