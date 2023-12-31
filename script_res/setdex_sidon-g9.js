@@ -460,4 +460,229 @@ var SETDEX_MISSING_VGC2023 = {
             ]
         },
     },
+    "Walking Wake": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 4,
+                "sa": 244,
+                "sd": 4,
+                "sp": 252
+            },
+            "nature": "Modest",
+            "ability": "Protosynthesis",
+            "item": "Life Orb",
+            "moves": [
+                "Hydro Steam",
+                "Draco Meteor",
+                "Flamethrower",
+                "Protect"
+            ]
+        },
+    },
+    "Iron Leaves": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 0,
+                "sp": 252
+            },
+            "nature": "Jolly",
+            "ability": "Quark Drive",
+            "item": "Booster Energy",
+            "moves": [
+                "Psyblade",
+                "Close Combat",
+                "Swords Dance",
+                "Protect"
+            ]
+        },
+    },
+    "Archaludon": {
+        "James Boyt's Assault Vest": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 4,
+                "sa": 116,
+                "sd": 124,
+                "sp": 12
+            },
+            "nature": "Modest",
+            "ability": "Stamina",
+            "tera_type": "Flying",
+            "item": "Assault Vest",
+            "moves": [
+                "Flash Cannon",
+                "Draco Meteor",
+                "Body Press",
+                "Electro Shot"
+            ]
+        },
+    },
+    "Gouging Fire": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 0,
+                "sp": 252
+            },
+            "nature": "Modest",
+            "ability": "Protosynthesis",
+            "item": "Life Orb",
+            "moves": [
+                "Breaking Swipe",
+                "Flare Blitz",
+                "Flame Charge",
+                "Burning Bulwark"
+            ]
+        },
+    },
+    "Raging Bolt": {
+        "James Boyt's offensive set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 4,
+                "sa": 244,
+                "sd": 4,
+                "sp": 252
+            },
+            "nature": "Modest",
+            "ability": "Protosynthesis",
+            "item": "Life Orb",
+            "moves": [
+                "Thunderbolt",
+                "Draco Meteor",
+                "Thunderclap",
+                "Protect"
+            ]
+        },
+        "James Boyt's bulky": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 148,
+                "sa": 44,
+                "sd": 4,
+                "sp": 60
+            },
+            "nature": "Modest",
+            "ability": "Protosynthesis",
+            "tera_type": "Fairy",
+            "item": "Leftovers",
+            "moves": [
+                "Thunderclap",
+                "Dragon Pulse",
+                "Calm Mind",
+                "Protect"
+            ]
+        },
+    },
+    "Iron Crown": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 0,
+                "at": 0,
+                "df": 4,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "nature": "Timid",
+            "ability": "Quark Drive",
+            "tera_type": "Water",
+            "item": "Booster Energy",
+            "moves": [
+                "Expanding Force",
+                "Tachyon Cutter",
+                "Tera Blast",
+                "Protect"
+            ]
+        },
+    },
+    "Iron Boulder": {
+        "Default Set": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 252,
+                "df": 0,
+                "sa": 0,
+                "sd": 0,
+                "sp": 252
+            },
+            "nature": "Jolly",
+            "ability": "Quark Drive",
+            "tera_type": "Water",
+            "item": "Booster Energy",
+            "moves": [
+                "Mighty Cleave",
+                "Zen Headbutt",
+                "Earthquake",
+                "Protect"
+            ]
+        },
+    },
+    "Primarina": {
+        "Leftovers Calm Mind": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 220,
+                "sa": 28,
+                "sd": 4,
+                "sp": 4
+            },
+            "nature": "Modest",
+            "ability": "Liquid Voice",
+            "tera_type": "Grass",
+            "item": "Leftovers",
+            "moves": [
+                "Hyper Voice",
+                "Moonblast",
+                "Calm Mind",
+                "Protect"
+            ]
+        },
+    },
+    "Incineroar": {
+        "Defalt Set": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 4,
+                "df": 92,
+                "sa": 0,
+                "sd": 156,
+                "sp": 4
+            },
+            "nature": "Adament",
+            "ability": "Intimidate",
+            "tera_type": "Water",
+            "item": "Sitrus Berry",
+            "moves": [
+                "Flare Blitz",
+                "Knock Off",
+                "Fake Out",
+                "Parting Shot"
+            ]
+        },
+    },
+
 }
