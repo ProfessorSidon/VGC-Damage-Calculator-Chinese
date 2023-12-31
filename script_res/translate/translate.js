@@ -3618,6 +3618,8 @@ var KO_REPLACE_TEXTS = {
     "something broke; please tell nerd of now": "出错了",
     "The battlers shared their pain": "双方平分了痛苦",
     "Might as well Thunderbolt a Landorus": "并没有造成伤害",
+    "No damage for you": "并没有造成伤害",
+    "It's a status move, it won't deal damage": "变化招式并不造成伤害",
     "the Water-Type attack evaporated in the harsh sunlight": "水属性攻击因日光非常猛烈而蒸发",
     "the Fire-Type attack fizzled out in the heavy rain": "火属性攻击因下大雨而熄灭",
     "[The Smooth Taste Of] IMMUNE": "防御方免疫了伤害",
