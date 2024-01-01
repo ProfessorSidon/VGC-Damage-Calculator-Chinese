@@ -4738,7 +4738,8 @@ const POKEMON_NAMES_INPUTS = {
         "input4": "ljy",
         "input5": "tornadus",
         "input6": "tornelos",
-        "input7": "龙卷云"
+        "input7": "龙卷云",
+        "input8": "fengshen"
     },
     "Thundurus": {
         "input0": "leidianyun",
@@ -5376,7 +5377,10 @@ const POKEMON_NAMES_INPUTS = {
         "input1": "cypxh",
         "input2": "incineroar",
         "input3": "gaogaen",
-        "input4": "炽焰咆哮虎"
+        "input4": "炽焰咆哮虎",
+        "input5": "paoxiaohu",
+        "input6": "hushen",
+        "input7": "yuzhoudiyi"
     },
     "Popplio": {
         "input0": "qiuqiuhaishi",
