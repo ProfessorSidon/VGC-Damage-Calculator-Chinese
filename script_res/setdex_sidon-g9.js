@@ -672,7 +672,7 @@ var SETDEX_MISSING_VGC2023 = {
                 "sd": 156,
                 "sp": 4
             },
-            "nature": "Adament",
+            "nature": "Impish",
             "ability": "Intimidate",
             "tera_type": "Water",
             "item": "Sitrus Berry",
@@ -725,5 +725,73 @@ var SETDEX_MISSING_VGC2023 = {
             ]
         },
     },
-
+    "Whimsicott": {
+        "Sash": {
+            "level": 50,
+            "evs": {
+                "hp": 4,
+                "at": 0,
+                "df": 0,
+                "sa": 252,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0
+            },
+            "nature": "Timid",
+            "item": "Focus Sash",
+            "moves": [
+                "Moonblast",
+                "Dazzling Gleam",
+                "Energy Ball",
+                "Tailwind",
+            ]
+        },
+        "HS": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 0,
+                "sa": 4,
+                "sd": 0,
+                "sp": 252
+            },
+            "ivs": {
+                "at": 0
+            },
+            "nature": "Timid",
+            "item": "Focus Sash",
+            "moves": [
+                "Moonblast",
+                "Dazzling Gleam",
+                "Energy Ball",
+                "Tailwind",
+            ]
+        },
+        "Slow Bulky": {
+            "level": 50,
+            "evs": {
+                "hp": 252,
+                "at": 0,
+                "df": 84,
+                "sa": 0,
+                "sd": 172,
+                "sp": 0
+            },
+            "ivs": {
+                "at": 0,
+                "sp": 16,
+            },
+            "nature": "Bold",
+            "item": "Covert Cloak",
+            "moves": [
+                "Moonblast",
+                "Dazzling Gleam",
+                "Energy Ball",
+                "Tailwind",
+            ]
+        }
+    },
 }
